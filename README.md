@@ -25,6 +25,31 @@ python3 A8mini_RTSP_YOLO_Detection.py --model /path/to/yolo11s.engine \
 
 `--codec` 只选择本地 GStreamer 解码器，不修改相机配置；FFmpeg 自行探测编码。`--save-classes` 默认 `person`，只有同时指定 `--save` 才保存。保存采用同步磁盘写入，开启后慢磁盘仍会影响检测/显示；采集继续推进，终端统计包含 `SAVE` 耗时。默认关闭保存，不创建图片目录。
 
+## 类别名称显示为 classXX
+
+`class62` 表示已经有类别编号，但名称表缺失或只有占位名称。[Ultralytics 的默认名称逻辑](https://github.com/ultralytics/ultralytics/blob/main/ultralytics/nn/autobackend.py)会在缺少名称时生成 `class0`、`class1` 等标签。
+
+这次检查了目录中的真实文件：`yolo11s.engine` 没有可读取的标准 Ultralytics JSON 元数据头；`yolo11s.pt` 可以读出 80 类名称。已从这份 PT 提取 [yolo11s.names.json](yolo11s.names.json)，请与 engine 放在同一目录。原命令即可自动加载类别表，不必为了名称再额外加载 PT。
+
+名称来源按以下规则选择：
+
+1. 显式指定 `--names-file classes.json` 或 `--names-model original.pt`，二者互斥，优先于内置名称。显式路径错误会报错退出。
+2. 未显式指定时，先使用推理结果中有效的内置名称。
+3. 内置名称缺失或包含 `classXX` 时，先找 engine 同目录同文件名的 `.names.json`，再找同名 `.pt`。只解析一次；不自动下载权重，也不根据类别数量猜测 COCO。
+4. 都没有时警告一次并继续显示编号。类别名称也用于 `--save-classes` 匹配，此时应补齐名称表，或暂用编号。
+
+```bash
+# 最轻量：显式指定已从原始 PT 提取的名称表
+python3 A8mini_RTSP_YOLO_Detection.py --model yolo11s.engine --names-file yolo11s.names.json
+
+# 延续之前的做法：直接使用原始 PT 中的名称
+python3 A8mini_RTSP_YOLO_Detection.py --model yolo11s.engine --names-model yolo11s.pt
+```
+
+终端会打印实际名称来源、类别总数和示例。JSON 支持名称数组、从 0 开始的编号字典，或带 `names` 字段的对象。名称表必须来自导出 engine 的原始模型，且编号顺序一致；同样有 80 类并不能证明两个模型的类别定义相同。检测编号超出外部表时会明确报错。
+
+本次 PT 中 `62=tv`、`74=clock`。因此截图中的风扇框会显示 `clock`，这是模型原本的误识别；补名称仅恢复编号对应的标签，不会提高模型识别准确率。
+
 ## 采集与重连
 
 ```text
@@ -80,4 +105,6 @@ python3 A8mini_RTSP_YOLO_Detection.py --help
 
 本次 12 项测试全部通过，包含主循环的模拟模型推理和保存开关验证；另用本地生成的 MJPEG 视频验证了实际 FFmpeg 带超时参数打开和解码成功，语法检查及 `--help` 通过。
 
-当前验证主机 OpenCV 5.0.0 支持 FFmpeg、不支持 GStreamer；项目没有模型权重。未验证 A8 mini 真机网络、Orin NX 硬解码、TensorRT 性能或长时间稳定性。上板后先确认 `cv2.getBuildInformation()` 中 GStreamer 为 YES，且 `gst-inspect-1.0 nvv4l2decoder`、`gst-inspect-1.0 nvvidconv` 可用，再进行实际断网/恢复和长时间运行测试。
+后续类别名称修复增加 8 项测试，现共 20 项通过；覆盖同名 PT/JSON 自动回退、显式覆盖、只加载一次、名称缺失警告、无效/越界类别表，以及本次 PT 提取表中的 62/74 类映射。
+
+当前验证主机 OpenCV 5.0.0 支持 FFmpeg、不支持 GStreamer。本次类别修复实际加载了用户提供的 PT 并提取名称，但未运行 TensorRT engine。未验证 A8 mini 真机网络、Orin NX 硬解码、TensorRT 性能或长时间稳定性。上板后先确认 `cv2.getBuildInformation()` 中 GStreamer 为 YES，且 `gst-inspect-1.0 nvv4l2decoder`、`gst-inspect-1.0 nvvidconv` 可用，再进行实际断网/恢复和长时间运行测试。

@@ -2,6 +2,7 @@
 
 import contextlib
 import io
+import json
 import multiprocessing as mp
 import sys
 import tempfile
@@ -224,6 +225,71 @@ class CaptureTests(unittest.TestCase):
                     else:
                         saver.assert_not_called()
                         self.assertFalse((Path(directory) / "images").exists())
+
+
+class ClassNameTests(unittest.TestCase):
+    def test_real_embedded_names_do_not_load_pt(self):
+        resolver = app.ClassNameResolver("model.engine")
+        with patch.object(app, "load_class_names") as loader:
+            self.assertEqual(resolver.resolve({0: "person"}, [0]), {0: "person"})
+            loader.assert_not_called()
+
+    def test_same_stem_pt_fallback_loaded_only_once(self):
+        with tempfile.TemporaryDirectory() as directory:
+            model = Path(directory) / "custom.engine"
+            model.with_suffix(".pt").touch()
+            resolver = app.ClassNameResolver(model)
+            with patch.object(app, "load_class_names", return_value={0: "drone"}) as loader:
+                for _ in range(2):
+                    self.assertEqual(resolver.resolve({0: "class0"}, [0]), {0: "drone"})
+                loader.assert_called_once_with(str(model.with_suffix(".pt")))
+
+    def test_sidecar_precedes_pt_and_resolves_without_detections(self):
+        with tempfile.TemporaryDirectory() as directory:
+            model = Path(directory) / "custom.engine"
+            model.with_suffix(".names.json").write_text(json.dumps({"names": ["drone"]}))
+            with patch.object(app, "load_class_names") as loader:
+                resolver = app.ClassNameResolver(model)
+                self.assertEqual(resolver.resolve({0: "class0"}, []), {0: "drone"})
+                loader.assert_not_called()
+
+    def test_explicit_pt_overrides_embedded_names(self):
+        with patch.object(app, "load_class_names", return_value={0: "drone"}):
+            resolver = app.ClassNameResolver("model.engine", names_model="original.pt")
+            self.assertEqual(resolver.resolve({0: "person"}, [0]), {0: "drone"})
+
+    def test_explicit_missing_pt_fails(self):
+        with tempfile.TemporaryDirectory() as directory:
+            with self.assertRaises(FileNotFoundError):
+                app.ClassNameResolver("model.engine", names_model=str(Path(directory) / "missing.pt"))
+
+    def test_missing_names_warns_once_without_guessing_coco(self):
+        with tempfile.TemporaryDirectory() as directory:
+            resolver = app.ClassNameResolver(Path(directory) / "custom.engine")
+            output = io.StringIO()
+            with contextlib.redirect_stdout(output):
+                for _ in range(2):
+                    self.assertEqual(resolver.resolve({0: "class0"}, [0]), {0: "class0"})
+            self.assertEqual(output.getvalue().count("[WARN]"), 1)
+
+    def test_invalid_and_mismatched_tables_fail(self):
+        for names in ({1: "person"}, {}, {0: ""}, {"0": "person", 0: "drone"}):
+            with self.subTest(names=names), self.assertRaises(ValueError):
+                app.normalize_names(names)
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "names.json"
+            path.write_text(json.dumps({"0": "drone"}))
+            resolver = app.ClassNameResolver("custom.engine", names_file=str(path))
+            with self.assertRaisesRegex(ValueError, "超出名称表"):
+                resolver.resolve({0: "class0", 1: "class1"}, [1])
+
+    def test_packaged_names_match_screenshot_ids(self):
+        path = Path(__file__).with_name("yolo11s.names.json")
+        resolver = app.ClassNameResolver("yolo11s.engine", names_file=str(path))
+        names = resolver.resolve({i: f"class{i}" for i in range(80)}, [62, 74])
+        self.assertEqual(len(names), 80)
+        self.assertEqual(names[62], "tv")
+        self.assertEqual(names[74], "clock")
 
 
 if __name__ == "__main__":

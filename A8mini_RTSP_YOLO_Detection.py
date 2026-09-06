@@ -25,6 +25,7 @@ A8 mini 常用旧版 RTSP 地址：
 """
 
 import argparse
+import json
 import re
 import time
 from datetime import datetime
@@ -100,22 +101,100 @@ def load_class_names(names_model_path: Optional[str]):
         return None
 
     path = Path(names_model_path).expanduser()
-    if not path.exists():
-        print(f"[WARN] 类别名称模型不存在: {path}")
-        print("[WARN] 将使用推理模型自带的类别名称。")
-        return None
+    if not path.is_file():
+        raise FileNotFoundError(f"类别名称模型不存在: {path}")
 
     print(f"[INFO] Loading class names from: {path}")
     from ultralytics import YOLO
 
     names_model = YOLO(str(path), task="detect")
-    names = names_model.names
+    names = normalize_names(names_model.names)
     del names_model
 
     if names is not None:
         print(f"[INFO] Loaded {len(names)} class names.")
 
     return names
+
+
+def normalize_names(names):
+    """验证类别表，统一成从 0 开始的整数键，拒绝静默错位。"""
+    if isinstance(names, (list, tuple)):
+        names = dict(enumerate(names))
+    if not isinstance(names, dict) or not names:
+        raise ValueError("类别名称表为空或格式错误")
+    normalized = {}
+    for key, value in names.items():
+        if not re.fullmatch(r"0|[1-9][0-9]*", str(key)):
+            raise ValueError(f"无效类别编号: {key}")
+        index = int(key)
+        if index in normalized or not isinstance(value, str) or not value.strip():
+            raise ValueError(f"无效或重复类别名称: {key}")
+        normalized[index] = value.strip()
+    if set(normalized) != set(range(len(normalized))):
+        raise ValueError("类别编号必须从 0 开始连续排列")
+    return normalized
+
+
+def has_real_names(names):
+    try:
+        normalized = normalize_names(names)
+    except ValueError:
+        return False
+    return not any(re.fullmatch(r"class[_ ]?\d+", name, re.IGNORECASE)
+                   for name in normalized.values())
+
+
+class ClassNameResolver:
+    """显式指定优先；自动模式仅在推理结果缺名称时找同名伴随文件。"""
+
+    def __init__(self, model_path, names_model="", names_file=""):
+        self.model_path = Path(model_path).expanduser()
+        self.names = None
+        self.resolved = False
+        self.source = ""
+        if names_file:
+            self._load_file(Path(names_file).expanduser())
+        elif names_model:
+            self._set(load_class_names(names_model), str(Path(names_model).expanduser()))
+
+    def _set(self, names, source):
+        self.names = normalize_names(names)
+        if not has_real_names(self.names):
+            raise ValueError(f"{source} 仍包含 classXX 占位名称，请使用导出 engine 的原始权重")
+        self.source = source
+        self.resolved = True
+        sample = ", ".join(f"{i}={self.names[i]}" for i in sorted(self.names)[:5])
+        print(f"[INFO] 类别名称来源: {source}；共 {len(self.names)} 类；{sample}")
+
+    def _load_file(self, path):
+        with path.open(encoding="utf-8") as stream:
+            data = json.load(stream)
+        self._set(data.get("names", data) if isinstance(data, dict) else data, str(path))
+
+    def resolve(self, result_names, class_ids):
+        if not self.resolved:
+            if has_real_names(result_names):
+                self._set(result_names, "推理模型内置名称")
+            else:
+                sidecar = self.model_path.with_suffix(".names.json")
+                pt = self.model_path.with_suffix(".pt")
+                if sidecar.is_file():
+                    self._load_file(sidecar)
+                elif self.model_path.suffix.lower() != ".pt" and pt.is_file():
+                    self._set(load_class_names(str(pt)), str(pt))
+                else:
+                    self.resolved = True
+                    print("[WARN] 推理模型只有 classXX 占位名称，且没有同名 .names.json/.pt。"
+                          "请指定 --names-model 原始权重.pt 或 --names-file 类别表.json；"
+                          "当前继续显示编号，按名称保存可能不会触发。")
+        if self.names is not None:
+            missing = sorted({int(i) for i in class_ids} - self.names.keys())
+            if missing:
+                raise ValueError(f"检测类别编号 {missing} 超出名称表 {self.source}，"
+                                 "请确认名称表与 engine 来自同一模型、类别顺序一致")
+            return self.names
+        return result_names
 
 
 def parse_save_classes(save_classes_text: str):
@@ -227,12 +306,15 @@ def parse_args(argv=None):
         default="yolo11s.engine",
         help="推理模型，例如 yolo11s.engine 或 yolo11s.pt",
     )
-    parser.add_argument(
+    names_group = parser.add_mutually_exclusive_group()
+    names_group.add_argument(
         "--names-model",
         type=str,
         default="",
-        help="可选：用于读取类别名称的原始 PT 模型；默认直接使用 engine 内置名称",
+        help="显式使用导出 engine 的原始 PT 权重名称；默认自动检查内置名称及同名伴随文件",
     )
+    names_group.add_argument("--names-file", default="",
+                             help="显式使用 JSON 类别表，无需额外加载 PT 权重")
     parser.add_argument(
         "--source",
         type=str,
@@ -381,7 +463,7 @@ def main() -> int:
         from ultralytics import YOLO
 
         model = YOLO(str(model_path), task="detect")
-        names = load_class_names(args.names_model)
+        names = ClassNameResolver(model_path, args.names_model, args.names_file)
         capture = LatestFrameCapture(CaptureConfig(
             source=args.source, backend=args.backend, codec=args.codec,
             latency_ms=args.latency, open_timeout_ms=args.open_timeout,
@@ -440,7 +522,7 @@ def main() -> int:
             box_data = (result.boxes.data.detach().cpu().numpy()
                         if result.boxes is not None else [])
             yolo_ms = (time.monotonic() - started) * 1000
-            current_names = names if names is not None else result.names
+            current_names = names.resolve(result.names, [row[-1] for row in box_data])
             target_detections = []
             for row in box_data:
                 cls_id, confidence = int(row[-1]), float(row[-2])
