@@ -284,7 +284,7 @@ class ClassNameTests(unittest.TestCase):
                 resolver.resolve({0: "class0", 1: "class1"}, [1])
 
     def test_packaged_names_match_screenshot_ids(self):
-        path = Path(__file__).with_name("yolo11s.names.json")
+        path = Path(__file__).resolve().parents[1] / "weights" / "yolo11s.names.json"
         resolver = app.ClassNameResolver("yolo11s.engine", names_file=str(path))
         names = resolver.resolve({i: f"class{i}" for i in range(80)}, [62, 74])
         self.assertEqual(len(names), 80)

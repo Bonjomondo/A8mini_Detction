@@ -15,11 +15,11 @@ A8 mini 常用旧版 RTSP 地址：
     rtsp://192.168.144.25:8554/main.264
 
 使用示例：
-    python3 A8mini_RTSP_YOLO_Detection.py
+    python3 scripts/A8mini_RTSP_YOLO_Detection.py
 
-    python3 A8mini_RTSP_YOLO_Detection.py \
-        --model yolo11s.engine \
-        --names-model yolo11s.pt \
+    python3 scripts/A8mini_RTSP_YOLO_Detection.py \
+        --model weights/yolo11s.engine \
+        --names-model weights/yolo11s.pt \
         --save --save-classes person \
         --save-crops
 """
@@ -36,6 +36,9 @@ import cv2
 import numpy as np
 
 from rtsp_capture import CaptureConfig, LatestFrameCapture
+
+# 项目根目录（scripts/ 的上一级），用于解析 weights/ 等资源。
+WORKSPACE = Path(__file__).resolve().parents[1]
 
 
 def get_class_name(names, cls_id: int) -> str:
@@ -303,8 +306,8 @@ def parse_args(argv=None):
     parser.add_argument(
         "--model",
         type=str,
-        default="yolo11s.engine",
-        help="推理模型，例如 yolo11s.engine 或 yolo11s.pt",
+        default=str(WORKSPACE / "weights" / "yolo11s.engine"),
+        help="推理模型，例如 weights/yolo11s.engine 或 weights/yolo11s.pt",
     )
     names_group = parser.add_mutually_exclusive_group()
     names_group.add_argument(

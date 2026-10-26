@@ -1,25 +1,95 @@
 # A8 mini RTSP YOLO 检测 V1.2
 
-运行时将 `A8mini_RTSP_YOLO_Detection.py` 和 `rtsp_capture.py` 放在同一目录。使用目标 Orin NX 环境中可运行的 OpenCV、NumPy、Ultralytics、PyTorch/CUDA/TensorRT，以及在相应环境导出的 engine。
+所有 Python 入口脚本位于 `scripts/`，模型文件位于 `weights/`。运行时 `A8mini_RTSP_YOLO_Detection.py` 与 `rtsp_capture.py` 位于同一目录（`scripts/`）。使用目标 Orin NX 环境中可运行的 OpenCV、NumPy、Ultralytics、PyTorch/CUDA/TensorRT，以及在相应环境导出的 engine。
 
 ```bash
-python3 A8mini_RTSP_YOLO_Detection.py --model /path/to/yolo11s.engine --imgsz 640
+python3 scripts/A8mini_RTSP_YOLO_Detection.py --model weights/yolo11s.engine --imgsz 640
 ```
 
 默认地址仍为 `rtsp://192.168.144.25:8554/main.264`。默认先用 GStreamer H.264 硬解码；打开超时 2000 ms，读帧超时 1000 ms，重连间隔 0.2 秒。有线网络可测试 `--read-timeout 800`，代码不会再将它强制放大到 1000 ms。超时过短可能在网络抖动或等待关键帧时引发频繁重连，应以现场日志调整。
 
+## 目录结构
+
+```text
+Detr_Trials/
+├── scripts/       # 所有 Python 入口脚本（检测、基准、测试）
+├── weights/       # 模型文件（.pt/.pth/.engine/.onnx/.names.json）
+├── benchmarks/    # Test A/C 基准测试结果
+├── dataset/       # VisDrone 等数据集
+├── docs/          # 手册与 SDK 文档
+├── reports/       # 性能/可行性报告
+├── test_results/  # 运行时输出（D435i、predict 等）
+└── SO_DETR/       # 定制 ultralytics fork
+```
+
+## Orin NX 模型性能基线（Test A / C）
+
+使用系统 `python3` 和本机 TensorRT，运行 [scripts/benchmark_ac.py](scripts/benchmark_ac.py)：
+
+```bash
+sudo jetson_clocks
+python3 scripts/benchmark_ac.py
+# 仅选部分模型
+python3 scripts/benchmark_ac.py --models YOLO11n SO-DETR-NoFFT
+```
+
+默认测试 `weights/` 中的 YOLO11 n/s/m、YOLO26 n/s/m、RT-DETR-R18 和 SO-DETR-NoFFT；统一静态 640×640、Batch 1、TensorRT FP16、单 stream，每次精确预热 500 次，正式测 30 秒，重复 3 次。Test A 直接计时 TensorRT runtime，排除数据传输和检测预后处理；Test C 同时用 `tegrastats` 每 200 ms 记录 RAM、GPU 利用率、温度和可读取的功耗传感器。脚本验证 CPU/GPU 锁频，保留当前电源模式；未锁频时退出，可显式用 `--allow-unlocked` 记录当前状态。
+
+结果保存在 `benchmarks/时间戳_testAC/`：`benchmark_env.md`、环境原始 dump、`summary.md` / `summary.csv` / `summary.json`，以及每个模型的构建日志、配置、权重校验和 3 次逐次计时、资源采样日志。`summary.md` 分别汇总 Test A 和 Test C；FPS 是同步串行循环实测吞吐。RAM 为全系统占用，功耗取 `VDD_IN`，缺失传感器数据标为 `N/A`。
+
+导出使用 PyTorch 的逐通道 Conv/BN 融合，构建前检查 ONNX 权重是否包含 NaN/Inf；每轮预热后再次校验 TensorRT 输出。失败输出记录在 `output_validation.json`，通过后才开始计时。恢复时校验配置、权重、ONNX、engine 校验和及 CPU/GPU 频率，保留已完成模型的原始环境和结果。同一实验目录使用进程锁，防止重复启动队列；engine 构建成功后才保存为最终文件。
+
+RT-DETR-R18 使用 [官方模型代码](https://github.com/lyuwenyu/RT-DETR)，首次导出时自动下载固定提交到 `benchmarks/vendor/`；NoFFT 使用本项目 `SO_DETR` fork。YOLO26 保留 one-to-one 分支并排除最终 top-k 筛选。导出和测量在独立进程执行，测量进程不加载 PyTorch。此入口只执行 Test A / C，不读取 VisDrone、测 AP 或接相机。
+
+```bash
+# 同目录可恢复已完成的构建/重复实验；参数和权重必须保持一致
+python3 scripts/benchmark_ac.py --output benchmarks/20261006_testAC
+# 仅重新生成汇总表
+python3 scripts/benchmark_ac.py --output benchmarks/20261006_testAC --report-only
+# 完整八模型实验结束后，核验记录（不再运行 GPU 推理）
+python3 scripts/benchmark_audit.py --output benchmarks/20261006_testAC
+```
+
+核验报告写入实验目录的 `audit.json`，检查三个完整测量窗口、输入形状、输出有效性、锁频、逐次计时统计、正式资源采样和模型/环境校验和，并从 engine inspector 确认 FP16 卷积。早期 YOLO11n 记录只有模型/构建级 engine 校验和，此差异单独记录；不改写旧的测量数据。
+
+## D435i 本机 RGB 检测与性能测试
+
+机载电脑接入 D435i 后，可使用 [scripts/d435i_detection.py](scripts/d435i_detection.py) 测试现有 `weights/noFFN_fp16.engine`。脚本通过 `pyrealsense2` 读取 RGB，使用项目内 `SO_DETR` 的 **RTDETR** 推理，默认不开深度和 IMU。请使用已有 CUDA、TensorRT、PyTorch 和 RealSense SDK 的系统 `python3`；当前 `.venv` 缺少 PyTorch。
+
+```bash
+# 640×480 / 30 FPS RGB，640×640 模型输入，预热 10 帧后测试 60 秒
+python3 scripts/d435i_detection.py --no-display
+
+# 比较 720p RGB 输入
+python3 scripts/d435i_detection.py --width 1280 --height 720 --no-display
+
+# 在机载电脑桌面终端显示检测窗口，持续运行；Q / ESC / Ctrl+C 退出
+python3 scripts/d435i_detection.py --duration 0
+
+# 单测相机采集，排除模型耗时
+python3 scripts/d435i_detection.py --capture-only --no-display --duration 10
+```
+
+采集线程持续读取相机，主线程只处理最新帧。相机帧率超过检测吞吐时，主动跳过中间帧，不积累应用层待处理队列。测试结束释放相机，默认在 `test_results/d435i/时间戳/` 保存 `summary.json`、逐帧 `frames.json` 和最后一帧 `last_frame.jpg`，也可用 `--output` 指定目录。
+
+`processed_fps` 是排除预热后的真实处理吞吐，包含等帧、检测和启用的显示开销；`predict_ms` 包含模型调用、检测框转 CPU 和 CUDA 同步。`age_ms` 从 SDK 返回帧到送入检测计时；`local_result_latency_ms` 从 SDK 返回帧到检测结果可用计时，**均不包含曝光、USB 传输和 SDK 内部缓冲**。`skipped_by_consumer` 是主动跳过的已采集帧，`sdk_frame_number_gaps` 是 SDK 帧编号缺口，二者分别记录。`--no-display` 关闭循环内绘图和显示，保存结果图在计时结束后进行。
+
+noFFN 是 VisDrone 航拍 10 类模型；室内 D435i 画面可用于评估运行性能，检测数量不能作为准确率评估。该入口与 A8 mini RTSP 的网络/解码链路不同，真机结果不能直接代表 A8 mini 的端到端延迟。
+
+2026-10-04 在当前机载电脑完成两轮各 60 秒实测：640×480 输入为 **18.62 FPS**，1280×720 输入为 **18.43 FPS**，相机采集均约 30 FPS。详细计时与结果图见 [D435i 性能测试报告](reports/D435i_性能测试报告.md)。
+
 ```bash
 # 无桌面环境，每两秒输出一次统计
-python3 A8mini_RTSP_YOLO_Detection.py --model /path/to/yolo11s.engine --no-display
+python3 scripts/A8mini_RTSP_YOLO_Detection.py --model weights/yolo11s.engine --no-display
 
 # 单独比较 FFmpeg 后端
-python3 A8mini_RTSP_YOLO_Detection.py --model /path/to/yolo11s.engine --backend ffmpeg
+python3 scripts/A8mini_RTSP_YOLO_Detection.py --model weights/yolo11s.engine --backend ffmpeg
 
 # 相机实际输出为 H.265 时，选择相应 GStreamer 解码管线
-python3 A8mini_RTSP_YOLO_Detection.py --model /path/to/yolo11s.engine --codec h265
+python3 scripts/A8mini_RTSP_YOLO_Detection.py --model weights/yolo11s.engine --codec h265
 
 # 显式启用保存完整画面和未经标注的目标裁剪图
-python3 A8mini_RTSP_YOLO_Detection.py --model /path/to/yolo11s.engine \
+python3 scripts/A8mini_RTSP_YOLO_Detection.py --model weights/yolo11s.engine \
     --save --save-classes person --save-crops --save-cooldown 2
 ```
 
@@ -29,7 +99,7 @@ python3 A8mini_RTSP_YOLO_Detection.py --model /path/to/yolo11s.engine \
 
 `class62` 表示已经有类别编号，但名称表缺失或只有占位名称。[Ultralytics 的默认名称逻辑](https://github.com/ultralytics/ultralytics/blob/main/ultralytics/nn/autobackend.py)会在缺少名称时生成 `class0`、`class1` 等标签。
 
-这次检查了目录中的真实文件：`yolo11s.engine` 没有可读取的标准 Ultralytics JSON 元数据头；`yolo11s.pt` 可以读出 80 类名称。已从这份 PT 提取 [yolo11s.names.json](yolo11s.names.json)，请与 engine 放在同一目录。原命令即可自动加载类别表，不必为了名称再额外加载 PT。
+这次检查了目录中的真实文件：`yolo11s.engine` 没有可读取的标准 Ultralytics JSON 元数据头；`yolo11s.pt` 可以读出 80 类名称。已从这份 PT 提取 [weights/yolo11s.names.json](weights/yolo11s.names.json)，与 engine 一起放在 `weights/`。原命令即可自动加载类别表，不必为了名称再额外加载 PT。
 
 名称来源按以下规则选择：
 
@@ -40,10 +110,10 @@ python3 A8mini_RTSP_YOLO_Detection.py --model /path/to/yolo11s.engine \
 
 ```bash
 # 最轻量：显式指定已从原始 PT 提取的名称表
-python3 A8mini_RTSP_YOLO_Detection.py --model yolo11s.engine --names-file yolo11s.names.json
+python3 scripts/A8mini_RTSP_YOLO_Detection.py --model weights/yolo11s.engine --names-file weights/yolo11s.names.json
 
 # 延续之前的做法：直接使用原始 PT 中的名称
-python3 A8mini_RTSP_YOLO_Detection.py --model yolo11s.engine --names-model yolo11s.pt
+python3 scripts/A8mini_RTSP_YOLO_Detection.py --model weights/yolo11s.engine --names-model weights/yolo11s.pt
 ```
 
 终端会打印实际名称来源、类别总数和示例。JSON 支持名称数组、从 0 开始的编号字典，或带 `names` 字段的对象。名称表必须来自导出 engine 的原始模型，且编号顺序一致；同样有 80 类并不能证明两个模型的类别定义相同。检测编号超出外部表时会明确报错。
@@ -84,9 +154,9 @@ GStreamer 和 FFmpeg 都在 `VideoCapture` 打开时接收超时参数。GStream
 
 ## 文档核对
 
-- [A8 mini 用户手册](<A8 mini云台相机用户手册.pdf>)：印刷页 60–61 说明新旧 RTSP 地址与产品适用范围，A8 mini 使用旧地址；第 19 页说明同一地址最多四路输出。此次没有改相机固件或网络配置。
-- [SDK V0.1.1](<SDK - V0.1.1.pdf>)：第 22–23 页，`0x20/0x21` 定义查询/设置编码参数，`VideoEncType` 的 1/2 对应 H264/H265；实际能力仍依赖相机固件。
-- [达妙载板说明书](<达妙科技DM-ORIN NX V2.X使用说明书V1.0 (1).pdf>)：介绍载板接口、网口及驱动，不能据此推断已安装 OpenCV 的 GStreamer 支持情况。
+- [A8 mini 用户手册](<docs/A8 mini云台相机用户手册.pdf>)：印刷页 60–61 说明新旧 RTSP 地址与产品适用范围，A8 mini 使用旧地址；第 19 页说明同一地址最多四路输出。此次没有改相机固件或网络配置。
+- [SDK V0.1.1](<docs/SDK - V0.1.1.pdf>)：第 22–23 页，`0x20/0x21` 定义查询/设置编码参数，`VideoEncType` 的 1/2 对应 H264/H265；实际能力仍依赖相机固件。
+- [达妙载板说明书](<docs/达妙科技DM-ORIN NX V2.X使用说明书V1.0 (1).pdf>)：介绍载板接口、网口及驱动，不能据此推断已安装 OpenCV 的 GStreamer 支持情况。
 - [OpenCV 超时属性](https://docs.opencv.org/4.10.0/d4/d15/group__videoio__flags__base.html)及 [GStreamer 后端源码](https://github.com/opencv/opencv/blob/4.10.0/modules/videoio/src/cap_gstreamer.cpp)：超时需在打开时传入；实际能力取决于 OpenCV/GStreamer 构建版本。
 - [GStreamer rtspsrc](https://gstreamer.freedesktop.org/documentation/rtsp/rtspsrc.html#rtspsrc:tcp-timeout)：TCP 超时的单位是微秒；`timeout` 是另一项 UDP 回退属性，不能混用。
 - [Ultralytics 固定输入尺寸](https://docs.ultralytics.com/modes/predict/#fixed-shape-vs-minimum-rectangle-rect)：显式使用 `rect=False`。这并不说明旧版固定 engine 必然会收到错误尺寸；仍必须让 `--imgsz` 匹配 engine。
@@ -96,9 +166,9 @@ GStreamer 和 FFmpeg 都在 `VideoCapture` 打开时接收超时参数。GStream
 ## 验证
 
 ```bash
-python3 -m unittest -v test_rtsp_capture
-python3 -m py_compile A8mini_RTSP_YOLO_Detection.py rtsp_capture.py
-python3 A8mini_RTSP_YOLO_Detection.py --help
+python3 scripts/test_rtsp_capture.py -v
+python3 -m py_compile scripts/A8mini_RTSP_YOLO_Detection.py scripts/rtsp_capture.py
+python3 scripts/A8mini_RTSP_YOLO_Detection.py --help
 ```
 
 测试使用真实 spawn 进程注入打开、读帧和释放阻塞、连续短连接、打开异常；检查自动切换、固定后端重连、退出清理、慢消费者跳帧、共享帧所有权、过期帧、超时参数和保存结果。

@@ -1,0 +1,43 @@
+# Python caches and test artifacts
+__pycache__/
+*.py[cod]
+*.so
+.pytest_cache/
+.mypy_cache/
+
+# Local environments and editor settings
+.venv/
+venv/
+env/
+.env
+.vscode/
+.idea/
+.DS_Store
+
+# Local datasets and model weights
+/dataset/
+/datasets/
+/data/
+weights/
+*.pt
+*.pth
+
+# External nested repository
+/SO_DETR/
+
+# Exported and deployment model artifacts
+# *.onnx
+# *.engine
+*.trt
+*.torchscript
+*.mlmodel
+
+# Generated benchmark and runtime results
+benchmarks/
+test_results/
+wandb/
+mlruns/
+
+# Logs and temporary files
+*.log
+*.tmp
