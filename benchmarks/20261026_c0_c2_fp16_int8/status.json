@@ -1,0 +1,25 @@
+{
+  "started": 1793004377.5778017,
+  "completed": [
+    "c0_fp16_build",
+    "c0_int8_build",
+    "c2_export",
+    "c2_fp16_build",
+    "c2_int8_build",
+    "c0_fp16_repeat1",
+    "c0_int8_repeat1",
+    "c2_fp16_repeat1",
+    "c2_int8_repeat1",
+    "c2_int8_repeat2",
+    "c2_fp16_repeat2",
+    "c0_int8_repeat2",
+    "c0_fp16_repeat2",
+    "c0_fp16_repeat3",
+    "c0_int8_repeat3",
+    "c2_fp16_repeat3",
+    "c2_int8_repeat3"
+  ],
+  "status": "complete",
+  "stage": "c2_int8_repeat3",
+  "finished": 1793007373.4641354
+}

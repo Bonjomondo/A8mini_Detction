@@ -1,0 +1,11 @@
+{
+  "precision_requested": "int8",
+  "fp16_fallback": true,
+  "calibration": "EntropyCalibrator2; 256 deterministic VisDrone train images; RGB stretch /255",
+  "calibration_batches_consumed": 256,
+  "tensorrt": "8.5.2.2",
+  "build_seconds": 452.7007677555084,
+  "engine_sha256": "bb78b1299b410992e1a78c7a17f1fb234b3d7efc2194568fc771195599d675ab",
+  "engine_bytes": 28438374,
+  "workspace_bytes": 2147483648
+}

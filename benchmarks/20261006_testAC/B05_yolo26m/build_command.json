@@ -1,0 +1,15 @@
+{
+  "command": [
+    "/usr/src/tensorrt/bin/trtexec",
+    "--onnx=/home/q/Documents/A8mini_Detction/benchmarks/20261006_testAC/B05_yolo26m/model.onnx",
+    "--saveEngine=/home/q/Documents/A8mini_Detction/benchmarks/20261006_testAC/B05_yolo26m/model_fp16.building.engine",
+    "--fp16",
+    "--noTF32",
+    "--workspace=4096",
+    "--profilingVerbosity=detailed",
+    "--timingCacheFile=/home/q/Documents/A8mini_Detction/benchmarks/20261006_testAC/timing.cache",
+    "--buildOnly"
+  ],
+  "engine_sha256": "e28556c8ad295e0e13b121e7acba44b137fa63a29c2b0ac5c333fda87bdedd1b",
+  "onnx_sha256": "c1af6ecd159d6b98e2551cd32d5401b1cb42c382f7b0ec764c0e0f6895480d6e"
+}

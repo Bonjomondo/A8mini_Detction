@@ -1,0 +1,11 @@
+{
+  "precision_requested": "fp16",
+  "fp16_fallback": true,
+  "calibration": null,
+  "calibration_batches_consumed": 0,
+  "tensorrt": "8.5.2.2",
+  "build_seconds": 67.90880465507507,
+  "engine_sha256": "18af635a4364705646fd73f85a67f2d04e59293e02d2c631cf706d28417aa127",
+  "engine_bytes": 43742490,
+  "workspace_bytes": 2147483648
+}

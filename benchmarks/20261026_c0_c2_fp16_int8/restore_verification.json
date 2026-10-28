@@ -1,0 +1,270 @@
+{
+  "restore_exit_zero": true,
+  "frequency_checks": [
+    {
+      "path": "/sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq",
+      "before": "729600",
+      "after": "729600",
+      "match": true
+    },
+    {
+      "path": "/sys/devices/system/cpu/cpu1/cpufreq/scaling_min_freq",
+      "before": "729600",
+      "after": "729600",
+      "match": true
+    },
+    {
+      "path": "/sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq",
+      "before": "729600",
+      "after": "729600",
+      "match": true
+    },
+    {
+      "path": "/sys/devices/system/cpu/cpu3/cpufreq/scaling_min_freq",
+      "before": "729600",
+      "after": "729600",
+      "match": true
+    },
+    {
+      "path": "/sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq",
+      "before": "729600",
+      "after": "729600",
+      "match": true
+    },
+    {
+      "path": "/sys/devices/system/cpu/cpu5/cpufreq/scaling_min_freq",
+      "before": "729600",
+      "after": "729600",
+      "match": true
+    },
+    {
+      "path": "/sys/devices/system/cpu/cpu6/cpufreq/scaling_min_freq",
+      "before": "729600",
+      "after": "729600",
+      "match": true
+    },
+    {
+      "path": "/sys/devices/system/cpu/cpu7/cpufreq/scaling_min_freq",
+      "before": "729600",
+      "after": "729600",
+      "match": true
+    },
+    {
+      "path": "/sys/class/devfreq/17000000.ga10b/min_freq",
+      "before": "306000000",
+      "after": "306000000",
+      "match": true
+    }
+  ],
+  "all_readable_frequency_settings_restored": true,
+  "other_readable_checks": [
+    {
+      "path": "/sys/devices/system/cpu/cpu0/online",
+      "before": "1",
+      "after": "1",
+      "match": true
+    },
+    {
+      "path": "/sys/devices/system/cpu/cpu1/online",
+      "before": "1",
+      "after": "1",
+      "match": true
+    },
+    {
+      "path": "/sys/devices/system/cpu/cpu2/online",
+      "before": "1",
+      "after": "1",
+      "match": true
+    },
+    {
+      "path": "/sys/devices/system/cpu/cpu3/online",
+      "before": "1",
+      "after": "1",
+      "match": true
+    },
+    {
+      "path": "/sys/devices/system/cpu/cpu4/online",
+      "before": "1",
+      "after": "1",
+      "match": true
+    },
+    {
+      "path": "/sys/devices/system/cpu/cpu5/online",
+      "before": "1",
+      "after": "1",
+      "match": true
+    },
+    {
+      "path": "/sys/devices/system/cpu/cpu6/online",
+      "before": "1",
+      "after": "1",
+      "match": true
+    },
+    {
+      "path": "/sys/devices/system/cpu/cpu7/online",
+      "before": "1",
+      "after": "1",
+      "match": true
+    },
+    {
+      "path": "/sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq",
+      "before": "729600",
+      "after": "729600",
+      "match": true
+    },
+    {
+      "path": "/sys/devices/system/cpu/cpu1/cpufreq/scaling_min_freq",
+      "before": "729600",
+      "after": "729600",
+      "match": true
+    },
+    {
+      "path": "/sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq",
+      "before": "729600",
+      "after": "729600",
+      "match": true
+    },
+    {
+      "path": "/sys/devices/system/cpu/cpu3/cpufreq/scaling_min_freq",
+      "before": "729600",
+      "after": "729600",
+      "match": true
+    },
+    {
+      "path": "/sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq",
+      "before": "729600",
+      "after": "729600",
+      "match": true
+    },
+    {
+      "path": "/sys/devices/system/cpu/cpu5/cpufreq/scaling_min_freq",
+      "before": "729600",
+      "after": "729600",
+      "match": true
+    },
+    {
+      "path": "/sys/devices/system/cpu/cpu6/cpufreq/scaling_min_freq",
+      "before": "729600",
+      "after": "729600",
+      "match": true
+    },
+    {
+      "path": "/sys/devices/system/cpu/cpu7/cpufreq/scaling_min_freq",
+      "before": "729600",
+      "after": "729600",
+      "match": true
+    },
+    {
+      "path": "/sys/devices/system/cpu/cpu0/cpuidle/state0/disable",
+      "before": "0",
+      "after": "0",
+      "match": true
+    },
+    {
+      "path": "/sys/devices/system/cpu/cpu0/cpuidle/state1/disable",
+      "before": "0",
+      "after": "0",
+      "match": true
+    },
+    {
+      "path": "/sys/devices/system/cpu/cpu1/cpuidle/state0/disable",
+      "before": "0",
+      "after": "0",
+      "match": true
+    },
+    {
+      "path": "/sys/devices/system/cpu/cpu1/cpuidle/state1/disable",
+      "before": "0",
+      "after": "0",
+      "match": true
+    },
+    {
+      "path": "/sys/devices/system/cpu/cpu2/cpuidle/state0/disable",
+      "before": "0",
+      "after": "0",
+      "match": true
+    },
+    {
+      "path": "/sys/devices/system/cpu/cpu2/cpuidle/state1/disable",
+      "before": "0",
+      "after": "0",
+      "match": true
+    },
+    {
+      "path": "/sys/devices/system/cpu/cpu3/cpuidle/state0/disable",
+      "before": "0",
+      "after": "0",
+      "match": true
+    },
+    {
+      "path": "/sys/devices/system/cpu/cpu3/cpuidle/state1/disable",
+      "before": "0",
+      "after": "0",
+      "match": true
+    },
+    {
+      "path": "/sys/devices/system/cpu/cpu4/cpuidle/state0/disable",
+      "before": "0",
+      "after": "0",
+      "match": true
+    },
+    {
+      "path": "/sys/devices/system/cpu/cpu4/cpuidle/state1/disable",
+      "before": "0",
+      "after": "0",
+      "match": true
+    },
+    {
+      "path": "/sys/devices/system/cpu/cpu5/cpuidle/state0/disable",
+      "before": "0",
+      "after": "0",
+      "match": true
+    },
+    {
+      "path": "/sys/devices/system/cpu/cpu5/cpuidle/state1/disable",
+      "before": "0",
+      "after": "0",
+      "match": true
+    },
+    {
+      "path": "/sys/devices/system/cpu/cpu6/cpuidle/state0/disable",
+      "before": "0",
+      "after": "0",
+      "match": true
+    },
+    {
+      "path": "/sys/devices/system/cpu/cpu6/cpuidle/state1/disable",
+      "before": "0",
+      "after": "0",
+      "match": true
+    },
+    {
+      "path": "/sys/devices/system/cpu/cpu7/cpuidle/state0/disable",
+      "before": "0",
+      "after": "0",
+      "match": true
+    },
+    {
+      "path": "/sys/devices/system/cpu/cpu7/cpuidle/state1/disable",
+      "before": "0",
+      "after": "0",
+      "match": true
+    },
+    {
+      "path": "/sys/class/devfreq/17000000.ga10b/min_freq",
+      "before": "306000000",
+      "after": "306000000",
+      "match": true
+    },
+    {
+      "path": "/sys/devices/platform/gpu.0/railgate_enable",
+      "before": "0",
+      "after": "0",
+      "match": true
+    }
+  ],
+  "unreadable_paths": [
+    "/sys/kernel/debug/bpmp/debug/clk/emc/mrq_rate_locked",
+    "/root/.jetsonclocks_fan.txt"
+  ]
+}

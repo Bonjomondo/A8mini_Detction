@@ -1,0 +1,24 @@
+{
+  "model": "c2",
+  "torch": "2.1.0a0+41361538.nv23.06",
+  "parameters": 20135032,
+  "weights_sha256": "dd6a761f42617ac34784f657e938bd9082be363df6be1fc505e77f11f0f8fa32",
+  "onnx_sha256": "2587b1e898fa6e1bf1c138ab182a28df364ee2b4cd293c9256123eed99041aba",
+  "input_shape": [
+    1,
+    3,
+    640,
+    640
+  ],
+  "output_shape": [
+    1,
+    300,
+    14
+  ],
+  "head": "<class 'ultralytics.nn.modules.head.RTDETRDecoder'>",
+  "checkpoint_epoch": -1,
+  "preprocessing": "RGB resize directly to 640x640, NCHW float32 /255; RTDETR stretch",
+  "opset": 16,
+  "output_finite": true,
+  "fusion": "unfused PyTorch evaluation graph; ONNX constant folding and TensorRT optimization"
+}

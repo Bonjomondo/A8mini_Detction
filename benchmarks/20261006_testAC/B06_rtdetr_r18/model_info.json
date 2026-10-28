@@ -1,0 +1,37 @@
+{
+  "weights": "/home/q/Documents/A8mini_Detction/weights/rtdetr_r18vd_dec3_6x_coco_from_paddle.pth",
+  "weights_sha256": "3ba8b5c909c9a1c4f21e96d0a7251ab1a485093955ca327d0061fef8d33c66f0",
+  "input_shape": [
+    1,
+    3,
+    640,
+    640
+  ],
+  "opset": 16,
+  "postprocessing": "External detection selection/NMS excluded; box decode retained",
+  "params": 20184464,
+  "parameter_note": "Checkpoint total and fused module total saved separately; denoising embedding retained but unused during eval",
+  "source": "https://github.com/lyuwenyu/RT-DETR",
+  "source_commit": "29320b6fd828f8e0987a71426cf2d961b09dfed7",
+  "implementation": "official RT-DETR PyTorch; strict checkpoint load; raw boxes/scores",
+  "deploy_params": 19983248,
+  "gflops": 59.7198848,
+  "gflops_method": "THOP MACs x 2, deployed FP32 PyTorch model at 640; unsupported ops not counted",
+  "onnx_inputs": {
+    "images": [
+      1,
+      3,
+      640,
+      640
+    ]
+  },
+  "onnx_outputs": {
+    "output0": [
+      1,
+      300,
+      84
+    ]
+  },
+  "onnx_sha256": "21e935faf63ca3b9756c53fae40754895e068bcab0d2f2276620e381b32535fd",
+  "onnx_bytes": 80481441
+}

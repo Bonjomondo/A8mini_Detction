@@ -1,0 +1,822 @@
+[10/26/2026-17:18:53] [TRT] [I] [MemUsageChange] Init CUDA: CPU +221, GPU +0, now: CPU 256, GPU 7660 (MiB)
+[10/26/2026-17:18:56] [TRT] [I] [MemUsageChange] Init builder kernel library: CPU +302, GPU +283, now: CPU 581, GPU 7964 (MiB)
+[10/26/2026-17:18:56] [TRT] [W] onnx2trt_utils.cpp:375: Your ONNX model has been generated with INT64 weights, while TensorRT does not natively support INT64. Attempting to cast down to INT32.
+[10/26/2026-17:18:56] [TRT] [I] /model.6/ma/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:56] [TRT] [I] /model.6/ma/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:56] [TRT] [I] /model.6/ma/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:56] [TRT] [I] /model.6/ma/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:56] [TRT] [I] /model.6/ma/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:56] [TRT] [I] /model.6/ma/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:56] [TRT] [I] /model.6/ma/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:56] [TRT] [I] /model.6/ma/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:56] [TRT] [I] /model.6/ma/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:56] [TRT] [I] /model.6/ma/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:56] [TRT] [I] /model.6/ma/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:56] [TRT] [I] /model.6/ma/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:56] [TRT] [I] /model.6/ma/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:56] [TRT] [I] /model.6/ma/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:56] [TRT] [I] /model.6/ma/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:56] [TRT] [I] /model.6/ma/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:56] [TRT] [I] /model.6/ma/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:56] [TRT] [I] /model.6/ma/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:56] [TRT] [I] /model.6/ma/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:56] [TRT] [I] /model.6/ma/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:56] [TRT] [I] /model.6/ma/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:56] [TRT] [I] /model.6/ma/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:56] [TRT] [I] /model.6/ma/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:56] [TRT] [I] /model.6/ma/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:56] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:56] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:56] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:56] [TRT] [W] onnx2trt_utils.cpp:403: One or more weights outside the range of INT32 was clamped
+[10/26/2026-17:18:56] [TRT] [I] /model.6/ma/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:56] [TRT] [I] /model.6/ma/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:56] [TRT] [I] /model.6/ma/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:56] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:56] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:56] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:56] [TRT] [I] /model.6/ma/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:56] [TRT] [I] /model.6/ma/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:56] [TRT] [I] /model.6/ma/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:56] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:56] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:56] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:56] [TRT] [I] /model.6/ma/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:56] [TRT] [I] /model.6/ma/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:56] [TRT] [I] /model.6/ma/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:56] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:56] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:56] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:56] [TRT] [I] /model.6/ma/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:56] [TRT] [I] /model.6/ma/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:56] [TRT] [I] /model.6/ma/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:56] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:56] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:56] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:56] [TRT] [I] /model.6/ma/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:56] [TRT] [I] /model.6/ma/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:56] [TRT] [I] /model.6/ma/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:56] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:56] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:56] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:56] [TRT] [I] /model.6/ma/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:56] [TRT] [I] /model.6/ma/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:56] [TRT] [I] /model.6/ma/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:56] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:56] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:56] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:56] [TRT] [I] /model.6/ma/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:56] [TRT] [I] /model.6/ma/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:56] [TRT] [I] /model.6/ma/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:56] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:56] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:56] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:56] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:56] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:56] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [W] onnx2trt_utils.cpp:403: One or more weights outside the range of INT32 was clamped
+[10/26/2026-17:18:57] [TRT] [I] /model.6/ma/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.6/ma/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.6/ma/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.6/ma/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.6/ma/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.6/ma/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.6/ma/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.6/ma/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.6/ma/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.6/ma/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.6/ma/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.6/ma/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.6/ma/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.6/ma/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.6/ma/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.6/ma/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.6/ma/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.6/ma/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.6/ma/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.6/ma/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.6/ma/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.2/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.2/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.2/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [W] onnx2trt_utils.cpp:403: One or more weights outside the range of INT32 was clamped
+[10/26/2026-17:18:57] [TRT] [I] /model.6/ma/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.6/ma/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.6/ma/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.2/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.2/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.2/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.6/ma/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.6/ma/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.6/ma/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.2/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.2/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.2/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.6/ma/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.6/ma/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.6/ma/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.2/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.2/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.2/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.6/ma/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.6/ma/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.6/ma/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.2/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.2/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.2/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.6/ma/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.6/ma/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.6/ma/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.2/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.2/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.2/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.6/ma/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.6/ma/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.6/ma/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.2/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.2/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.2/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.6/ma/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.6/ma/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.6/ma/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.2/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.2/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:57] [TRT] [I] /model.24/decoder/layers.2/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:58] [TRT] [I] /model.6/ma/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:58] [TRT] [I] /model.6/ma/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:58] [TRT] [I] /model.6/ma/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:58] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:58] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:58] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:58] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:58] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:58] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:58] [TRT] [I] /model.24/decoder/layers.2/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:58] [TRT] [I] /model.24/decoder/layers.2/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:58] [TRT] [I] /model.24/decoder/layers.2/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-17:18:59] [TRT] [I] [MemUsageChange] Init cuBLAS/cuBLASLt: CPU +534, GPU +512, now: CPU 1202, GPU 8560 (MiB)
+[10/26/2026-17:18:59] [TRT] [I] [MemUsageChange] Init cuDNN: CPU +82, GPU +75, now: CPU 1284, GPU 8635 (MiB)
+[10/26/2026-17:18:59] [TRT] [I] Timing cache disabled. Turning it on will improve builder speed.
+[10/26/2026-17:19:10] [TRT] [I] Total Activation Memory: 3128104960
+[10/26/2026-17:19:10] [TRT] [I] Detected 1 inputs and 3 output network tensors.
+[10/26/2026-17:19:10] [TRT] [I] Total Host Persistent Memory: 167296
+[10/26/2026-17:19:10] [TRT] [I] Total Device Persistent Memory: 0
+[10/26/2026-17:19:10] [TRT] [I] Total Scratch Memory: 6636032
+[10/26/2026-17:19:10] [TRT] [I] [MemUsageStats] Peak memory usage of TRT CPU/GPU memory allocators: CPU 9 MiB, GPU 192 MiB
+[10/26/2026-17:19:10] [TRT] [I] [BlockAssignment] Started assigning block shifts. This will take 1035 steps to complete.
+[10/26/2026-17:19:12] [TRT] [I] [BlockAssignment] Algorithm ShiftNTopDown took 1329.47ms to assign 58 blocks to 1035 nodes requiring 78168064 bytes.
+[10/26/2026-17:19:12] [TRT] [I] Total Activation Memory: 78168064
+[10/26/2026-17:19:12] [TRT] [I] [MemUsageChange] Init cuBLAS/cuBLASLt: CPU +0, GPU +0, now: CPU 1609, GPU 8981 (MiB)
+[10/26/2026-17:19:12] [TRT] [I] [MemUsageChange] Init cuDNN: CPU +0, GPU +0, now: CPU 1609, GPU 8981 (MiB)
+[10/26/2026-17:19:12] [TRT] [I] [MemUsageChange] Init cuBLAS/cuBLASLt: CPU +0, GPU +0, now: CPU 1608, GPU 8981 (MiB)
+[10/26/2026-17:19:12] [TRT] [I] [MemUsageChange] Init cuDNN: CPU +0, GPU +0, now: CPU 1608, GPU 8981 (MiB)
+[10/26/2026-17:19:12] [TRT] [I] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +0, GPU +74, now: CPU 0, GPU 202 (MiB)
+[10/26/2026-17:19:12] [TRT] [I] Starting Calibration.
+[10/26/2026-17:19:13] [TRT] [I]   Calibrated batch 0 in 1.23088 seconds.
+[10/26/2026-17:19:14] [TRT] [I]   Calibrated batch 1 in 1.23855 seconds.
+[10/26/2026-17:19:15] [TRT] [I]   Calibrated batch 2 in 1.23007 seconds.
+[10/26/2026-17:19:17] [TRT] [I]   Calibrated batch 3 in 1.24265 seconds.
+[10/26/2026-17:19:18] [TRT] [I]   Calibrated batch 4 in 1.24353 seconds.
+[10/26/2026-17:19:19] [TRT] [I]   Calibrated batch 5 in 1.25777 seconds.
+[10/26/2026-17:19:21] [TRT] [I]   Calibrated batch 6 in 1.25552 seconds.
+[10/26/2026-17:19:22] [TRT] [I]   Calibrated batch 7 in 1.24576 seconds.
+[10/26/2026-17:19:23] [TRT] [I]   Calibrated batch 8 in 1.25915 seconds.
+[10/26/2026-17:19:24] [TRT] [I]   Calibrated batch 9 in 1.25113 seconds.
+[10/26/2026-17:19:26] [TRT] [I]   Calibrated batch 10 in 1.27193 seconds.
+[10/26/2026-17:19:27] [TRT] [I]   Calibrated batch 11 in 1.2378 seconds.
+[10/26/2026-17:19:28] [TRT] [I]   Calibrated batch 12 in 1.26269 seconds.
+[10/26/2026-17:19:29] [TRT] [I]   Calibrated batch 13 in 1.26101 seconds.
+[10/26/2026-17:19:31] [TRT] [I]   Calibrated batch 14 in 1.26166 seconds.
+[10/26/2026-17:19:32] [TRT] [I]   Calibrated batch 15 in 1.25328 seconds.
+[10/26/2026-17:19:33] [TRT] [I]   Calibrated batch 16 in 1.26084 seconds.
+[10/26/2026-17:19:35] [TRT] [I]   Calibrated batch 17 in 1.25668 seconds.
+[10/26/2026-17:19:36] [TRT] [I]   Calibrated batch 18 in 1.26831 seconds.
+[10/26/2026-17:19:37] [TRT] [I]   Calibrated batch 19 in 1.2473 seconds.
+[10/26/2026-17:19:38] [TRT] [I]   Calibrated batch 20 in 1.25829 seconds.
+[10/26/2026-17:19:40] [TRT] [I]   Calibrated batch 21 in 1.25626 seconds.
+[10/26/2026-17:19:41] [TRT] [I]   Calibrated batch 22 in 1.25348 seconds.
+[10/26/2026-17:19:42] [TRT] [I]   Calibrated batch 23 in 1.26407 seconds.
+[10/26/2026-17:19:43] [TRT] [I]   Calibrated batch 24 in 1.26394 seconds.
+[10/26/2026-17:19:45] [TRT] [I]   Calibrated batch 25 in 1.24601 seconds.
+[10/26/2026-17:19:46] [TRT] [I]   Calibrated batch 26 in 1.25491 seconds.
+[10/26/2026-17:19:47] [TRT] [I]   Calibrated batch 27 in 1.26801 seconds.
+[10/26/2026-17:19:49] [TRT] [I]   Calibrated batch 28 in 1.26188 seconds.
+[10/26/2026-17:19:50] [TRT] [I]   Calibrated batch 29 in 1.26844 seconds.
+[10/26/2026-17:19:51] [TRT] [I]   Calibrated batch 30 in 1.26215 seconds.
+CALIBRATION 32 256
+[10/26/2026-17:19:52] [TRT] [I]   Calibrated batch 31 in 1.25111 seconds.
+[10/26/2026-17:19:54] [TRT] [I]   Calibrated batch 32 in 1.25962 seconds.
+[10/26/2026-17:19:55] [TRT] [I]   Calibrated batch 33 in 1.26135 seconds.
+[10/26/2026-17:19:56] [TRT] [I]   Calibrated batch 34 in 1.24615 seconds.
+[10/26/2026-17:19:57] [TRT] [I]   Calibrated batch 35 in 1.24111 seconds.
+[10/26/2026-17:19:59] [TRT] [I]   Calibrated batch 36 in 1.25491 seconds.
+[10/26/2026-17:20:00] [TRT] [I]   Calibrated batch 37 in 1.27518 seconds.
+[10/26/2026-17:20:01] [TRT] [I]   Calibrated batch 38 in 1.26664 seconds.
+[10/26/2026-17:20:03] [TRT] [I]   Calibrated batch 39 in 1.27454 seconds.
+[10/26/2026-17:20:04] [TRT] [I]   Calibrated batch 40 in 1.26572 seconds.
+[10/26/2026-17:20:05] [TRT] [I]   Calibrated batch 41 in 1.25737 seconds.
+[10/26/2026-17:20:06] [TRT] [I]   Calibrated batch 42 in 1.26569 seconds.
+[10/26/2026-17:20:08] [TRT] [I]   Calibrated batch 43 in 1.26423 seconds.
+[10/26/2026-17:20:09] [TRT] [I]   Calibrated batch 44 in 1.26863 seconds.
+[10/26/2026-17:20:10] [TRT] [I]   Calibrated batch 45 in 1.26369 seconds.
+[10/26/2026-17:20:12] [TRT] [I]   Calibrated batch 46 in 1.25223 seconds.
+[10/26/2026-17:20:13] [TRT] [I]   Calibrated batch 47 in 1.28283 seconds.
+[10/26/2026-17:20:14] [TRT] [I]   Calibrated batch 48 in 1.2547 seconds.
+[10/26/2026-17:20:15] [TRT] [I]   Calibrated batch 49 in 1.2715 seconds.
+[10/26/2026-17:20:17] [TRT] [I]   Calibrated batch 50 in 1.25426 seconds.
+[10/26/2026-17:20:18] [TRT] [I]   Calibrated batch 51 in 1.26958 seconds.
+[10/26/2026-17:20:19] [TRT] [I]   Calibrated batch 52 in 1.26565 seconds.
+[10/26/2026-17:20:21] [TRT] [I]   Calibrated batch 53 in 1.27328 seconds.
+[10/26/2026-17:20:22] [TRT] [I]   Calibrated batch 54 in 1.26076 seconds.
+[10/26/2026-17:20:23] [TRT] [I]   Calibrated batch 55 in 1.27892 seconds.
+[10/26/2026-17:20:24] [TRT] [I]   Calibrated batch 56 in 1.27253 seconds.
+[10/26/2026-17:20:26] [TRT] [I]   Calibrated batch 57 in 1.27326 seconds.
+[10/26/2026-17:20:27] [TRT] [I]   Calibrated batch 58 in 1.2687 seconds.
+[10/26/2026-17:20:28] [TRT] [I]   Calibrated batch 59 in 1.27103 seconds.
+[10/26/2026-17:20:30] [TRT] [I]   Calibrated batch 60 in 1.28067 seconds.
+[10/26/2026-17:20:31] [TRT] [I]   Calibrated batch 61 in 1.2891 seconds.
+[10/26/2026-17:20:32] [TRT] [I]   Calibrated batch 62 in 1.25952 seconds.
+CALIBRATION 64 256
+[10/26/2026-17:20:33] [TRT] [I]   Calibrated batch 63 in 1.27534 seconds.
+[10/26/2026-17:20:35] [TRT] [I]   Calibrated batch 64 in 1.26835 seconds.
+[10/26/2026-17:20:36] [TRT] [I]   Calibrated batch 65 in 1.28522 seconds.
+[10/26/2026-17:20:37] [TRT] [I]   Calibrated batch 66 in 1.25891 seconds.
+[10/26/2026-17:20:39] [TRT] [I]   Calibrated batch 67 in 1.28663 seconds.
+[10/26/2026-17:20:40] [TRT] [I]   Calibrated batch 68 in 1.27363 seconds.
+[10/26/2026-17:20:41] [TRT] [I]   Calibrated batch 69 in 1.27794 seconds.
+[10/26/2026-17:20:42] [TRT] [I]   Calibrated batch 70 in 1.27877 seconds.
+[10/26/2026-17:20:44] [TRT] [I]   Calibrated batch 71 in 1.27433 seconds.
+[10/26/2026-17:20:45] [TRT] [I]   Calibrated batch 72 in 1.28006 seconds.
+[10/26/2026-17:20:46] [TRT] [I]   Calibrated batch 73 in 1.27723 seconds.
+[10/26/2026-17:20:48] [TRT] [I]   Calibrated batch 74 in 1.28174 seconds.
+[10/26/2026-17:20:49] [TRT] [I]   Calibrated batch 75 in 1.28116 seconds.
+[10/26/2026-17:20:50] [TRT] [I]   Calibrated batch 76 in 1.27608 seconds.
+[10/26/2026-17:20:52] [TRT] [I]   Calibrated batch 77 in 1.28928 seconds.
+[10/26/2026-17:20:53] [TRT] [I]   Calibrated batch 78 in 1.28025 seconds.
+[10/26/2026-17:20:54] [TRT] [I]   Calibrated batch 79 in 1.28363 seconds.
+[10/26/2026-17:20:55] [TRT] [I]   Calibrated batch 80 in 1.27745 seconds.
+[10/26/2026-17:20:57] [TRT] [I]   Calibrated batch 81 in 1.27494 seconds.
+[10/26/2026-17:20:58] [TRT] [I]   Calibrated batch 82 in 1.28563 seconds.
+[10/26/2026-17:20:59] [TRT] [I]   Calibrated batch 83 in 1.28503 seconds.
+[10/26/2026-17:21:01] [TRT] [I]   Calibrated batch 84 in 1.27683 seconds.
+[10/26/2026-17:21:02] [TRT] [I]   Calibrated batch 85 in 1.27015 seconds.
+[10/26/2026-17:21:03] [TRT] [I]   Calibrated batch 86 in 1.26689 seconds.
+[10/26/2026-17:21:05] [TRT] [I]   Calibrated batch 87 in 1.33437 seconds.
+[10/26/2026-17:21:06] [TRT] [I]   Calibrated batch 88 in 1.28654 seconds.
+[10/26/2026-17:21:07] [TRT] [I]   Calibrated batch 89 in 1.27137 seconds.
+[10/26/2026-17:21:08] [TRT] [I]   Calibrated batch 90 in 1.27803 seconds.
+[10/26/2026-17:21:10] [TRT] [I]   Calibrated batch 91 in 1.27996 seconds.
+[10/26/2026-17:21:11] [TRT] [I]   Calibrated batch 92 in 1.27609 seconds.
+[10/26/2026-17:21:12] [TRT] [I]   Calibrated batch 93 in 1.28566 seconds.
+[10/26/2026-17:21:14] [TRT] [I]   Calibrated batch 94 in 1.28791 seconds.
+CALIBRATION 96 256
+[10/26/2026-17:21:15] [TRT] [I]   Calibrated batch 95 in 1.28868 seconds.
+[10/26/2026-17:21:16] [TRT] [I]   Calibrated batch 96 in 1.27508 seconds.
+[10/26/2026-17:21:18] [TRT] [I]   Calibrated batch 97 in 1.27665 seconds.
+[10/26/2026-17:21:19] [TRT] [I]   Calibrated batch 98 in 1.28268 seconds.
+[10/26/2026-17:21:20] [TRT] [I]   Calibrated batch 99 in 1.27851 seconds.
+[10/26/2026-17:21:21] [TRT] [I]   Calibrated batch 100 in 1.28143 seconds.
+[10/26/2026-17:21:23] [TRT] [I]   Calibrated batch 101 in 1.27517 seconds.
+[10/26/2026-17:21:24] [TRT] [I]   Calibrated batch 102 in 1.27432 seconds.
+[10/26/2026-17:21:25] [TRT] [I]   Calibrated batch 103 in 1.27656 seconds.
+[10/26/2026-17:21:27] [TRT] [I]   Calibrated batch 104 in 1.28276 seconds.
+[10/26/2026-17:21:28] [TRT] [I]   Calibrated batch 105 in 1.28482 seconds.
+[10/26/2026-17:21:29] [TRT] [I]   Calibrated batch 106 in 1.28214 seconds.
+[10/26/2026-17:21:31] [TRT] [I]   Calibrated batch 107 in 1.28461 seconds.
+[10/26/2026-17:21:32] [TRT] [I]   Calibrated batch 108 in 1.26698 seconds.
+[10/26/2026-17:21:33] [TRT] [I]   Calibrated batch 109 in 1.27466 seconds.
+[10/26/2026-17:21:34] [TRT] [I]   Calibrated batch 110 in 1.26463 seconds.
+[10/26/2026-17:21:36] [TRT] [I]   Calibrated batch 111 in 1.2837 seconds.
+[10/26/2026-17:21:37] [TRT] [I]   Calibrated batch 112 in 1.26077 seconds.
+[10/26/2026-17:21:38] [TRT] [I]   Calibrated batch 113 in 1.31594 seconds.
+[10/26/2026-17:21:40] [TRT] [I]   Calibrated batch 114 in 1.2854 seconds.
+[10/26/2026-17:21:41] [TRT] [I]   Calibrated batch 115 in 1.26794 seconds.
+[10/26/2026-17:21:42] [TRT] [I]   Calibrated batch 116 in 1.27947 seconds.
+[10/26/2026-17:21:43] [TRT] [I]   Calibrated batch 117 in 1.28725 seconds.
+[10/26/2026-17:21:45] [TRT] [I]   Calibrated batch 118 in 1.28081 seconds.
+[10/26/2026-17:21:46] [TRT] [I]   Calibrated batch 119 in 1.29009 seconds.
+[10/26/2026-17:21:47] [TRT] [I]   Calibrated batch 120 in 1.28347 seconds.
+[10/26/2026-17:21:49] [TRT] [I]   Calibrated batch 121 in 1.27661 seconds.
+[10/26/2026-17:21:50] [TRT] [I]   Calibrated batch 122 in 1.28818 seconds.
+[10/26/2026-17:21:51] [TRT] [I]   Calibrated batch 123 in 1.27504 seconds.
+[10/26/2026-17:21:53] [TRT] [I]   Calibrated batch 124 in 1.28436 seconds.
+[10/26/2026-17:21:54] [TRT] [I]   Calibrated batch 125 in 1.27376 seconds.
+[10/26/2026-17:21:55] [TRT] [I]   Calibrated batch 126 in 1.28131 seconds.
+CALIBRATION 128 256
+[10/26/2026-17:21:56] [TRT] [I]   Calibrated batch 127 in 1.27314 seconds.
+[10/26/2026-17:21:58] [TRT] [I]   Calibrated batch 128 in 1.27872 seconds.
+[10/26/2026-17:21:59] [TRT] [I]   Calibrated batch 129 in 1.2794 seconds.
+[10/26/2026-17:22:00] [TRT] [I]   Calibrated batch 130 in 1.26753 seconds.
+[10/26/2026-17:22:02] [TRT] [I]   Calibrated batch 131 in 1.27772 seconds.
+[10/26/2026-17:22:03] [TRT] [I]   Calibrated batch 132 in 1.2836 seconds.
+[10/26/2026-17:22:04] [TRT] [I]   Calibrated batch 133 in 1.26522 seconds.
+[10/26/2026-17:22:05] [TRT] [I]   Calibrated batch 134 in 1.26929 seconds.
+[10/26/2026-17:22:07] [TRT] [I]   Calibrated batch 135 in 1.28182 seconds.
+[10/26/2026-17:22:08] [TRT] [I]   Calibrated batch 136 in 1.27388 seconds.
+[10/26/2026-17:22:09] [TRT] [I]   Calibrated batch 137 in 1.28879 seconds.
+[10/26/2026-17:22:11] [TRT] [I]   Calibrated batch 138 in 1.25682 seconds.
+[10/26/2026-17:22:12] [TRT] [I]   Calibrated batch 139 in 1.27094 seconds.
+[10/26/2026-17:22:13] [TRT] [I]   Calibrated batch 140 in 1.26668 seconds.
+[10/26/2026-17:22:15] [TRT] [I]   Calibrated batch 141 in 1.28685 seconds.
+[10/26/2026-17:22:16] [TRT] [I]   Calibrated batch 142 in 1.2781 seconds.
+[10/26/2026-17:22:17] [TRT] [I]   Calibrated batch 143 in 1.28318 seconds.
+[10/26/2026-17:22:18] [TRT] [I]   Calibrated batch 144 in 1.26731 seconds.
+[10/26/2026-17:22:20] [TRT] [I]   Calibrated batch 145 in 1.28127 seconds.
+[10/26/2026-17:22:21] [TRT] [I]   Calibrated batch 146 in 1.2789 seconds.
+[10/26/2026-17:22:22] [TRT] [I]   Calibrated batch 147 in 1.28107 seconds.
+[10/26/2026-17:22:24] [TRT] [I]   Calibrated batch 148 in 1.27933 seconds.
+[10/26/2026-17:22:25] [TRT] [I]   Calibrated batch 149 in 1.27291 seconds.
+[10/26/2026-17:22:26] [TRT] [I]   Calibrated batch 150 in 1.25867 seconds.
+[10/26/2026-17:22:27] [TRT] [I]   Calibrated batch 151 in 1.27268 seconds.
+[10/26/2026-17:22:29] [TRT] [I]   Calibrated batch 152 in 1.28132 seconds.
+[10/26/2026-17:22:30] [TRT] [I]   Calibrated batch 153 in 1.27371 seconds.
+[10/26/2026-17:22:31] [TRT] [I]   Calibrated batch 154 in 1.28077 seconds.
+[10/26/2026-17:22:33] [TRT] [I]   Calibrated batch 155 in 1.27556 seconds.
+[10/26/2026-17:22:34] [TRT] [I]   Calibrated batch 156 in 1.28256 seconds.
+[10/26/2026-17:22:35] [TRT] [I]   Calibrated batch 157 in 1.25371 seconds.
+[10/26/2026-17:22:36] [TRT] [I]   Calibrated batch 158 in 1.25542 seconds.
+CALIBRATION 160 256
+[10/26/2026-17:22:38] [TRT] [I]   Calibrated batch 159 in 1.25945 seconds.
+[10/26/2026-17:22:39] [TRT] [I]   Calibrated batch 160 in 1.2625 seconds.
+[10/26/2026-17:22:40] [TRT] [I]   Calibrated batch 161 in 1.28505 seconds.
+[10/26/2026-17:22:42] [TRT] [I]   Calibrated batch 162 in 1.29278 seconds.
+[10/26/2026-17:22:43] [TRT] [I]   Calibrated batch 163 in 1.28524 seconds.
+[10/26/2026-17:22:44] [TRT] [I]   Calibrated batch 164 in 1.27448 seconds.
+[10/26/2026-17:22:46] [TRT] [I]   Calibrated batch 165 in 1.26823 seconds.
+[10/26/2026-17:22:47] [TRT] [I]   Calibrated batch 166 in 1.25345 seconds.
+[10/26/2026-17:22:48] [TRT] [I]   Calibrated batch 167 in 1.27466 seconds.
+[10/26/2026-17:22:49] [TRT] [I]   Calibrated batch 168 in 1.26662 seconds.
+[10/26/2026-17:22:51] [TRT] [I]   Calibrated batch 169 in 1.28475 seconds.
+[10/26/2026-17:22:52] [TRT] [I]   Calibrated batch 170 in 1.28493 seconds.
+[10/26/2026-17:22:53] [TRT] [I]   Calibrated batch 171 in 1.27775 seconds.
+[10/26/2026-17:22:55] [TRT] [I]   Calibrated batch 172 in 1.27187 seconds.
+[10/26/2026-17:22:56] [TRT] [I]   Calibrated batch 173 in 1.27575 seconds.
+[10/26/2026-17:22:57] [TRT] [I]   Calibrated batch 174 in 1.27897 seconds.
+[10/26/2026-17:22:58] [TRT] [I]   Calibrated batch 175 in 1.25727 seconds.
+[10/26/2026-17:23:00] [TRT] [I]   Calibrated batch 176 in 1.28182 seconds.
+[10/26/2026-17:23:01] [TRT] [I]   Calibrated batch 177 in 1.28479 seconds.
+[10/26/2026-17:23:02] [TRT] [I]   Calibrated batch 178 in 1.28733 seconds.
+[10/26/2026-17:23:04] [TRT] [I]   Calibrated batch 179 in 1.28128 seconds.
+[10/26/2026-17:23:05] [TRT] [I]   Calibrated batch 180 in 1.26232 seconds.
+[10/26/2026-17:23:06] [TRT] [I]   Calibrated batch 181 in 1.28526 seconds.
+[10/26/2026-17:23:08] [TRT] [I]   Calibrated batch 182 in 1.28251 seconds.
+[10/26/2026-17:23:09] [TRT] [I]   Calibrated batch 183 in 1.27594 seconds.
+[10/26/2026-17:23:10] [TRT] [I]   Calibrated batch 184 in 1.28196 seconds.
+[10/26/2026-17:23:12] [TRT] [I]   Calibrated batch 185 in 1.43696 seconds.
+[10/26/2026-17:23:13] [TRT] [I]   Calibrated batch 186 in 1.26215 seconds.
+[10/26/2026-17:23:14] [TRT] [I]   Calibrated batch 187 in 1.27798 seconds.
+[10/26/2026-17:23:15] [TRT] [I]   Calibrated batch 188 in 1.27364 seconds.
+[10/26/2026-17:23:17] [TRT] [I]   Calibrated batch 189 in 1.27087 seconds.
+[10/26/2026-17:23:18] [TRT] [I]   Calibrated batch 190 in 1.27562 seconds.
+CALIBRATION 192 256
+[10/26/2026-17:23:19] [TRT] [I]   Calibrated batch 191 in 1.27016 seconds.
+[10/26/2026-17:23:21] [TRT] [I]   Calibrated batch 192 in 1.28441 seconds.
+[10/26/2026-17:23:22] [TRT] [I]   Calibrated batch 193 in 1.29955 seconds.
+[10/26/2026-17:23:23] [TRT] [I]   Calibrated batch 194 in 1.27955 seconds.
+[10/26/2026-17:23:25] [TRT] [I]   Calibrated batch 195 in 1.27991 seconds.
+[10/26/2026-17:23:26] [TRT] [I]   Calibrated batch 196 in 1.29115 seconds.
+[10/26/2026-17:23:27] [TRT] [I]   Calibrated batch 197 in 1.26164 seconds.
+[10/26/2026-17:23:28] [TRT] [I]   Calibrated batch 198 in 1.25351 seconds.
+[10/26/2026-17:23:30] [TRT] [I]   Calibrated batch 199 in 1.28478 seconds.
+[10/26/2026-17:23:31] [TRT] [I]   Calibrated batch 200 in 1.28401 seconds.
+[10/26/2026-17:23:32] [TRT] [I]   Calibrated batch 201 in 1.28783 seconds.
+[10/26/2026-17:23:34] [TRT] [I]   Calibrated batch 202 in 1.28402 seconds.
+[10/26/2026-17:23:35] [TRT] [I]   Calibrated batch 203 in 1.28678 seconds.
+[10/26/2026-17:23:36] [TRT] [I]   Calibrated batch 204 in 1.26859 seconds.
+[10/26/2026-17:23:37] [TRT] [I]   Calibrated batch 205 in 1.26967 seconds.
+[10/26/2026-17:23:39] [TRT] [I]   Calibrated batch 206 in 1.28643 seconds.
+[10/26/2026-17:23:40] [TRT] [I]   Calibrated batch 207 in 1.28193 seconds.
+[10/26/2026-17:23:41] [TRT] [I]   Calibrated batch 208 in 1.27847 seconds.
+[10/26/2026-17:23:43] [TRT] [I]   Calibrated batch 209 in 1.28484 seconds.
+[10/26/2026-17:23:44] [TRT] [I]   Calibrated batch 210 in 1.28665 seconds.
+[10/26/2026-17:23:45] [TRT] [I]   Calibrated batch 211 in 1.28363 seconds.
+[10/26/2026-17:23:47] [TRT] [I]   Calibrated batch 212 in 1.28472 seconds.
+[10/26/2026-17:23:48] [TRT] [I]   Calibrated batch 213 in 1.27249 seconds.
+[10/26/2026-17:23:49] [TRT] [I]   Calibrated batch 214 in 1.27383 seconds.
+[10/26/2026-17:23:50] [TRT] [I]   Calibrated batch 215 in 1.2501 seconds.
+[10/26/2026-17:23:52] [TRT] [I]   Calibrated batch 216 in 1.29097 seconds.
+[10/26/2026-17:23:53] [TRT] [I]   Calibrated batch 217 in 1.28432 seconds.
+[10/26/2026-17:23:54] [TRT] [I]   Calibrated batch 218 in 1.28015 seconds.
+[10/26/2026-17:23:56] [TRT] [I]   Calibrated batch 219 in 1.26844 seconds.
+[10/26/2026-17:23:57] [TRT] [I]   Calibrated batch 220 in 1.25887 seconds.
+[10/26/2026-17:23:58] [TRT] [I]   Calibrated batch 221 in 1.28278 seconds.
+[10/26/2026-17:23:59] [TRT] [I]   Calibrated batch 222 in 1.28237 seconds.
+CALIBRATION 224 256
+[10/26/2026-17:24:01] [TRT] [I]   Calibrated batch 223 in 1.28524 seconds.
+[10/26/2026-17:24:02] [TRT] [I]   Calibrated batch 224 in 1.27876 seconds.
+[10/26/2026-17:24:03] [TRT] [I]   Calibrated batch 225 in 1.28459 seconds.
+[10/26/2026-17:24:05] [TRT] [I]   Calibrated batch 226 in 1.28478 seconds.
+[10/26/2026-17:24:06] [TRT] [I]   Calibrated batch 227 in 1.27986 seconds.
+[10/26/2026-17:24:07] [TRT] [I]   Calibrated batch 228 in 1.26059 seconds.
+[10/26/2026-17:24:09] [TRT] [I]   Calibrated batch 229 in 1.2845 seconds.
+[10/26/2026-17:24:10] [TRT] [I]   Calibrated batch 230 in 1.2896 seconds.
+[10/26/2026-17:24:11] [TRT] [I]   Calibrated batch 231 in 1.25524 seconds.
+[10/26/2026-17:24:12] [TRT] [I]   Calibrated batch 232 in 1.27616 seconds.
+[10/26/2026-17:24:14] [TRT] [I]   Calibrated batch 233 in 1.27156 seconds.
+[10/26/2026-17:24:15] [TRT] [I]   Calibrated batch 234 in 1.28597 seconds.
+[10/26/2026-17:24:16] [TRT] [I]   Calibrated batch 235 in 1.27851 seconds.
+[10/26/2026-17:24:18] [TRT] [I]   Calibrated batch 236 in 1.25493 seconds.
+[10/26/2026-17:24:19] [TRT] [I]   Calibrated batch 237 in 1.28167 seconds.
+[10/26/2026-17:24:20] [TRT] [I]   Calibrated batch 238 in 1.27553 seconds.
+[10/26/2026-17:24:21] [TRT] [I]   Calibrated batch 239 in 1.25112 seconds.
+[10/26/2026-17:24:23] [TRT] [I]   Calibrated batch 240 in 1.28131 seconds.
+[10/26/2026-17:24:24] [TRT] [I]   Calibrated batch 241 in 1.27504 seconds.
+[10/26/2026-17:24:25] [TRT] [I]   Calibrated batch 242 in 1.25955 seconds.
+[10/26/2026-17:24:27] [TRT] [I]   Calibrated batch 243 in 1.27774 seconds.
+[10/26/2026-17:24:28] [TRT] [I]   Calibrated batch 244 in 1.28803 seconds.
+[10/26/2026-17:24:29] [TRT] [I]   Calibrated batch 245 in 1.32188 seconds.
+[10/26/2026-17:24:31] [TRT] [I]   Calibrated batch 246 in 1.27769 seconds.
+[10/26/2026-17:24:32] [TRT] [I]   Calibrated batch 247 in 1.28503 seconds.
+[10/26/2026-17:24:33] [TRT] [I]   Calibrated batch 248 in 1.27206 seconds.
+[10/26/2026-17:24:34] [TRT] [I]   Calibrated batch 249 in 1.28177 seconds.
+[10/26/2026-17:24:36] [TRT] [I]   Calibrated batch 250 in 1.2905 seconds.
+[10/26/2026-17:24:37] [TRT] [I]   Calibrated batch 251 in 1.26067 seconds.
+[10/26/2026-17:24:38] [TRT] [I]   Calibrated batch 252 in 1.28334 seconds.
+[10/26/2026-17:24:40] [TRT] [I]   Calibrated batch 253 in 1.2891 seconds.
+[10/26/2026-17:24:41] [TRT] [I]   Calibrated batch 254 in 1.27564 seconds.
+CALIBRATION 256 256
+[10/26/2026-17:24:42] [TRT] [I]   Calibrated batch 255 in 1.28135 seconds.
+[10/26/2026-17:25:25] [TRT] [I]   Post Processing Calibration data in 42.3207 seconds.
+[10/26/2026-17:25:25] [TRT] [I] Calibration completed in 386.588 seconds.
+[10/26/2026-17:25:25] [TRT] [I] Writing Calibration Cache for calibrator: TRT-8502-EntropyCalibration2
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor (Unnamed Layer* 68) [Constant]_output, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor (Unnamed Layer* 73) [Constant]_output, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor (Unnamed Layer* 130) [Constant]_output, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor /model.6/ma/Softmax_output_0, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor (Unnamed Layer* 150) [Constant]_output, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor (Unnamed Layer* 154) [Constant]_output, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor (Unnamed Layer* 171) [Constant]_output, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor (Unnamed Layer* 175) [Constant]_output, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor (Unnamed Layer* 179) [Constant]_output, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor (Unnamed Layer* 191) [Constant]_output, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor (Unnamed Layer* 195) [Constant]_output, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor (Unnamed Layer* 220) [Constant]_output, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor (Unnamed Layer* 228) [Constant]_output, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor (Unnamed Layer* 236) [Constant]_output, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor (Unnamed Layer* 262) [Constant]_output, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor (Unnamed Layer* 270) [Constant]_output, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor (Unnamed Layer* 278) [Constant]_output, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor (Unnamed Layer* 300) [Constant]_output, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor (Unnamed Layer* 308) [Constant]_output, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor (Unnamed Layer* 316) [Constant]_output, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor (Unnamed Layer* 338) [Constant]_output, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor (Unnamed Layer* 346) [Constant]_output, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor (Unnamed Layer* 354) [Constant]_output, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor (Unnamed Layer* 398) [Constant]_output, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor (Unnamed Layer* 402) [Constant]_output, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor /model.24/TopK_output_1, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor /model.24/Reshape_3_output_0, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor (Unnamed Layer* 427) [Constant]_output, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor /model.24/Expand_output_0, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor /model.24/Tile_output_0, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor /model.24/Reshape_4_output_0, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor /model.24/Gather_output_0, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor /model.24/Mul_1_output_0, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor /model.24/Add_output_0, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor /model.24/Reshape_5_output_0, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor /model.24/Reshape_6_output_0, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor (Unnamed Layer* 453) [Constant]_output, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor /model.24/Reshape_8_output_0, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor (Unnamed Layer* 515) [Constant]_output, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor /model.24/decoder/layers.0/self_attn/Softmax_output_0, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor (Unnamed Layer* 535) [Constant]_output, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor (Unnamed Layer* 539) [Constant]_output, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor /model.24/decoder/layers.0/cross_attn/Softmax_output_0, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor (Unnamed Layer* 576) [Constant]_output, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor (Unnamed Layer* 583) [Constant]_output, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor (Unnamed Layer* 591) [Constant]_output, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor (Unnamed Layer* 594) [Constant]_output, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor (Unnamed Layer* 604) [Constant]_output, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor (Unnamed Layer* 621) [Constant]_output, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor (Unnamed Layer* 638) [Constant]_output, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor (Unnamed Layer* 672) [Constant]_output, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor (Unnamed Layer* 676) [Constant]_output, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor (Unnamed Layer* 703) [Constant]_output, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor (Unnamed Layer* 707) [Constant]_output, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor (Unnamed Layer* 739) [Constant]_output, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor (Unnamed Layer* 740) [Constant]_output, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor (Unnamed Layer* 745) [Constant]_output, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor (Unnamed Layer* 748) [Constant]_output, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor (Unnamed Layer* 749) [Constant]_output, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor (Unnamed Layer* 793) [Constant]_output, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor /model.24/decoder/layers.1/self_attn/Softmax_output_0, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor (Unnamed Layer* 813) [Constant]_output, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor (Unnamed Layer* 817) [Constant]_output, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor /model.24/decoder/layers.1/cross_attn/Softmax_output_0, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor (Unnamed Layer* 854) [Constant]_output, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor (Unnamed Layer* 861) [Constant]_output, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor (Unnamed Layer* 869) [Constant]_output, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor (Unnamed Layer* 872) [Constant]_output, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor (Unnamed Layer* 947) [Constant]_output, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor (Unnamed Layer* 951) [Constant]_output, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor (Unnamed Layer* 978) [Constant]_output, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor (Unnamed Layer* 982) [Constant]_output, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor (Unnamed Layer* 1014) [Constant]_output, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor (Unnamed Layer* 1015) [Constant]_output, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor (Unnamed Layer* 1020) [Constant]_output, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor (Unnamed Layer* 1023) [Constant]_output, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor (Unnamed Layer* 1024) [Constant]_output, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor (Unnamed Layer* 1068) [Constant]_output, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor /model.24/decoder/layers.2/self_attn/Softmax_output_0, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor (Unnamed Layer* 1088) [Constant]_output, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor (Unnamed Layer* 1092) [Constant]_output, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor /model.24/decoder/layers.2/cross_attn/Softmax_output_0, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor (Unnamed Layer* 1129) [Constant]_output, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor (Unnamed Layer* 1136) [Constant]_output, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor (Unnamed Layer* 1144) [Constant]_output, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor (Unnamed Layer* 1147) [Constant]_output, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor (Unnamed Layer* 1222) [Constant]_output, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor (Unnamed Layer* 1226) [Constant]_output, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor (Unnamed Layer* 1253) [Constant]_output, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor (Unnamed Layer* 1257) [Constant]_output, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor (Unnamed Layer* 1289) [Constant]_output, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor (Unnamed Layer* 1290) [Constant]_output, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor (Unnamed Layer* 1295) [Constant]_output, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor (Unnamed Layer* 1298) [Constant]_output, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:25] [TRT] [W] Missing scale and zero-point for tensor (Unnamed Layer* 1299) [Constant]_output, expect fall back to non-int8 implementation for any layer consuming or producing given tensor
+[10/26/2026-17:25:27] [TRT] [I] ---------- Layers Running on DLA ----------
+[10/26/2026-17:25:27] [TRT] [I] ---------- Layers Running on GPU ----------
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONSTANT: /model.6/Constant_5_output_0
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] POINTWISE: PWN(PWN(PWN(/model.6/Constant_4_output_0 + (Unnamed Layer* 69) [Shuffle], /model.6/Pow), /model.6/Reciprocal), PWN(/model.6/Constant_6_output_0 + (Unnamed Layer* 74) [Shuffle], /model.6/Mul))
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] SHUFFLE: /model.6/Unsqueeze_1
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONSTANT: /model.6/Constant_2_output_0
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] SLICE: /model.6/Expand
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] SHUFFLE: /model.6/Reshape + /model.6/Unsqueeze
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] MATRIX_MULTIPLY: /model.6/MatMul
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONSTANT: /model.6/Constant_3_output_0
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] SLICE: /model.6/Expand_1
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] SHUFFLE: /model.6/Reshape_1 + /model.6/Unsqueeze_2
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] MATRIX_MULTIPLY: /model.6/MatMul_1
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] POINTWISE: PWN(/model.6/Cos_1)
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] POINTWISE: PWN(/model.6/Sin_1)
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] POINTWISE: PWN(/model.6/Cos)
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] POINTWISE: PWN(/model.6/Sin)
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONVOLUTION: /model.0/layers/layers.0/conv/Conv + /model.0/layers/layers.0/act/Relu
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONVOLUTION: /model.0/layers/layers.1/conv/Conv + /model.0/layers/layers.1/act/Relu
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONVOLUTION: /model.0/layers/layers.2/conv/Conv + /model.0/layers/layers.2/act/Relu
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] POOLING: /model.0/layers/layers.3/MaxPool
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONVOLUTION: /model.1/blocks/blocks.0/conv1/conv/Conv + /model.1/blocks/blocks.0/conv1/act/Relu
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONVOLUTION: /model.1/blocks/blocks.0/conv2/conv/Conv
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONVOLUTION: /model.1/blocks/blocks.0/shortcut/conv/Conv + /model.1/blocks/blocks.0/Add + /model.1/blocks/blocks.0/act/Relu
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONVOLUTION: /model.1/blocks/blocks.1/conv1/conv/Conv + /model.1/blocks/blocks.1/conv1/act/Relu
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONVOLUTION: /model.1/blocks/blocks.1/conv2/conv/Conv + /model.1/blocks/blocks.1/Add + /model.1/blocks/blocks.1/act/Relu
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] COPY: (Unnamed Layer* 27) [Identity]
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] POOLING: /model.2/blocks/blocks.0/shortcut/shortcut.0/AveragePool
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONVOLUTION: /model.14/conv/Conv + PWN(PWN(/model.14/act/Sigmoid), /model.14/act/Mul)
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONVOLUTION: /model.2/blocks/blocks.0/conv1/conv/Conv + /model.2/blocks/blocks.0/conv1/act/Relu
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONVOLUTION: /model.2/blocks/blocks.0/conv2/conv/Conv
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONVOLUTION: /model.2/blocks/blocks.0/shortcut/shortcut.1/conv/Conv + /model.2/blocks/blocks.0/Add + /model.2/blocks/blocks.0/act/Relu
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONVOLUTION: /model.2/blocks/blocks.1/conv1/conv/Conv + /model.2/blocks/blocks.1/conv1/act/Relu
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONVOLUTION: /model.2/blocks/blocks.1/conv2/conv/Conv + /model.2/blocks/blocks.1/Add + /model.2/blocks/blocks.1/act/Relu
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] COPY: (Unnamed Layer* 40) [Identity]
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] POOLING: /model.3/blocks/blocks.0/shortcut/shortcut.0/AveragePool
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONVOLUTION: /model.3/blocks/blocks.0/conv1/conv/Conv + /model.3/blocks/blocks.0/conv1/act/Relu
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONVOLUTION: /model.3/blocks/blocks.0/conv2/conv/Conv
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONVOLUTION: /model.3/blocks/blocks.0/shortcut/shortcut.1/conv/Conv + /model.3/blocks/blocks.0/Add + /model.3/blocks/blocks.0/act/Relu
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONVOLUTION: /model.3/blocks/blocks.1/conv1/conv/Conv + /model.3/blocks/blocks.1/conv1/act/Relu
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONVOLUTION: /model.3/blocks/blocks.1/conv2/conv/Conv + /model.3/blocks/blocks.1/Add + /model.3/blocks/blocks.1/act/Relu
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] COPY: (Unnamed Layer* 53) [Identity]
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] POOLING: /model.4/blocks/blocks.0/shortcut/shortcut.0/AveragePool
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONVOLUTION: /model.9/conv/Conv
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONVOLUTION: /model.4/blocks/blocks.0/conv1/conv/Conv + /model.4/blocks/blocks.0/conv1/act/Relu
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONVOLUTION: /model.4/blocks/blocks.0/conv2/conv/Conv
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONVOLUTION: /model.4/blocks/blocks.0/shortcut/shortcut.1/conv/Conv + /model.4/blocks/blocks.0/Add + /model.4/blocks/blocks.0/act/Relu
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONVOLUTION: /model.4/blocks/blocks.1/conv1/conv/Conv + /model.4/blocks/blocks.1/conv1/act/Relu
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONVOLUTION: /model.4/blocks/blocks.1/conv2/conv/Conv + /model.4/blocks/blocks.1/Add + /model.4/blocks/blocks.1/act/Relu
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONVOLUTION: /model.5/conv/Conv
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONSTANT: model.6.norm2.bias + (Unnamed Layer* 204) [Shuffle]
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONSTANT: model.6.norm2.weight + (Unnamed Layer* 201) [Shuffle]
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONSTANT: model.6.norm1.bias + (Unnamed Layer* 163) [Shuffle]
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONSTANT: model.6.norm1.weight + (Unnamed Layer* 160) [Shuffle]
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] SHUFFLE: /model.6/Reshape_2
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] SHUFFLE: /model.6/Transpose
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONSTANT: onnx::Add_2712 + (Unnamed Layer* 123) [Shuffle]
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] SHUFFLE: /model.6/ma/Transpose_1 + reshape_before_/model.6/ma/MatMul_2
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONVOLUTION: /model.6/ma/MatMul_2
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] SHUFFLE: reshape_after_/model.6/ma/MatMul_2
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] POINTWISE: PWN(/model.6/ma/Add_2)
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] SHUFFLE: /model.6/ma/Reshape_2 + /model.6/ma/Transpose_3
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONSTANT: onnx::Add_2710 + (Unnamed Layer* 117) [Shuffle]
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] COPY: /model.6/Sin_output_0 copy
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] COPY: /model.6/Cos_output_0 copy
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] COPY: /model.6/Sin_1_output_0 copy
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] COPY: /model.6/Cos_1_output_0 copy
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] SHUFFLE: /model.6/Unsqueeze_3
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] COPY: /model.6/Cast
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] POINTWISE: PWN(/model.6/Add)
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] SHUFFLE: /model.6/ma/Transpose + reshape_before_/model.6/ma/MatMul_1
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONVOLUTION: /model.6/ma/MatMul_1 || /model.6/ma/MatMul
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] COPY: reshape_after_/model.6/ma/MatMul_1_copy_input
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] SHUFFLE: reshape_after_/model.6/ma/MatMul_1
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] POINTWISE: PWN(/model.6/ma/Add_1)
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] SHUFFLE: /model.6/ma/Reshape_1 + /model.6/ma/Transpose_4
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONSTANT: onnx::Add_2708 + (Unnamed Layer* 111) [Shuffle]
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] COPY: reshape_after_/model.6/ma/MatMul_copy_input
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] SHUFFLE: reshape_after_/model.6/ma/MatMul
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] POINTWISE: PWN(/model.6/ma/Add)
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] SHUFFLE: /model.6/ma/Reshape + /model.6/ma/Transpose_2
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] POINTWISE: PWN(/model.6/ma/Constant_3_output_0 + (Unnamed Layer* 131) [Shuffle], /model.6/ma/Div)
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] MATRIX_MULTIPLY: /model.6/ma/MatMul_3
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] SOFTMAX: /model.6/ma/Softmax
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] MATRIX_MULTIPLY: /model.6/ma/MatMul_4
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] SHUFFLE: /model.6/ma/Transpose_5 + /model.6/ma/Reshape_3 + reshape_before_/model.6/ma/Gemm
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONVOLUTION: /model.6/ma/Gemm
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] SHUFFLE: reshape_after_/model.6/ma/Gemm + /model.6/ma/Reshape_4 + /model.6/ma/Transpose_6
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] POINTWISE: PWN(/model.6/Add_1)
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] REDUCE: /model.6/norm1/ReduceMean
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] ELEMENTWISE: /model.6/norm1/Sub
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] POINTWISE: PWN(/model.6/norm1/Constant_output_0 + (Unnamed Layer* 151) [Shuffle], /model.6/norm1/Pow)
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] REDUCE: /model.6/norm1/ReduceMean_1
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] POINTWISE: PWN(PWN(PWN(PWN(PWN(/model.6/norm1/Constant_1_output_0 + (Unnamed Layer* 155) [Shuffle], /model.6/norm1/Add), /model.6/norm1/Sqrt), /model.6/norm1/Div), /model.6/norm1/Mul), /model.6/norm1/Add_1)
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONSTANT: model.6.fc2.bias + (Unnamed Layer* 186) [Shuffle]
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONSTANT: model.6.fc1.bias + (Unnamed Layer* 169) [Shuffle]
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] SHUFFLE: reshape_before_/model.6/fc1/MatMul
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONVOLUTION: /model.6/fc1/MatMul
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] SHUFFLE: reshape_after_/model.6/fc1/MatMul
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] POINTWISE: PWN(/model.6/fc1/Add, PWN(PWN(PWN(PWN(PWN(/model.6/act/Constant_output_0 + (Unnamed Layer* 172) [Shuffle], /model.6/act/Div), /model.6/act/Erf), PWN(/model.6/act/Constant_1_output_0 + (Unnamed Layer* 176) [Shuffle], /model.6/act/Add)), /model.6/act/Mul), PWN(/model.6/act/Constant_2_output_0 + (Unnamed Layer* 180) [Shuffle], /model.6/act/Mul_1)))
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] SHUFFLE: reshape_before_/model.6/fc2/MatMul
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONVOLUTION: /model.6/fc2/MatMul
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] SHUFFLE: reshape_after_/model.6/fc2/MatMul
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] POINTWISE: PWN(/model.6/fc2/Add, /model.6/Add_2)
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] REDUCE: /model.6/norm2/ReduceMean
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] ELEMENTWISE: /model.6/norm2/Sub
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] POINTWISE: PWN(/model.6/norm2/Constant_output_0 + (Unnamed Layer* 192) [Shuffle], /model.6/norm2/Pow)
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] REDUCE: /model.6/norm2/ReduceMean_1
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] POINTWISE: PWN(PWN(PWN(PWN(PWN(/model.6/norm2/Constant_1_output_0 + (Unnamed Layer* 196) [Shuffle], /model.6/norm2/Add), /model.6/norm2/Sqrt), /model.6/norm2/Div), /model.6/norm2/Mul), /model.6/norm2/Add_1)
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] SHUFFLE: /model.6/Transpose_1 + /model.6/Reshape_3
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONVOLUTION: /model.7/conv/Conv + PWN(PWN(/model.7/act/Sigmoid), /model.7/act/Mul)
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] RESIZE: /model.8/Resize
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] COPY: /model.8/Resize_output_0 copy
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONVOLUTION: /model.11/cv2/conv/Conv
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONVOLUTION: /model.11/cv1/conv/Conv + PWN(PWN(/model.11/cv1/act/Sigmoid), /model.11/cv1/act/Mul)
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONVOLUTION: /model.11/m/m.0/conv1/conv/Conv
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONVOLUTION: /model.11/m/m.0/conv2/conv/Conv + /model.11/m/m.0/Add + PWN(PWN(/model.11/m/m.0/act/Sigmoid), /model.11/m/m.0/act/Mul)
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONVOLUTION: /model.11/m/m.1/conv1/conv/Conv
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONVOLUTION: /model.11/m/m.1/conv2/conv/Conv + /model.11/m/m.1/Add + PWN(PWN(/model.11/m/m.1/act/Sigmoid), /model.11/m/m.1/act/Mul)
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONVOLUTION: /model.11/m/m.2/conv1/conv/Conv
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONVOLUTION: /model.11/m/m.2/conv2/conv/Conv + /model.11/m/m.2/Add
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] POINTWISE: PWN(PWN(PWN(/model.11/m/m.2/act/Sigmoid), /model.11/m/m.2/act/Mul), PWN(PWN(PWN(/model.11/cv2/act/Sigmoid), /model.11/cv2/act/Mul), /model.11/Add))
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONVOLUTION: /model.11/cv3/conv/Conv + PWN(PWN(/model.11/cv3/act/Sigmoid), /model.11/cv3/act/Mul)
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONVOLUTION: /model.12/conv/Conv + PWN(PWN(/model.12/act/Sigmoid), /model.12/act/Mul)
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] RESIZE: /model.13/Resize
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] COPY: /model.13/Resize_output_0 copy
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] COPY: /model.2/blocks/blocks.1/act/Relu_output_0 copy
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONVOLUTION: /model.16/cv2/conv/Conv
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONVOLUTION: /model.16/cv1/conv/Conv + PWN(PWN(/model.16/cv1/act/Sigmoid), /model.16/cv1/act/Mul)
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONVOLUTION: /model.16/m/m.0/conv1/conv/Conv
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONVOLUTION: /model.16/m/m.0/conv2/conv/Conv + /model.16/m/m.0/Add + PWN(PWN(/model.16/m/m.0/act/Sigmoid), /model.16/m/m.0/act/Mul)
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONVOLUTION: /model.16/m/m.1/conv1/conv/Conv
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONVOLUTION: /model.16/m/m.1/conv2/conv/Conv + /model.16/m/m.1/Add + PWN(PWN(/model.16/m/m.1/act/Sigmoid), /model.16/m/m.1/act/Mul)
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONVOLUTION: /model.16/m/m.2/conv1/conv/Conv
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONVOLUTION: /model.16/m/m.2/conv2/conv/Conv + /model.16/m/m.2/Add
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] POINTWISE: PWN(PWN(PWN(/model.16/m/m.2/act/Sigmoid), /model.16/m/m.2/act/Mul), PWN(PWN(PWN(/model.16/cv2/act/Sigmoid), /model.16/cv2/act/Mul), /model.16/Add))
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONVOLUTION: /model.16/cv3/conv/Conv + PWN(PWN(/model.16/cv3/act/Sigmoid), /model.16/cv3/act/Mul)
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONVOLUTION: /model.24/input_proj.0/input_proj.0.0/Conv
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONVOLUTION: /model.17/conv/Conv + PWN(PWN(/model.17/act/Sigmoid), /model.17/act/Mul)
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] COPY: /model.12/act/Mul_output_0 copy
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONVOLUTION: /model.19/cv2/conv/Conv
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONVOLUTION: /model.19/cv1/conv/Conv + PWN(PWN(/model.19/cv1/act/Sigmoid), /model.19/cv1/act/Mul)
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONVOLUTION: /model.19/m/m.0/conv1/conv/Conv
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONVOLUTION: /model.19/m/m.0/conv2/conv/Conv + /model.19/m/m.0/Add + PWN(PWN(/model.19/m/m.0/act/Sigmoid), /model.19/m/m.0/act/Mul)
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONVOLUTION: /model.19/m/m.1/conv1/conv/Conv
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONVOLUTION: /model.19/m/m.1/conv2/conv/Conv + /model.19/m/m.1/Add + PWN(PWN(/model.19/m/m.1/act/Sigmoid), /model.19/m/m.1/act/Mul)
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONVOLUTION: /model.19/m/m.2/conv1/conv/Conv
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONVOLUTION: /model.19/m/m.2/conv2/conv/Conv + /model.19/m/m.2/Add
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] POINTWISE: PWN(PWN(PWN(/model.19/m/m.2/act/Sigmoid), /model.19/m/m.2/act/Mul), PWN(PWN(PWN(/model.19/cv2/act/Sigmoid), /model.19/cv2/act/Mul), /model.19/Add))
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONVOLUTION: /model.19/cv3/conv/Conv + PWN(PWN(/model.19/cv3/act/Sigmoid), /model.19/cv3/act/Mul)
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONVOLUTION: /model.24/input_proj.1/input_proj.1.0/Conv
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONVOLUTION: /model.20/conv/Conv + PWN(PWN(/model.20/act/Sigmoid), /model.20/act/Mul)
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] COPY: /model.7/act/Mul_output_0 copy
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONVOLUTION: /model.22/cv2/conv/Conv
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONVOLUTION: /model.22/cv1/conv/Conv + PWN(PWN(/model.22/cv1/act/Sigmoid), /model.22/cv1/act/Mul)
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONVOLUTION: /model.22/m/m.0/conv1/conv/Conv
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONVOLUTION: /model.22/m/m.0/conv2/conv/Conv + /model.22/m/m.0/Add + PWN(PWN(/model.22/m/m.0/act/Sigmoid), /model.22/m/m.0/act/Mul)
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONVOLUTION: /model.22/m/m.1/conv1/conv/Conv
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONVOLUTION: /model.22/m/m.1/conv2/conv/Conv + /model.22/m/m.1/Add + PWN(PWN(/model.22/m/m.1/act/Sigmoid), /model.22/m/m.1/act/Mul)
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONVOLUTION: /model.22/m/m.2/conv1/conv/Conv
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONVOLUTION: /model.22/m/m.2/conv2/conv/Conv + /model.22/m/m.2/Add
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] POINTWISE: PWN(PWN(PWN(/model.22/m/m.2/act/Sigmoid), /model.22/m/m.2/act/Mul), PWN(PWN(PWN(/model.22/cv2/act/Sigmoid), /model.22/cv2/act/Mul), /model.22/Add))
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONVOLUTION: /model.22/cv3/conv/Conv + PWN(PWN(/model.22/cv3/act/Sigmoid), /model.22/cv3/act/Mul)
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] CONVOLUTION: /model.24/input_proj.2/input_proj.2.0/Conv
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] MYELIN: {ForeignNode[model.24.enc_output.1.bias + (Unnamed Layer* 411) [Shuffle].../model.24/decoder/dec_bbox_head.0/layers.2/Add]}
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] POINTWISE: PWN(PWN(/model.24/decoder/Clip), PWN(PWN(PWN(PWN(PWN(PWN(PWN(/model.24/decoder/Constant_3_output_0 + (Unnamed Layer* 746) [Shuffle], /model.24/decoder/Sub), PWN(/model.24/decoder/Constant_4_output_0 + (Unnamed Layer* 750) [Shuffle], (Unnamed Layer* 752) [ElementWise])), PWN((Unnamed Layer* 749) [Constant] + (Unnamed Layer* 751) [Shuffle], (Unnamed Layer* 753) [ElementWise])), PWN(PWN(PWN(/model.24/decoder/Constant_2_output_0 + (Unnamed Layer* 741) [Shuffle], (Unnamed Layer* 743) [ElementWise]), PWN((Unnamed Layer* 740) [Constant] + (Unnamed Layer* 742) [Shuffle], (Unnamed Layer* 744) [ElementWise])), /model.24/decoder/Div)), /model.24/decoder/Log), /model.24/decoder/Add), PWN(/model.24/decoder/Sigmoid_1)))
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] POINTWISE: PWN(/model.24/decoder/Clip_3)
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] MYELIN: {ForeignNode[/model.24/decoder/layers.1/Transpose_1.../model.24/decoder/Sigmoid_2]}
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] POINTWISE: PWN(PWN(/model.24/decoder/Clip_6), PWN(PWN(PWN((Unnamed Layer* 1299) [Constant] + (Unnamed Layer* 1301) [Shuffle], PWN(PWN(/model.24/decoder/Constant_14_output_0 + (Unnamed Layer* 1300) [Shuffle], PWN(PWN(/model.24/decoder/Constant_13_output_0 + (Unnamed Layer* 1296) [Shuffle], /model.24/decoder/Sub_2), (Unnamed Layer* 1302) [ElementWise])), (Unnamed Layer* 1303) [ElementWise])), PWN(PWN((Unnamed Layer* 1290) [Constant] + (Unnamed Layer* 1292) [Shuffle], PWN(PWN(/model.24/decoder/Constant_12_output_0 + (Unnamed Layer* 1291) [Shuffle], (Unnamed Layer* 1293) [ElementWise]), (Unnamed Layer* 1294) [ElementWise])), /model.24/decoder/Div_2)), /model.24/decoder/Log_2))
+[10/26/2026-17:25:27] [TRT] [I] [GpuLayer] MYELIN: {ForeignNode[/model.24/decoder/layers.2/Transpose_1.../model.24/Concat_6]}
+[10/26/2026-17:25:27] [TRT] [I] [MemUsageChange] Init cuBLAS/cuBLASLt: CPU +0, GPU +0, now: CPU 1607, GPU 8990 (MiB)
+[10/26/2026-17:25:27] [TRT] [I] [MemUsageChange] Init cuDNN: CPU +0, GPU +0, now: CPU 1607, GPU 8990 (MiB)
+[10/26/2026-17:25:27] [TRT] [I] Global timing cache in use. Profiling results in this builder pass will be stored.
+[10/26/2026-17:26:20] [TRT] [I] Total Activation Memory: 2233595904
+[10/26/2026-17:26:20] [TRT] [I] Detected 1 inputs and 1 output network tensors.
+[10/26/2026-17:26:30] [TRT] [I] Total Host Persistent Memory: 227504
+[10/26/2026-17:26:30] [TRT] [I] Total Device Persistent Memory: 0
+[10/26/2026-17:26:30] [TRT] [I] Total Scratch Memory: 10560000
+[10/26/2026-17:26:30] [TRT] [I] [MemUsageStats] Peak memory usage of TRT CPU/GPU memory allocators: CPU 27 MiB, GPU 202 MiB
+[10/26/2026-17:26:30] [TRT] [I] [BlockAssignment] Started assigning block shifts. This will take 176 steps to complete.
+[10/26/2026-17:26:30] [TRT] [I] [BlockAssignment] Algorithm ShiftNTopDown took 25.5628ms to assign 11 blocks to 176 nodes requiring 21004800 bytes.
+[10/26/2026-17:26:30] [TRT] [I] Total Activation Memory: 21004800
+[10/26/2026-17:26:30] [TRT] [I] [MemUsageChange] Init cuBLAS/cuBLASLt: CPU +0, GPU +0, now: CPU 1647, GPU 9028 (MiB)
+[10/26/2026-17:26:30] [TRT] [W] TensorRT encountered issues when converting weights between types and that could affect accuracy.
+[10/26/2026-17:26:30] [TRT] [W] If this is not the desired behavior, please modify the weights or retrain with regularization to adjust the magnitude of the weights.
+[10/26/2026-17:26:30] [TRT] [W] Check verbose logs for the list of affected weights.
+[10/26/2026-17:26:30] [TRT] [W] - 1 weights are affected by this issue: Detected FP32 infinity values and converted them to corresponding FP16 infinity.
+[10/26/2026-17:26:30] [TRT] [W] - 169 weights are affected by this issue: Detected subnormal FP16 values.
+[10/26/2026-17:26:30] [TRT] [W] - 10 weights are affected by this issue: Detected values less than smallest positive FP16 subnormal value and converted them to the FP16 minimum subnormalized value.
+[10/26/2026-17:26:30] [TRT] [W] - 2 weights are affected by this issue: Detected finite FP32 values which would overflow in FP16 and converted them to the closest finite FP16 value.
+[10/26/2026-17:26:30] [TRT] [I] [MemUsageChange] TensorRT-managed allocation in building engine: CPU +24, GPU +32, now: CPU 24, GPU 32 (MiB)
+{
+  "precision_requested": "int8",
+  "fp16_fallback": true,
+  "calibration": "EntropyCalibrator2; 256 deterministic VisDrone train images; RGB stretch /255",
+  "calibration_batches_consumed": 256,
+  "tensorrt": "8.5.2.2",
+  "build_seconds": 452.7007677555084,
+  "engine_sha256": "bb78b1299b410992e1a78c7a17f1fb234b3d7efc2194568fc771195599d675ab",
+  "engine_bytes": 28438374,
+  "workspace_bytes": 2147483648
+}

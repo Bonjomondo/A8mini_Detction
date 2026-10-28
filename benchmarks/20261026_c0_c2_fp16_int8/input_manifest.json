@@ -1,0 +1,57 @@
+{
+  "files": {
+    "export_model.py": "40c8c03cf2f7e46a44d6fde0a843bc3a79d56f4c68ed8c09627a80686f682ce1",
+    "build_engine.py": "2a3a6a516db97853dff90ff2c113c76aebbe18f714358730ef8e16b73f6de25e",
+    "c2_best.pt": "dd6a761f42617ac34784f657e938bd9082be363df6be1fc505e77f11f0f8fa32",
+    "c0_best.pt": "021596fbecd5d2edc5e1b5d5477f84087d4caf48bc2efe274e08bc047dc5e393",
+    "source.tar.gz": "31b2faf59455078d982ae81b45f253248f43f6aa458771b92d0470255f390895",
+    "run_comparison.py": "25b81c16fac41cd6c1b08d49b38c70f89b1e676158119c17a6d3b3e4d24f7a5e"
+  },
+  "source_host": "zjnu-4090",
+  "source_root": "/home/zjnu/\u6587\u6863/ZHJ_WorkSpace/ultralytics",
+  "source_branch": "feat/r18-p2-sfi",
+  "weights_relative": {
+    "c0": "runs/detect/r18_p2_sfi_convergence_20261024/rtdetr-r18-c0-seed0-cont/weights/best.pt",
+    "c2": "runs/detect/r18_p2_sfi_convergence_20261024/rtdetr-r18-c2-seed0-cont/weights/best.pt"
+  },
+  "target": "q@192.168.2.110",
+  "target_folder": "/home/q/Documents/Detr_Trials/benchmarks/20261026_c0_c2_fp16_int8",
+  "training_note": "150+350 epochs completed; empirical plateau criterion False for both",
+  "source_commit": "eb40ae103fcd4ff9dd03a8d356022c2fbe5ba5f1",
+  "source_worktree": "Contains pre-existing report changes; exact inference package frozen as source.tar.gz.",
+  "calibration": {
+    "algorithm": "TensorRT IInt8EntropyCalibrator2",
+    "images": 256,
+    "split": "VisDrone train",
+    "sampling_seed": 0,
+    "batch_size": 1
+  },
+  "benchmark": {
+    "input": [
+      1,
+      3,
+      640,
+      640
+    ],
+    "warmup": 500,
+    "seconds_per_repeat": 30,
+    "repeats": 3,
+    "stream_count": 1,
+    "power_mode": "25W",
+    "gpu_clock_MHz": 408,
+    "cpu_clock_MHz": 1497.6,
+    "workspace_GiB": 2
+  },
+  "script_sha256_final": {
+    "export_model.py": "40c8c03cf2f7e46a44d6fde0a843bc3a79d56f4c68ed8c09627a80686f682ce1",
+    "build_engine.py": "8ea4b56f7d7d987ea1a3a16ba4efb575436e0af018e229a09fabd132dde98624",
+    "evaluate_engines.py": "fd30ccdd226e8c333e64c25760c856b7e5859e76294a88b20bfd0a1eec4b7cf6",
+    "collect_results.py": "9eca826fe05d5f4b0402d74189b28b42780668cd5298828af5012efb02ce67ff",
+    "benchmark_export.py": "47cd446678e5555d0b2d32af8998a5112e3474fd11aba288cee96c7a5352ce86",
+    "finish_evaluation.py": "a5a0575933e2a08d77015bb1f595e71072076bc1cf1a6b03414983c67ecb086d",
+    "benchmark_trt.py": "e8eaf0f0c8500e6909e446a107163dcade292981d60945a00bccfef62831c4bd",
+    "run_comparison.py": "25b81c16fac41cd6c1b08d49b38c70f89b1e676158119c17a6d3b3e4d24f7a5e",
+    "write_report.py": "80eba765ba2af79b6dc8d5aac4f5ff4d1d0f402e5fd34d16554fa5897cf4509e"
+  },
+  "script_note": "Initial files hashes retained; build_engine.py later added cross-model timing-cache reuse. Precision flags, workspace, calibration and measurement protocol stayed unchanged."
+}

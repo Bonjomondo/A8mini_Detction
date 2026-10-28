@@ -1,0 +1,43 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "/home/q/Documents/A8mini_Detction/benchmark_trt.py",
+    "--engine",
+    "/home/q/Documents/A8mini_Detction/benchmarks/20261006_testAC/B04_yolo26s/model_fp16.engine",
+    "--output",
+    "/home/q/Documents/A8mini_Detction/benchmarks/20261006_testAC/B04_yolo26s/run_02",
+    "--warmup",
+    "500",
+    "--duration",
+    "30"
+  ],
+  "input_size": [
+    640,
+    640
+  ],
+  "batch": 1,
+  "precision": "FP16 with FP32 fallback",
+  "backend": "TensorRT",
+  "dynamic": false,
+  "streams": 1,
+  "cuda_graph": false,
+  "warmup_iterations": 500,
+  "duration_s": 30,
+  "repeat": 3,
+  "data_transfer": "excluded",
+  "preprocessing": "excluded",
+  "postprocessing": "external selection/NMS excluded; model box decode retained",
+  "workspace_mib": 4096,
+  "opset": 16,
+  "tf32": false,
+  "seed": 0,
+  "tests": [
+    "A",
+    "C"
+  ],
+  "allow_unlocked": false,
+  "model": "YOLO26s",
+  "weights": "/home/q/Documents/A8mini_Detction/weights/yolo26s.pt",
+  "environment": "../env/environment_20261006_173320.json",
+  "environment_sha256": "c731c2856403208fe19706b86d9190f6780332ab4bf43881084b7242001c2302"
+}

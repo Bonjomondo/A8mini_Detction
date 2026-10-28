@@ -1,0 +1,181 @@
+{
+  "status": "ok",
+  "engine": "/home/q/Documents/A8mini_Detction/benchmarks/20261006_testAC/B07_sodetr_nofft/model_fp16.engine",
+  "tensorrt": "8.5.2.2",
+  "engine_sha256": "3ec1ac5abc5a5d75b38e3f300f26f29e74c8871a570c985b8067dcfe0dc4ece6",
+  "seed": 0,
+  "warmup_iterations": 500,
+  "requested_duration_s": 30.0,
+  "measured_duration_s": 30.038205755000035,
+  "iterations": 775,
+  "measurement_begin_monotonic_s": 2380.259371594,
+  "measurement_end_monotonic_s": 2410.297577349,
+  "throughput_fps": 25.800475778117896,
+  "gpu_compute": {
+    "mean_ms": 38.717305883592175,
+    "p50_ms": 38.675968170166016,
+    "p95_ms": 39.102818679809566,
+    "p99_ms": 39.333132629394534,
+    "min_ms": 38.501121520996094,
+    "max_ms": 41.64531326293945
+  },
+  "host_latency": {
+    "mean_ms": 38.73766678837426,
+    "p50_ms": 38.695261999691866,
+    "p95_ms": 39.17340099987996,
+    "p99_ms": 39.35849759996927,
+    "min_ms": 38.51747099997738,
+    "max_ms": 41.66634000011982
+  },
+  "bindings": [
+    {
+      "name": "images",
+      "shape": [
+        1,
+        3,
+        640,
+        640
+      ],
+      "dtype": "float32",
+      "input": true,
+      "bytes": 4915200
+    },
+    {
+      "name": "output0",
+      "shape": [
+        1,
+        300,
+        14
+      ],
+      "dtype": "float32",
+      "input": false,
+      "bytes": 16800
+    }
+  ],
+  "output_checks": [
+    {
+      "shape": [
+        1,
+        300,
+        14
+      ],
+      "finite": true,
+      "nan_count": 0,
+      "inf_count": 0,
+      "min": 0.0011930465698242188,
+      "max": 0.9951171875
+    }
+  ],
+  "clock_state_before": {
+    "/sys/devices/17000000.ga10b/devfreq/17000000.ga10b/min_freq": 408000000,
+    "/sys/devices/17000000.ga10b/devfreq/17000000.ga10b/max_freq": 408000000,
+    "/sys/devices/system/cpu/cpu7/cpufreq/scaling_min_freq": 1497600,
+    "/sys/devices/system/cpu/cpu5/cpufreq/scaling_min_freq": 1497600,
+    "/sys/devices/system/cpu/cpu3/cpufreq/scaling_min_freq": 1497600,
+    "/sys/devices/system/cpu/cpu1/cpufreq/scaling_min_freq": 1497600,
+    "/sys/devices/system/cpu/cpu6/cpufreq/scaling_min_freq": 1497600,
+    "/sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq": 1497600,
+    "/sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq": 1497600,
+    "/sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq": 1497600,
+    "/sys/devices/system/cpu/cpu7/cpufreq/scaling_max_freq": 1497600,
+    "/sys/devices/system/cpu/cpu5/cpufreq/scaling_max_freq": 1497600,
+    "/sys/devices/system/cpu/cpu3/cpufreq/scaling_max_freq": 1497600,
+    "/sys/devices/system/cpu/cpu1/cpufreq/scaling_max_freq": 1497600,
+    "/sys/devices/system/cpu/cpu6/cpufreq/scaling_max_freq": 1497600,
+    "/sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq": 1497600,
+    "/sys/devices/system/cpu/cpu2/cpufreq/scaling_max_freq": 1497600,
+    "/sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq": 1497600
+  },
+  "clock_state_after": {
+    "/sys/devices/17000000.ga10b/devfreq/17000000.ga10b/min_freq": 408000000,
+    "/sys/devices/17000000.ga10b/devfreq/17000000.ga10b/max_freq": 408000000,
+    "/sys/devices/system/cpu/cpu7/cpufreq/scaling_min_freq": 1497600,
+    "/sys/devices/system/cpu/cpu5/cpufreq/scaling_min_freq": 1497600,
+    "/sys/devices/system/cpu/cpu3/cpufreq/scaling_min_freq": 1497600,
+    "/sys/devices/system/cpu/cpu1/cpufreq/scaling_min_freq": 1497600,
+    "/sys/devices/system/cpu/cpu6/cpufreq/scaling_min_freq": 1497600,
+    "/sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq": 1497600,
+    "/sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq": 1497600,
+    "/sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq": 1497600,
+    "/sys/devices/system/cpu/cpu7/cpufreq/scaling_max_freq": 1497600,
+    "/sys/devices/system/cpu/cpu5/cpufreq/scaling_max_freq": 1497600,
+    "/sys/devices/system/cpu/cpu3/cpufreq/scaling_max_freq": 1497600,
+    "/sys/devices/system/cpu/cpu1/cpufreq/scaling_max_freq": 1497600,
+    "/sys/devices/system/cpu/cpu6/cpufreq/scaling_max_freq": 1497600,
+    "/sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq": 1497600,
+    "/sys/devices/system/cpu/cpu2/cpufreq/scaling_max_freq": 1497600,
+    "/sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq": 1497600
+  },
+  "clocks_locked_and_unchanged": true,
+  "resources": {
+    "samples": 146,
+    "baseline_ram_mb": 6216.0,
+    "peak_system_ram_mb": 7077,
+    "peak_ram_above_baseline_mb": 861.0,
+    "mean_gpu_util_pct": 97.67808219178082,
+    "power_rails": {
+      "VDD_CPU_GPU_CV": {
+        "mean_w": 3.6943835616438356,
+        "peak_w": 4.159,
+        "samples": 146
+      },
+      "VDD_IN": {
+        "mean_w": 11.332986301369864,
+        "peak_w": 11.962,
+        "samples": 146
+      },
+      "VDD_SOC": {
+        "mean_w": 3.148041095890411,
+        "peak_w": 3.219,
+        "samples": 146
+      }
+    },
+    "total_input_power_rail": "VDD_IN",
+    "mean_input_power_w": 11.332986301369864,
+    "peak_soc_temp_c": 62.75,
+    "temperatures": {
+      "CPU": {
+        "mean_c": 61.04867808219178,
+        "peak_c": 61.781
+      },
+      "CV0": {
+        "mean_c": 60.67773287671233,
+        "peak_c": 61.312
+      },
+      "CV1": {
+        "mean_c": 60.04115753424657,
+        "peak_c": 60.843
+      },
+      "CV2": {
+        "mean_c": 59.30121917808219,
+        "peak_c": 59.875
+      },
+      "GPU": {
+        "mean_c": 60.10281506849315,
+        "peak_c": 60.875
+      },
+      "SOC0": {
+        "mean_c": 61.997863013698634,
+        "peak_c": 62.593
+      },
+      "SOC1": {
+        "mean_c": 62.09399315068493,
+        "peak_c": 62.75
+      },
+      "SOC2": {
+        "mean_c": 60.41248630136986,
+        "peak_c": 61.031
+      },
+      "iwlwifi": {
+        "mean_c": 61.56164383561644,
+        "peak_c": 63.0
+      },
+      "tj": {
+        "mean_c": 62.10211643835616,
+        "peak_c": 62.75
+      }
+    }
+  },
+  "telemetry_error": null,
+  "timing": "CUDA events; one in-flight enqueue; event completion synchronized each iteration; transfers/preprocess/postprocess excluded"
+}

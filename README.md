@@ -24,6 +24,8 @@ Detr_Trials/
 
 ## Orin NX 模型性能基线（Test A / C）
 
+两次实验的报告、原始计时和精度证据见 [benchmarks 实验索引](benchmarks/README.md)。
+
 使用系统 `python3` 和本机 TensorRT，运行 [scripts/benchmark_ac.py](scripts/benchmark_ac.py)：
 
 ```bash

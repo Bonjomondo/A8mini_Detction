@@ -1,0 +1,5 @@
+# Preserve exact benchmark CSV bytes and accept their original CRLF line endings.
+benchmarks/**/*.csv -text whitespace=cr-at-eol
+# Keep original machine-generated environment and clock dumps byte-for-byte.
+benchmarks/20261006_testAC/env/*.txt -text -whitespace
+benchmarks/20261006_testAC/jetson_clocks_show.txt -text -whitespace

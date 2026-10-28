@@ -1,0 +1,181 @@
+{
+  "status": "ok",
+  "engine": "/home/q/Documents/A8mini_Detction/benchmarks/20261006_testAC/B04_yolo26s/model_fp16.engine",
+  "tensorrt": "8.5.2.2",
+  "engine_sha256": "46ea0fe04cea9b2c5f3e416d32595639976bddc82f8db0ac941602c365876a2c",
+  "seed": 0,
+  "warmup_iterations": 500,
+  "requested_duration_s": 30.0,
+  "measured_duration_s": 30.000894574000085,
+  "iterations": 1833,
+  "measurement_begin_monotonic_s": 5418.675782609,
+  "measurement_end_monotonic_s": 5448.676677183,
+  "throughput_fps": 61.09817810528048,
+  "gpu_compute": {
+    "mean_ms": 16.320648929036125,
+    "p50_ms": 16.312480926513672,
+    "p95_ms": 16.352185440063476,
+    "p99_ms": 16.636074829101585,
+    "min_ms": 16.226015090942383,
+    "max_ms": 19.272512435913086
+  },
+  "host_latency": {
+    "mean_ms": 16.346616170207685,
+    "p50_ms": 16.33668599970406,
+    "p95_ms": 16.38192499995057,
+    "p99_ms": 16.775807320336753,
+    "min_ms": 16.290354000375373,
+    "max_ms": 19.294757999887224
+  },
+  "bindings": [
+    {
+      "name": "images",
+      "shape": [
+        1,
+        3,
+        640,
+        640
+      ],
+      "dtype": "float32",
+      "input": true,
+      "bytes": 4915200
+    },
+    {
+      "name": "output0",
+      "shape": [
+        1,
+        8400,
+        84
+      ],
+      "dtype": "float32",
+      "input": false,
+      "bytes": 2822400
+    }
+  ],
+  "output_checks": [
+    {
+      "shape": [
+        1,
+        8400,
+        84
+      ],
+      "finite": true,
+      "nan_count": 0,
+      "inf_count": 0,
+      "min": -11.140625,
+      "max": 644.25
+    }
+  ],
+  "clock_state_before": {
+    "/sys/devices/17000000.ga10b/devfreq/17000000.ga10b/min_freq": 408000000,
+    "/sys/devices/17000000.ga10b/devfreq/17000000.ga10b/max_freq": 408000000,
+    "/sys/devices/system/cpu/cpu7/cpufreq/scaling_min_freq": 1497600,
+    "/sys/devices/system/cpu/cpu5/cpufreq/scaling_min_freq": 1497600,
+    "/sys/devices/system/cpu/cpu3/cpufreq/scaling_min_freq": 1497600,
+    "/sys/devices/system/cpu/cpu1/cpufreq/scaling_min_freq": 1497600,
+    "/sys/devices/system/cpu/cpu6/cpufreq/scaling_min_freq": 1497600,
+    "/sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq": 1497600,
+    "/sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq": 1497600,
+    "/sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq": 1497600,
+    "/sys/devices/system/cpu/cpu7/cpufreq/scaling_max_freq": 1497600,
+    "/sys/devices/system/cpu/cpu5/cpufreq/scaling_max_freq": 1497600,
+    "/sys/devices/system/cpu/cpu3/cpufreq/scaling_max_freq": 1497600,
+    "/sys/devices/system/cpu/cpu1/cpufreq/scaling_max_freq": 1497600,
+    "/sys/devices/system/cpu/cpu6/cpufreq/scaling_max_freq": 1497600,
+    "/sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq": 1497600,
+    "/sys/devices/system/cpu/cpu2/cpufreq/scaling_max_freq": 1497600,
+    "/sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq": 1497600
+  },
+  "clock_state_after": {
+    "/sys/devices/17000000.ga10b/devfreq/17000000.ga10b/min_freq": 408000000,
+    "/sys/devices/17000000.ga10b/devfreq/17000000.ga10b/max_freq": 408000000,
+    "/sys/devices/system/cpu/cpu7/cpufreq/scaling_min_freq": 1497600,
+    "/sys/devices/system/cpu/cpu5/cpufreq/scaling_min_freq": 1497600,
+    "/sys/devices/system/cpu/cpu3/cpufreq/scaling_min_freq": 1497600,
+    "/sys/devices/system/cpu/cpu1/cpufreq/scaling_min_freq": 1497600,
+    "/sys/devices/system/cpu/cpu6/cpufreq/scaling_min_freq": 1497600,
+    "/sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq": 1497600,
+    "/sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq": 1497600,
+    "/sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq": 1497600,
+    "/sys/devices/system/cpu/cpu7/cpufreq/scaling_max_freq": 1497600,
+    "/sys/devices/system/cpu/cpu5/cpufreq/scaling_max_freq": 1497600,
+    "/sys/devices/system/cpu/cpu3/cpufreq/scaling_max_freq": 1497600,
+    "/sys/devices/system/cpu/cpu1/cpufreq/scaling_max_freq": 1497600,
+    "/sys/devices/system/cpu/cpu6/cpufreq/scaling_max_freq": 1497600,
+    "/sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq": 1497600,
+    "/sys/devices/system/cpu/cpu2/cpufreq/scaling_max_freq": 1497600,
+    "/sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq": 1497600
+  },
+  "clocks_locked_and_unchanged": true,
+  "resources": {
+    "samples": 145,
+    "baseline_ram_mb": 6411.0,
+    "peak_system_ram_mb": 8062,
+    "peak_ram_above_baseline_mb": 1651.0,
+    "mean_gpu_util_pct": 97.97931034482758,
+    "power_rails": {
+      "VDD_CPU_GPU_CV": {
+        "mean_w": 3.9274137931034483,
+        "peak_w": 4.04,
+        "samples": 145
+      },
+      "VDD_IN": {
+        "mean_w": 11.77915172413793,
+        "peak_w": 11.962,
+        "samples": 145
+      },
+      "VDD_SOC": {
+        "mean_w": 3.292889655172414,
+        "peak_w": 3.298,
+        "samples": 145
+      }
+    },
+    "total_input_power_rail": "VDD_IN",
+    "mean_input_power_w": 11.77915172413793,
+    "peak_soc_temp_c": 63.906,
+    "temperatures": {
+      "CPU": {
+        "mean_c": 62.71663448275862,
+        "peak_c": 63.312
+      },
+      "CV0": {
+        "mean_c": 62.29488275862069,
+        "peak_c": 62.843
+      },
+      "CV1": {
+        "mean_c": 61.58884827586207,
+        "peak_c": 62.031
+      },
+      "CV2": {
+        "mean_c": 60.69851034482759,
+        "peak_c": 61.125
+      },
+      "GPU": {
+        "mean_c": 61.530158620689654,
+        "peak_c": 62.125
+      },
+      "SOC0": {
+        "mean_c": 63.361462068965515,
+        "peak_c": 63.843
+      },
+      "SOC1": {
+        "mean_c": 63.42053793103448,
+        "peak_c": 63.906
+      },
+      "SOC2": {
+        "mean_c": 61.90564827586207,
+        "peak_c": 62.406
+      },
+      "iwlwifi": {
+        "mean_c": 62.213793103448275,
+        "peak_c": 63.0
+      },
+      "tj": {
+        "mean_c": 63.43451724137931,
+        "peak_c": 63.906
+      }
+    }
+  },
+  "telemetry_error": null,
+  "timing": "CUDA events; one in-flight enqueue; event completion synchronized each iteration; transfers/preprocess/postprocess excluded"
+}

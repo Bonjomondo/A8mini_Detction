@@ -1,0 +1,14 @@
+[
+  {
+    "shape": [
+      1,
+      84,
+      8400
+    ],
+    "finite": true,
+    "nan_count": 0,
+    "inf_count": 0,
+    "min": 0.0,
+    "max": 637.0
+  }
+]

@@ -1,0 +1,415 @@
+===== DATE =====
+Command: date --iso-8601=seconds
+Exit code: 0
+2026-10-07T14:42:07+08:00
+
+===== MODEL =====
+Command: cat /proc/device-tree/model
+Exit code: 0
+NVIDIA Orin NX Developer Kit
+===== KERNEL =====
+Command: uname -a
+Exit code: 0
+Linux ubuntu 5.10.216-tegra #1 SMP PREEMPT Mon Jan 26 23:28:09 PST 2026 aarch64 aarch64 aarch64 GNU/Linux
+
+===== OS =====
+Command: cat /etc/os-release
+Exit code: 0
+NAME="Ubuntu"
+VERSION="20.04.6 LTS (Focal Fossa)"
+ID=ubuntu
+ID_LIKE=debian
+PRETTY_NAME="Ubuntu 20.04.6 LTS"
+VERSION_ID="20.04"
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+VERSION_CODENAME=focal
+UBUNTU_CODENAME=focal
+
+===== L4T =====
+Command: cat /etc/nv_tegra_release
+Exit code: 0
+# R35 (release), REVISION: 6.4, GCID: 43803471, BOARD: t186ref, EABI: aarch64, DATE: Tue Jan 27 08:01:21 UTC 2026
+
+===== CUDA =====
+Command: /usr/local/cuda/bin/nvcc --version
+Exit code: 0
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2022 NVIDIA Corporation
+Built on Sun_Oct_23_22:16:07_PDT_2022
+Cuda compilation tools, release 11.4, V11.4.315
+Build cuda_11.4.r11.4/compiler.31964100_0
+
+===== PACKAGES =====
+Command: dpkg-query -W -f=${Package}	${Version}
+ nvidia-jetpack nvidia-l4t-core libcudnn8 libnvinfer8 cuda-toolkit-11-4
+Exit code: 1
+dpkg-query: no packages found matching nvidia-jetpack
+cuda-toolkit-11-4	11.4.19-1
+libcudnn8	8.6.0.166-1+cuda11.4
+libnvinfer8	8.5.2-1+cuda11.4
+nvidia-l4t-core	35.6.4-20260126234748
+
+===== PYTHON_LIBRARIES =====
+Command: /usr/bin/python3 -c import json,platform,tensorrt,torch,ultralytics; print(json.dumps({'python':platform.python_version(),'tensorrt':tensorrt.__version__,'torch':torch.__version__,'torch_cuda':torch.version.cuda,'cuda_available':torch.cuda.is_available(),'cudnn':torch.backends.cudnn.version(),'ultralytics':ultralytics.__version__,'ultralytics_path':ultralytics.__file__}))
+Exit code: 0
+{"python": "3.8.10", "tensorrt": "8.5.2.2", "torch": "2.1.0a0+41361538.nv23.06", "torch_cuda": "11.4", "cuda_available": true, "cudnn": 8600, "ultralytics": "8.4.89", "ultralytics_path": "/home/q/.local/lib/python3.8/site-packages/ultralytics/__init__.py"}
+
+===== TRTEXEC_HELP =====
+Command: /usr/src/tensorrt/bin/trtexec --help
+Exit code: 0
+&&&& RUNNING TensorRT.trtexec [TensorRT v8502] # /usr/src/tensorrt/bin/trtexec --help
+=== Model Options ===
+  --uff=<file>                UFF model
+  --onnx=<file>               ONNX model
+  --model=<file>              Caffe model (default = no model, random weights used)
+  --deploy=<file>             Caffe prototxt file
+  --output=<name>[,<name>]*   Output names (it can be specified multiple times); at least one output is required for UFF and Caffe
+  --uffInput=<name>,X,Y,Z     Input blob name and its dimensions (X,Y,Z=C,H,W), it can be specified multiple times; at least one is required for UFF models
+  --uffNHWC                   Set if inputs are in the NHWC layout instead of NCHW (use X,Y,Z=H,W,C order in --uffInput)
+
+=== Build Options ===
+  --maxBatch                  Set max batch size and build an implicit batch engine (default = same size as --batch)
+                              This option should not be used when the input model is ONNX or when dynamic shapes are provided.
+  --minShapes=spec            Build with dynamic shapes using a profile with the min shapes provided
+  --optShapes=spec            Build with dynamic shapes using a profile with the opt shapes provided
+  --maxShapes=spec            Build with dynamic shapes using a profile with the max shapes provided
+  --minShapesCalib=spec       Calibrate with dynamic shapes using a profile with the min shapes provided
+  --optShapesCalib=spec       Calibrate with dynamic shapes using a profile with the opt shapes provided
+  --maxShapesCalib=spec       Calibrate with dynamic shapes using a profile with the max shapes provided
+                              Note: All three of min, opt and max shapes must be supplied.
+                                    However, if only opt shapes is supplied then it will be expanded so
+                                    that min shapes and max shapes are set to the same values as opt shapes.
+                                    Input names can be wrapped with escaped single quotes (ex: \'Input:0\').
+                              Example input shapes spec: input0:1x3x256x256,input1:1x3x128x128
+                              Each input shape is supplied as a key-value pair where key is the input name and
+                              value is the dimensions (including the batch dimension) to be used for that input.
+                              Each key-value pair has the key and value separated using a colon (:).
+                              Multiple input shapes can be provided via comma-separated key-value pairs.
+  --inputIOFormats=spec       Type and format of each of the input tensors (default = all inputs in fp32:chw)
+                              See --outputIOFormats help for the grammar of type and format list.
+                              Note: If this option is specified, please set comma-separated types and formats for all
+                                    inputs following the same order as network inputs ID (even if only one input
+                                    needs specifying IO format) or set the type and format once for broadcasting.
+  --outputIOFormats=spec      Type and format of each of the output tensors (default = all outputs in fp32:chw)
+                              Note: If this option is specified, please set comma-separated types and formats for all
+                                    outputs following the same order as network outputs ID (even if only one output
+                                    needs specifying IO format) or set the type and format once for broadcasting.
+                              IO Formats: spec  ::= IOfmt[","spec]
+                                          IOfmt ::= type:fmt
+                                          type  ::= "fp32"|"fp16"|"int32"|"int8"
+                                          fmt   ::= ("chw"|"chw2"|"chw4"|"hwc8"|"chw16"|"chw32"|"dhwc8"|
+                                                     "cdhw32"|"hwc"|"dla_linear"|"dla_hwc4")["+"fmt]
+  --workspace=N               Set workspace size in MiB.
+  --memPoolSize=poolspec      Specify the size constraints of the designated memory pool(s) in MiB.
+                              Note: Also accepts decimal sizes, e.g. 0.25MiB. Will be rounded down to the nearest integer bytes.
+                              Pool constraint: poolspec ::= poolfmt[","poolspec]
+                                               poolfmt ::= pool:sizeInMiB
+                                               pool ::= "workspace"|"dlaSRAM"|"dlaLocalDRAM"|"dlaGlobalDRAM"
+  --profilingVerbosity=mode   Specify profiling verbosity. mode ::= layer_names_only|detailed|none (default = layer_names_only)
+  --minTiming=M               Set the minimum number of iterations used in kernel selection (default = 1)
+  --avgTiming=M               Set the number of times averaged in each iteration for kernel selection (default = 8)
+  --refit                     Mark the engine as refittable. This will allow the inspection of refittable layers 
+                              and weights within the engine.
+  --sparsity=spec             Control sparsity (default = disabled). 
+                              Sparsity: spec ::= "disable", "enable", "force"
+                              Note: Description about each of these options is as below
+                                    disable = do not enable sparse tactics in the builder (this is the default)
+                                    enable  = enable sparse tactics in the builder (but these tactics will only be
+                                              considered if the weights have the right sparsity pattern)
+                                    force   = enable sparse tactics in the builder and force-overwrite the weights to have
+                                              a sparsity pattern (even if you loaded a model yourself)
+  --noTF32                    Disable tf32 precision (default is to enable tf32, in addition to fp32)
+  --fp16                      Enable fp16 precision, in addition to fp32 (default = disabled)
+  --int8                      Enable int8 precision, in addition to fp32 (default = disabled)
+  --best                      Enable all precisions to achieve the best performance (default = disabled)
+  --directIO                  Avoid reformatting at network boundaries. (default = disabled)
+  --precisionConstraints=spec Control precision constraint setting. (default = none)
+                                  Precision Constaints: spec ::= "none" | "obey" | "prefer"
+                                  none = no constraints
+                                  prefer = meet precision constraints set by --layerPrecisions/--layerOutputTypes if possible
+                                  obey = meet precision constraints set by --layerPrecisions/--layerOutputTypes or fail
+                                         otherwise
+  --layerPrecisions=spec      Control per-layer precision constraints. Effective only when precisionConstraints is set to
+                              "obey" or "prefer". (default = none)
+                              The specs are read left-to-right, and later ones override earlier ones. "*" can be used as a
+                              layerName to specify the default precision for all the unspecified layers.
+                              Per-layer precision spec ::= layerPrecision[","spec]
+                                                  layerPrecision ::= layerName":"precision
+                                                  precision ::= "fp32"|"fp16"|"int32"|"int8"
+  --layerOutputTypes=spec     Control per-layer output type constraints. Effective only when precisionConstraints is set to
+                              "obey" or "prefer". (default = none)
+                              The specs are read left-to-right, and later ones override earlier ones. "*" can be used as a
+                              layerName to specify the default precision for all the unspecified layers. If a layer has more than
+                              one output, then multiple types separated by "+" can be provided for this layer.
+                              Per-layer output type spec ::= layerOutputTypes[","spec]
+                                                    layerOutputTypes ::= layerName":"type
+                                                    type ::= "fp32"|"fp16"|"int32"|"int8"["+"type]
+  --calib=<file>              Read INT8 calibration cache file
+  --safe                      Enable build safety certified engine
+  --consistency               Perform consistency checking on safety certified engine
+  --restricted                Enable safety scope checking with kSAFETY_SCOPE build flag
+  --saveEngine=<file>         Save the serialized engine
+  --loadEngine=<file>         Load a serialized engine
+  --tacticSources=tactics     Specify the tactics to be used by adding (+) or removing (-) tactics from the default 
+                              tactic sources (default = all available tactics).
+                              Note: Currently only cuDNN, cuBLAS, cuBLAS-LT, and edge mask convolutions are listed as optional
+                                    tactics.
+                              Tactic Sources: tactics ::= [","tactic]
+                                              tactic  ::= (+|-)lib
+                                              lib     ::= "CUBLAS"|"CUBLAS_LT"|"CUDNN"|"EDGE_MASK_CONVOLUTIONS"
+                                                          |"JIT_CONVOLUTIONS"
+                              For example, to disable cudnn and enable cublas: --tacticSources=-CUDNN,+CUBLAS
+  --noBuilderCache            Disable timing cache in builder (default is to enable timing cache)
+  --heuristic                 Enable tactic selection heuristic in builder (default is to disable the heuristic)
+  --timingCacheFile=<file>    Save/load the serialized global timing cache
+  --preview=features          Specify preview feature to be used by adding (+) or removing (-) preview features from the default
+                              Preview Features: features ::= [","feature]
+                                                feature  ::= (+|-)flag
+                                                flag     ::= "fasterDynamicShapes0805"
+                                                             |"disableExternalTacticSourcesForCore0805"
+
+=== Inference Options ===
+  --batch=N                   Set batch size for implicit batch engines (default = 1)
+                              This option should not be used when the engine is built from an ONNX model or when dynamic
+                              shapes are provided when the engine is built.
+  --shapes=spec               Set input shapes for dynamic shapes inference inputs.
+                              Note: Input names can be wrapped with escaped single quotes (ex: \'Input:0\').
+                              Example input shapes spec: input0:1x3x256x256, input1:1x3x128x128
+                              Each input shape is supplied as a key-value pair where key is the input name and
+                              value is the dimensions (including the batch dimension) to be used for that input.
+                              Each key-value pair has the key and value separated using a colon (:).
+                              Multiple input shapes can be provided via comma-separated key-value pairs.
+  --loadInputs=spec           Load input values from files (default = generate random inputs). Input names can be wrapped with single quotes (ex: 'Input:0')
+                              Input values spec ::= Ival[","spec]
+                                           Ival ::= name":"file
+  --iterations=N              Run at least N inference iterations (default = 10)
+  --warmUp=N                  Run for N milliseconds to warmup before measuring performance (default = 200)
+  --duration=N                Run performance measurements for at least N seconds wallclock time (default = 3)
+  --sleepTime=N               Delay inference start with a gap of N milliseconds between launch and compute (default = 0)
+  --idleTime=N                Sleep N milliseconds between two continuous iterations(default = 0)
+  --streams=N                 Instantiate N engines to use concurrently (default = 1)
+  --exposeDMA                 Serialize DMA transfers to and from device (default = disabled).
+  --noDataTransfers           Disable DMA transfers to and from device (default = enabled).
+  --useManagedMemory          Use managed memory instead of separate host and device allocations (default = disabled).
+  --useSpinWait               Actively synchronize on GPU events. This option may decrease synchronization time but increase CPU usage and power (default = disabled)
+  --threads                   Enable multithreading to drive engines with independent threads or speed up refitting (default = disabled) 
+  --useCudaGraph              Use CUDA graph to capture engine execution and then launch inference (default = disabled).
+                              This flag may be ignored if the graph capture fails.
+  --timeDeserialize           Time the amount of time it takes to deserialize the network and exit.
+  --timeRefit                 Time the amount of time it takes to refit the engine before inference.
+  --separateProfileRun        Do not attach the profiler in the benchmark run; if profiling is enabled, a second profile run will be executed (default = disabled)
+  --buildOnly                 Exit after the engine has been built and skip inference perf measurement (default = disabled)
+  --persistentCacheRatio      Set the persistentCacheLimit in ratio, 0.5 represent half of max persistent L2 size (default = 0)
+
+=== Build and Inference Batch Options ===
+                              When using implicit batch, the max batch size of the engine, if not given, 
+                              is set to the inference batch size;
+                              when using explicit batch, if shapes are specified only for inference, they 
+                              will be used also as min/opt/max in the build profile; if shapes are 
+                              specified only for the build, the opt shapes will be used also for inference;
+                              if both are specified, they must be compatible; and if explicit batch is 
+                              enabled but neither is specified, the model must provide complete static
+                              dimensions, including batch size, for all inputs
+                              Using ONNX models automatically forces explicit batch.
+
+=== Reporting Options ===
+  --verbose                   Use verbose logging (default = false)
+  --avgRuns=N                 Report performance measurements averaged over N consecutive iterations (default = 10)
+  --percentile=P1,P2,P3,...   Report performance for the P1,P2,P3,... percentages (0<=P_i<=100, 0 representing max perf, and 100 representing min perf; (default = 90,95,99%)
+  --dumpRefit                 Print the refittable layers and weights from a refittable engine
+  --dumpOutput                Print the output tensor(s) of the last inference iteration (default = disabled)
+  --dumpProfile               Print profile information per layer (default = disabled)
+  --dumpLayerInfo             Print layer information of the engine to console (default = disabled)
+  --exportTimes=<file>        Write the timing results in a json file (default = disabled)
+  --exportOutput=<file>       Write the output tensors to a json file (default = disabled)
+  --exportProfile=<file>      Write the profile information per layer in a json file (default = disabled)
+  --exportLayerInfo=<file>    Write the layer information of the engine in a json file (default = disabled)
+
+=== System Options ===
+  --device=N                  Select cuda device N (default = 0)
+  --useDLACore=N              Select DLA core N for layers that support DLA (default = none)
+  --allowGPUFallback          When DLA is enabled, allow GPU fallback for unsupported layers (default = disabled)
+  --plugins                   Plugin library (.so) to load (can be specified multiple times)
+
+=== Help ===
+  --help, -h                  Print this message
+
+===== NVP_MODEL =====
+Command: nvpmodel -q
+Exit code: 0
+NV Power Mode: 25W
+3
+NVPM ERROR: Error opening /sys/kernel/nvpmodel_emc_cap/emc_iso_cap: 13
+NVPM ERROR: failed to read PARAM EMC: ARG MAX_FREQ: PATH /sys/kernel/nvpmodel_emc_cap/emc_iso_cap
+
+===== NVP_MODEL_VERBOSE =====
+Command: sudo -n nvpmodel -q --verbose
+Exit code: 1
+sudo: a password is required
+
+Authenticated snapshot:
+NVPM VERB: Config file: /etc/nvpmodel.conf
+NVPM VERB: parsing done for /etc/nvpmodel.conf
+NVPM VERB: Current mode: NV Power Mode: 25W
+3
+NVPM VERB: PARAM CPU_ONLINE: ARG CORE_0: PATH /sys/devices/system/cpu/cpu0/online: REAL_VAL: 1 CONF_VAL: 1
+NVPM VERB: PARAM CPU_ONLINE: ARG CORE_1: PATH /sys/devices/system/cpu/cpu1/online: REAL_VAL: 1 CONF_VAL: 1
+NVPM VERB: PARAM CPU_ONLINE: ARG CORE_2: PATH /sys/devices/system/cpu/cpu2/online: REAL_VAL: 1 CONF_VAL: 1
+NVPM VERB: PARAM CPU_ONLINE: ARG CORE_3: PATH /sys/devices/system/cpu/cpu3/online: REAL_VAL: 1 CONF_VAL: 1
+NVPM VERB: PARAM CPU_ONLINE: ARG CORE_4: PATH /sys/devices/system/cpu/cpu4/online: REAL_VAL: 1 CONF_VAL: 1
+NVPM VERB: PARAM CPU_ONLINE: ARG CORE_5: PATH /sys/devices/system/cpu/cpu5/online: REAL_VAL: 1 CONF_VAL: 1
+NVPM VERB: PARAM CPU_ONLINE: ARG CORE_6: PATH /sys/devices/system/cpu/cpu6/online: REAL_VAL: 1 CONF_VAL: 1
+NVPM VERB: PARAM CPU_ONLINE: ARG CORE_7: PATH /sys/devices/system/cpu/cpu7/online: REAL_VAL: 1 CONF_VAL: 1
+NVPM VERB: PARAM FBP_POWER_GATING: ARG FBP_PG_MASK: PATH /sys/devices/gpu.0/fbp_pg_mask: REAL_VAL: 2 CONF_VAL: 2
+NVPM VERB: PARAM TPC_POWER_GATING: ARG TPC_PG_MASK: PATH /sys/devices/gpu.0/tpc_pg_mask: REAL_VAL: 240 CONF_VAL: 240
+NVPM VERB: PARAM GPU_POWER_CONTROL_ENABLE: ARG GPU_PWR_CNTL_EN: PATH /sys/devices/gpu.0/power/control: REAL_VAL: auto CONF_VAL: on
+NVPM VERB: PARAM CPU_A78_0: ARG MIN_FREQ: PATH /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq: REAL_VAL: 1497600 CONF_VAL: 729600
+NVPM VERB: PARAM CPU_A78_0: ARG MAX_FREQ: PATH /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq: REAL_VAL: 1497600 CONF_VAL: 1497600
+NVPM VERB: PARAM CPU_A78_1: ARG MIN_FREQ: PATH /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq: REAL_VAL: 1497600 CONF_VAL: 729600
+NVPM VERB: PARAM CPU_A78_1: ARG MAX_FREQ: PATH /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq: REAL_VAL: 1497600 CONF_VAL: 1497600
+NVPM VERB: PARAM GPU: ARG MIN_FREQ: PATH /sys/devices/17000000.ga10b/devfreq_dev/min_freq: REAL_VAL: 408000000 CONF_VAL: 0
+NVPM VERB: PARAM GPU: ARG MAX_FREQ: PATH /sys/devices/17000000.ga10b/devfreq_dev/max_freq: REAL_VAL: 408000000 CONF_VAL: 408000000
+NVPM VERB: PARAM GPU_POWER_CONTROL_DISABLE: ARG GPU_PWR_CNTL_DIS: PATH /sys/devices/gpu.0/power/control: REAL_VAL: auto CONF_VAL: auto
+NVPM VERB: PARAM EMC: ARG MAX_FREQ: PATH /sys/kernel/nvpmodel_emc_cap/emc_iso_cap: REAL_VAL: 0 CONF_VAL: 0
+NVPM VERB: PARAM DLA0_CORE: ARG MAX_FREQ: PATH /sys/devices/platform/13e40000.host1x/15880000.nvdla0/acm/clk_cap/dla0_core: REAL_VAL: 614400000 CONF_VAL: 614400000
+NVPM VERB: PARAM DLA1_CORE: ARG MAX_FREQ: PATH /sys/devices/platform/13e40000.host1x/158c0000.nvdla1/acm/clk_cap/dla1_core: REAL_VAL: 614400000 CONF_VAL: 614400000
+NVPM VERB: PARAM DLA0_FALCON: ARG MAX_FREQ: PATH /sys/devices/platform/13e40000.host1x/15880000.nvdla0/acm/clk_cap/dla0_falcon: REAL_VAL: 294400000 CONF_VAL: 294400000
+NVPM VERB: PARAM DLA1_FALCON: ARG MAX_FREQ: PATH /sys/devices/platform/13e40000.host1x/158c0000.nvdla1/acm/clk_cap/dla1_falcon: REAL_VAL: 294400000 CONF_VAL: 294400000
+NVPM VERB: PARAM PVA0_VPS: ARG MAX_FREQ: PATH /sys/devices/platform/13e40000.host1x/16000000.pva0/acm/clk_cap/pva0_vps: REAL_VAL: 512000000 CONF_VAL: 512000000
+NVPM VERB: PARAM PVA0_AXI: ARG MAX_FREQ: PATH /sys/devices/platform/13e40000.host1x/16000000.pva0/acm/clk_cap/pva0_cpu_axi: REAL_VAL: 358400000 CONF_VAL: 358400000
+
+===== JETSON_CLOCKS =====
+Command: sudo -n jetson_clocks --show
+Exit code: 1
+sudo: a password is required
+
+Authenticated snapshot:
+SOC family:tegra234  Machine:NVIDIA Orin NX Developer Kit
+Online CPUs: 0-7
+cpu0:  Online=1 Governor=schedutil MinFreq=1497600 MaxFreq=1497600 CurrentFreq=1497600 IdleStates: WFI=0 c7=0 
+cpu1:  Online=1 Governor=schedutil MinFreq=1497600 MaxFreq=1497600 CurrentFreq=1497600 IdleStates: WFI=0 c7=0 
+cpu2:  Online=1 Governor=schedutil MinFreq=1497600 MaxFreq=1497600 CurrentFreq=1497600 IdleStates: WFI=0 c7=0 
+cpu3:  Online=1 Governor=schedutil MinFreq=1497600 MaxFreq=1497600 CurrentFreq=1497600 IdleStates: WFI=0 c7=0 
+cpu4:  Online=1 Governor=schedutil MinFreq=1497600 MaxFreq=1497600 CurrentFreq=1497600 IdleStates: WFI=0 c7=0 
+cpu5:  Online=1 Governor=schedutil MinFreq=1497600 MaxFreq=1497600 CurrentFreq=1497600 IdleStates: WFI=0 c7=0 
+cpu6:  Online=1 Governor=schedutil MinFreq=1497600 MaxFreq=1497600 CurrentFreq=1497600 IdleStates: WFI=0 c7=0 
+cpu7:  Online=1 Governor=schedutil MinFreq=1497600 MaxFreq=1497600 CurrentFreq=1497600 IdleStates: WFI=0 c7=0 
+GPU MinFreq=408000000 MaxFreq=408000000 CurrentFreq=408000000
+EMC MinFreq=204000000 MaxFreq=3199000000 CurrentFreq=3199000000 FreqOverride=1
+DLA0_CORE:   Online=1 MinFreq=0 MaxFreq=614400000 CurrentFreq=614400000
+DLA0_FALCON: Online=1 MinFreq=0 MaxFreq=294400000 CurrentFreq=294400000
+DLA1_CORE:   Online=1 MinFreq=0 MaxFreq=614400000 CurrentFreq=614400000
+DLA1_FALCON: Online=1 MinFreq=0 MaxFreq=294400000 CurrentFreq=294400000
+PVA0_VPS0: Online=1 MinFreq=0 MaxFreq=512000000 CurrentFreq=512000000
+PVA0_AXI:  Online=1 MinFreq=0 MaxFreq=358400000 CurrentFreq=358400000
+FAN Dynamic Speed control=active hwmon2_pwm1=85
+NV Power Mode: 25W
+
+===== STORAGE =====
+Command: lsblk -o NAME,SIZE,MODEL,TYPE,MOUNTPOINT
+Exit code: 0
+NAME           SIZE MODEL                     TYPE MOUNTPOINT
+loop0           16M                           loop 
+zram0        968.9M                           disk [SWAP]
+zram1        968.9M                           disk [SWAP]
+zram2        968.9M                           disk [SWAP]
+zram3        968.9M                           disk [SWAP]
+zram4        968.9M                           disk [SWAP]
+zram5        968.9M                           disk [SWAP]
+zram6        968.9M                           disk [SWAP]
+zram7        968.9M                           disk [SWAP]
+nvme0n1      119.2G PM991a NVMe Samsung 128GB disk 
+├─nvme0n1p1  117.8G                           part /
+├─nvme0n1p2    128M                           part 
+├─nvme0n1p3    768K                           part 
+├─nvme0n1p4   31.6M                           part 
+├─nvme0n1p5    128M                           part 
+├─nvme0n1p6    768K                           part 
+├─nvme0n1p7   31.6M                           part 
+├─nvme0n1p8     80M                           part 
+├─nvme0n1p9    512K                           part 
+├─nvme0n1p10    64M                           part 
+├─nvme0n1p11    80M                           part 
+├─nvme0n1p12   512K                           part 
+├─nvme0n1p13    64M                           part 
+├─nvme0n1p14   400M                           part 
+└─nvme0n1p15 479.5M                           part 
+
+===== MEMORY =====
+Command: cat /proc/meminfo
+Exit code: 0
+MemTotal:       15874312 kB
+MemFree:         7790668 kB
+MemAvailable:   11810844 kB
+Buffers:          370920 kB
+Cached:          3635488 kB
+SwapCached:            0 kB
+Active:          1653080 kB
+Inactive:        5478676 kB
+Active(anon):       4596 kB
+Inactive(anon):  3181636 kB
+Active(file):    1648484 kB
+Inactive(file):  2297040 kB
+Unevictable:       21960 kB
+Mlocked:               0 kB
+SwapTotal:       7937120 kB
+SwapFree:        7937120 kB
+Dirty:                 0 kB
+Writeback:             0 kB
+AnonPages:       3044536 kB
+Mapped:           724524 kB
+Shmem:             39080 kB
+KReclaimable:     328016 kB
+Slab:             461104 kB
+SReclaimable:     328016 kB
+SUnreclaim:       133088 kB
+KernelStack:       13984 kB
+PageTables:        39504 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:    15874276 kB
+Committed_AS:    8707104 kB
+VmallocTotal:   135290159040 kB
+VmallocUsed:       66080 kB
+VmallocChunk:          0 kB
+Percpu:             4960 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:    987136 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+FileHugePages:         0 kB
+FilePmdMapped:         0 kB
+CmaTotal:         262144 kB
+CmaFree:          189556 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:               0 kB
+
+===== CPU/GPU CLOCK SYSFS =====
+{
+  "/sys/devices/17000000.ga10b/devfreq/17000000.ga10b/min_freq": 408000000,
+  "/sys/devices/17000000.ga10b/devfreq/17000000.ga10b/max_freq": 408000000,
+  "/sys/devices/system/cpu/cpu7/cpufreq/scaling_min_freq": 1497600,
+  "/sys/devices/system/cpu/cpu5/cpufreq/scaling_min_freq": 1497600,
+  "/sys/devices/system/cpu/cpu3/cpufreq/scaling_min_freq": 1497600,
+  "/sys/devices/system/cpu/cpu1/cpufreq/scaling_min_freq": 1497600,
+  "/sys/devices/system/cpu/cpu6/cpufreq/scaling_min_freq": 1497600,
+  "/sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq": 1497600,
+  "/sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq": 1497600,
+  "/sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq": 1497600,
+  "/sys/devices/system/cpu/cpu7/cpufreq/scaling_max_freq": 1497600,
+  "/sys/devices/system/cpu/cpu5/cpufreq/scaling_max_freq": 1497600,
+  "/sys/devices/system/cpu/cpu3/cpufreq/scaling_max_freq": 1497600,
+  "/sys/devices/system/cpu/cpu1/cpufreq/scaling_max_freq": 1497600,
+  "/sys/devices/system/cpu/cpu6/cpufreq/scaling_max_freq": 1497600,
+  "/sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq": 1497600,
+  "/sys/devices/system/cpu/cpu2/cpufreq/scaling_max_freq": 1497600,
+  "/sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq": 1497600
+}

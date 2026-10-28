@@ -1,0 +1,112 @@
+{
+  "windows": [
+    {
+      "path": "c0/fp16/repeat1/result.json",
+      "gpu_mean_ms": 32.753202617428705,
+      "gpu_freq_min_mhz": 408.0,
+      "gpu_freq_max_mhz": 408.0,
+      "telemetry_samples": 149,
+      "peak_soc_temp_c": 64.812,
+      "clocks_valid": true
+    },
+    {
+      "path": "c0/fp16/repeat2/result.json",
+      "gpu_mean_ms": 32.69546879858851,
+      "gpu_freq_min_mhz": 408.0,
+      "gpu_freq_max_mhz": 408.0,
+      "telemetry_samples": 149,
+      "peak_soc_temp_c": 66.718,
+      "clocks_valid": true
+    },
+    {
+      "path": "c0/fp16/repeat3/result.json",
+      "gpu_mean_ms": 32.69897281226571,
+      "gpu_freq_min_mhz": 408.0,
+      "gpu_freq_max_mhz": 408.0,
+      "telemetry_samples": 149,
+      "peak_soc_temp_c": 66.937,
+      "clocks_valid": true
+    },
+    {
+      "path": "c0/int8/repeat1/result.json",
+      "gpu_mean_ms": 26.745865928180297,
+      "gpu_freq_min_mhz": 408.0,
+      "gpu_freq_max_mhz": 408.0,
+      "telemetry_samples": 148,
+      "peak_soc_temp_c": 65.375,
+      "clocks_valid": true
+    },
+    {
+      "path": "c0/int8/repeat2/result.json",
+      "gpu_mean_ms": 26.75215636056837,
+      "gpu_freq_min_mhz": 408.0,
+      "gpu_freq_max_mhz": 408.0,
+      "telemetry_samples": 148,
+      "peak_soc_temp_c": 66.437,
+      "clocks_valid": true
+    },
+    {
+      "path": "c0/int8/repeat3/result.json",
+      "gpu_mean_ms": 26.735544136653086,
+      "gpu_freq_min_mhz": 408.0,
+      "gpu_freq_max_mhz": 408.0,
+      "telemetry_samples": 148,
+      "peak_soc_temp_c": 66.718,
+      "clocks_valid": true
+    },
+    {
+      "path": "c2/fp16/repeat1/result.json",
+      "gpu_mean_ms": 32.63298049196196,
+      "gpu_freq_min_mhz": 408.0,
+      "gpu_freq_max_mhz": 408.0,
+      "telemetry_samples": 149,
+      "peak_soc_temp_c": 66.062,
+      "clocks_valid": true
+    },
+    {
+      "path": "c2/fp16/repeat2/result.json",
+      "gpu_mean_ms": 32.64178082836595,
+      "gpu_freq_min_mhz": 408.0,
+      "gpu_freq_max_mhz": 408.0,
+      "telemetry_samples": 149,
+      "peak_soc_temp_c": 66.562,
+      "clocks_valid": true
+    },
+    {
+      "path": "c2/fp16/repeat3/result.json",
+      "gpu_mean_ms": 32.67267907003432,
+      "gpu_freq_min_mhz": 408.0,
+      "gpu_freq_max_mhz": 408.0,
+      "telemetry_samples": 149,
+      "peak_soc_temp_c": 66.906,
+      "clocks_valid": true
+    },
+    {
+      "path": "c2/int8/repeat1/result.json",
+      "gpu_mean_ms": 26.747642762101624,
+      "gpu_freq_min_mhz": 408.0,
+      "gpu_freq_max_mhz": 408.0,
+      "telemetry_samples": 148,
+      "peak_soc_temp_c": 65.968,
+      "clocks_valid": true
+    },
+    {
+      "path": "c2/int8/repeat2/result.json",
+      "gpu_mean_ms": 26.747540578578434,
+      "gpu_freq_min_mhz": 408.0,
+      "gpu_freq_max_mhz": 408.0,
+      "telemetry_samples": 148,
+      "peak_soc_temp_c": 66.062,
+      "clocks_valid": true
+    },
+    {
+      "path": "c2/int8/repeat3/result.json",
+      "gpu_mean_ms": 26.75262308078191,
+      "gpu_freq_min_mhz": 408.0,
+      "gpu_freq_max_mhz": 408.0,
+      "telemetry_samples": 148,
+      "peak_soc_temp_c": 66.75,
+      "clocks_valid": true
+    }
+  ]
+}

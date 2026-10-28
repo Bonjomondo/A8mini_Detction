@@ -1,0 +1,32 @@
+{
+  "model": "c2",
+  "precision": "int8",
+  "images": 548,
+  "all_outputs_finite": true,
+  "detections": 164400,
+  "metrics_percent": {
+    "AP": 23.92577710631713,
+    "AP50": 40.369905885230665,
+    "AP75": 23.826070784491307,
+    "APs": 16.37707060419403,
+    "APm": 32.67668357038105,
+    "APl": 36.57067388265516,
+    "AR1": 9.34838632180723,
+    "AR10": 24.90591412287378,
+    "AR100": 33.199901740300184,
+    "ARs": 24.968641601309404,
+    "ARm": 43.922256659896085,
+    "ARl": 45.71650071947339
+  },
+  "gt_sha256": "6f57aa4b42d64ee7b99b8a6a5b159ad19cba2eacf00bd86f23314966614bf4d8",
+  "pipeline_excluding_decode": {
+    "mean_ms": 38.46410622302123,
+    "p50_ms": 37.44341999936296,
+    "p95_ms": 38.55926935048046,
+    "p99_ms": 39.27891551074936,
+    "min_ms": 36.78071899958013,
+    "max_ms": 514.861767000184
+  },
+  "mean_max_class_score": 0.9276996250570255,
+  "protocol": "548 held-out images; direct RGB stretch640; /255; one argmax class/query; conf>=0.001; no NMS; clipped boxes; COCOeval maxDets100. Preprocessing may differ from training validator; compare formats within this evaluation only."
+}

@@ -1,0 +1,26 @@
+{
+  "c0/fp16": {
+    "layers_total": 185,
+    "layers_with_int8_tensor_io": 0,
+    "convolution_layers": 70,
+    "convolutions_with_int8_tensor_io": 0
+  },
+  "c0/int8": {
+    "layers_total": 186,
+    "layers_with_int8_tensor_io": 92,
+    "convolution_layers": 74,
+    "convolutions_with_int8_tensor_io": 69
+  },
+  "c2/fp16": {
+    "layers_total": 190,
+    "layers_with_int8_tensor_io": 0,
+    "convolution_layers": 70,
+    "convolutions_with_int8_tensor_io": 0
+  },
+  "c2/int8": {
+    "layers_total": 187,
+    "layers_with_int8_tensor_io": 93,
+    "convolution_layers": 74,
+    "convolutions_with_int8_tensor_io": 69
+  }
+}

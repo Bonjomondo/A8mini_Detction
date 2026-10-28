@@ -1,0 +1,442 @@
+[10/26/2026-16:46:19] [TRT] [I] [MemUsageChange] Init CUDA: CPU +221, GPU +0, now: CPU 256, GPU 5822 (MiB)
+[10/26/2026-16:46:22] [TRT] [I] [MemUsageChange] Init builder kernel library: CPU +302, GPU +527, now: CPU 581, GPU 6439 (MiB)
+[10/26/2026-16:46:22] [TRT] [W] onnx2trt_utils.cpp:375: Your ONNX model has been generated with INT64 weights, while TensorRT does not natively support INT64. Attempting to cast down to INT32.
+[10/26/2026-16:46:22] [TRT] [I] /model.6/ma/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:22] [TRT] [I] /model.6/ma/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:22] [TRT] [I] /model.6/ma/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:22] [TRT] [I] /model.6/ma/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:22] [TRT] [I] /model.6/ma/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:22] [TRT] [I] /model.6/ma/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:22] [TRT] [I] /model.6/ma/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:22] [TRT] [I] /model.6/ma/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:22] [TRT] [I] /model.6/ma/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:22] [TRT] [I] /model.6/ma/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:22] [TRT] [I] /model.6/ma/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:22] [TRT] [I] /model.6/ma/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:22] [TRT] [I] /model.6/ma/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:22] [TRT] [I] /model.6/ma/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:22] [TRT] [I] /model.6/ma/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:22] [TRT] [I] /model.6/ma/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:22] [TRT] [I] /model.6/ma/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:22] [TRT] [I] /model.6/ma/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:22] [TRT] [I] /model.6/ma/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:22] [TRT] [I] /model.6/ma/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:22] [TRT] [I] /model.6/ma/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:22] [TRT] [I] /model.6/ma/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:22] [TRT] [I] /model.6/ma/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:22] [TRT] [I] /model.6/ma/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:22] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:22] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:22] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:22] [TRT] [W] onnx2trt_utils.cpp:403: One or more weights outside the range of INT32 was clamped
+[10/26/2026-16:46:22] [TRT] [I] /model.6/ma/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:22] [TRT] [I] /model.6/ma/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:22] [TRT] [I] /model.6/ma/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:22] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:22] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:22] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:22] [TRT] [I] /model.6/ma/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:22] [TRT] [I] /model.6/ma/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:22] [TRT] [I] /model.6/ma/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:22] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:22] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:22] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:22] [TRT] [I] /model.6/ma/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:22] [TRT] [I] /model.6/ma/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:22] [TRT] [I] /model.6/ma/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:22] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:22] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:22] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.6/ma/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.6/ma/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.6/ma/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.6/ma/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.6/ma/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.6/ma/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.6/ma/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.6/ma/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.6/ma/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.6/ma/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.6/ma/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.6/ma/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [W] onnx2trt_utils.cpp:403: One or more weights outside the range of INT32 was clamped
+[10/26/2026-16:46:23] [TRT] [I] /model.6/ma/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.6/ma/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.6/ma/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.6/ma/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.6/ma/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.6/ma/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.6/ma/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.6/ma/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.6/ma/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.6/ma/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.6/ma/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.6/ma/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.6/ma/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.6/ma/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.6/ma/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.6/ma/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.6/ma/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.6/ma/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.6/ma/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.6/ma/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.6/ma/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.24/decoder/layers.2/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.24/decoder/layers.2/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [I] /model.24/decoder/layers.2/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:23] [TRT] [W] onnx2trt_utils.cpp:403: One or more weights outside the range of INT32 was clamped
+[10/26/2026-16:46:24] [TRT] [I] /model.6/ma/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.6/ma/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.6/ma/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.24/decoder/layers.2/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.24/decoder/layers.2/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.24/decoder/layers.2/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.6/ma/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.6/ma/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.6/ma/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.24/decoder/layers.2/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.24/decoder/layers.2/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.24/decoder/layers.2/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.6/ma/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.6/ma/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.6/ma/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.24/decoder/layers.2/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.24/decoder/layers.2/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.24/decoder/layers.2/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.6/ma/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.6/ma/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.6/ma/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.24/decoder/layers.2/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.24/decoder/layers.2/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.24/decoder/layers.2/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.6/ma/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.6/ma/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.6/ma/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.24/decoder/layers.2/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.24/decoder/layers.2/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.24/decoder/layers.2/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.6/ma/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.6/ma/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.6/ma/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.24/decoder/layers.2/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.24/decoder/layers.2/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.24/decoder/layers.2/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.6/ma/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.6/ma/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.6/ma/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.24/decoder/layers.2/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.24/decoder/layers.2/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.24/decoder/layers.2/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.6/ma/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.6/ma/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.6/ma/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[400,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.24/decoder/layers.0/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.24/decoder/layers.1/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.24/decoder/layers.2/self_attn/MatMul_2: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.24/decoder/layers.2/self_attn/MatMul: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:24] [TRT] [I] /model.24/decoder/layers.2/self_attn/MatMul_1: broadcasting input1 to make tensors conform, dims(input0)=[300,1,256][NONE] dims(input1)=[1,256,256][NONE].
+[10/26/2026-16:46:25] [TRT] [I] ---------- Layers Running on DLA ----------
+[10/26/2026-16:46:25] [TRT] [I] ---------- Layers Running on GPU ----------
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONSTANT: /model.6/Constant_5_output_0
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] POINTWISE: PWN(PWN(PWN(/model.6/Constant_4_output_0 + (Unnamed Layer* 69) [Shuffle], /model.6/Pow), /model.6/Reciprocal), PWN(/model.6/Constant_6_output_0 + (Unnamed Layer* 74) [Shuffle], /model.6/Mul))
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] SHUFFLE: /model.6/Unsqueeze_1
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONSTANT: /model.6/Constant_2_output_0
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] SLICE: /model.6/Expand
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] SHUFFLE: /model.6/Reshape + /model.6/Unsqueeze
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] MATRIX_MULTIPLY: /model.6/MatMul
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONSTANT: /model.6/Constant_3_output_0
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] SLICE: /model.6/Expand_1
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] SHUFFLE: /model.6/Reshape_1 + /model.6/Unsqueeze_2
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] MATRIX_MULTIPLY: /model.6/MatMul_1
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] POINTWISE: PWN(/model.6/Cos_1)
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] POINTWISE: PWN(/model.6/Sin_1)
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] POINTWISE: PWN(/model.6/Cos)
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] POINTWISE: PWN(/model.6/Sin)
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONVOLUTION: /model.0/layers/layers.0/conv/Conv + /model.0/layers/layers.0/act/Relu
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONVOLUTION: /model.0/layers/layers.1/conv/Conv + /model.0/layers/layers.1/act/Relu
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONVOLUTION: /model.0/layers/layers.2/conv/Conv + /model.0/layers/layers.2/act/Relu
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] POOLING: /model.0/layers/layers.3/MaxPool
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONVOLUTION: /model.1/blocks/blocks.0/conv1/conv/Conv + /model.1/blocks/blocks.0/conv1/act/Relu
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONVOLUTION: /model.1/blocks/blocks.0/conv2/conv/Conv
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONVOLUTION: /model.1/blocks/blocks.0/shortcut/conv/Conv + /model.1/blocks/blocks.0/Add + /model.1/blocks/blocks.0/act/Relu
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONVOLUTION: /model.1/blocks/blocks.1/conv1/conv/Conv + /model.1/blocks/blocks.1/conv1/act/Relu
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONVOLUTION: /model.1/blocks/blocks.1/conv2/conv/Conv + /model.1/blocks/blocks.1/Add + /model.1/blocks/blocks.1/act/Relu
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] COPY: (Unnamed Layer* 27) [Identity]
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] POOLING: /model.2/blocks/blocks.0/shortcut/shortcut.0/AveragePool
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONVOLUTION: /model.2/blocks/blocks.0/conv1/conv/Conv + /model.2/blocks/blocks.0/conv1/act/Relu
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONVOLUTION: /model.2/blocks/blocks.0/conv2/conv/Conv
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONVOLUTION: /model.2/blocks/blocks.0/shortcut/shortcut.1/conv/Conv + /model.2/blocks/blocks.0/Add + /model.2/blocks/blocks.0/act/Relu
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONVOLUTION: /model.2/blocks/blocks.1/conv1/conv/Conv + /model.2/blocks/blocks.1/conv1/act/Relu
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONVOLUTION: /model.2/blocks/blocks.1/conv2/conv/Conv + /model.2/blocks/blocks.1/Add + /model.2/blocks/blocks.1/act/Relu
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] COPY: (Unnamed Layer* 40) [Identity]
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] POOLING: /model.3/blocks/blocks.0/shortcut/shortcut.0/AveragePool
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONVOLUTION: /model.14/conv/Conv
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONVOLUTION: /model.3/blocks/blocks.0/conv1/conv/Conv + /model.3/blocks/blocks.0/conv1/act/Relu
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONVOLUTION: /model.3/blocks/blocks.0/conv2/conv/Conv
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONVOLUTION: /model.3/blocks/blocks.0/shortcut/shortcut.1/conv/Conv + /model.3/blocks/blocks.0/Add + /model.3/blocks/blocks.0/act/Relu
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONVOLUTION: /model.3/blocks/blocks.1/conv1/conv/Conv + /model.3/blocks/blocks.1/conv1/act/Relu
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONVOLUTION: /model.3/blocks/blocks.1/conv2/conv/Conv + /model.3/blocks/blocks.1/Add + /model.3/blocks/blocks.1/act/Relu
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] COPY: (Unnamed Layer* 53) [Identity]
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] POOLING: /model.4/blocks/blocks.0/shortcut/shortcut.0/AveragePool
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONVOLUTION: /model.9/conv/Conv
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONVOLUTION: /model.4/blocks/blocks.0/conv1/conv/Conv + /model.4/blocks/blocks.0/conv1/act/Relu
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONVOLUTION: /model.4/blocks/blocks.0/conv2/conv/Conv
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONVOLUTION: /model.4/blocks/blocks.0/shortcut/shortcut.1/conv/Conv + /model.4/blocks/blocks.0/Add + /model.4/blocks/blocks.0/act/Relu
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONVOLUTION: /model.4/blocks/blocks.1/conv1/conv/Conv + /model.4/blocks/blocks.1/conv1/act/Relu
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONVOLUTION: /model.4/blocks/blocks.1/conv2/conv/Conv + /model.4/blocks/blocks.1/Add + /model.4/blocks/blocks.1/act/Relu
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONVOLUTION: /model.5/conv/Conv
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONSTANT: model.6.norm2.bias + (Unnamed Layer* 204) [Shuffle]
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONSTANT: model.6.norm2.weight + (Unnamed Layer* 201) [Shuffle]
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONSTANT: model.6.norm1.bias + (Unnamed Layer* 163) [Shuffle]
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONSTANT: model.6.norm1.weight + (Unnamed Layer* 160) [Shuffle]
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] SHUFFLE: /model.6/Reshape_2
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] SHUFFLE: /model.6/Transpose
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONSTANT: onnx::Add_2710 + (Unnamed Layer* 123) [Shuffle]
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] SHUFFLE: /model.6/ma/Transpose_1 + reshape_before_/model.6/ma/MatMul_2
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONVOLUTION: /model.6/ma/MatMul_2
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] SHUFFLE: reshape_after_/model.6/ma/MatMul_2
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] ELEMENTWISE: /model.6/ma/Add_2
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] SHUFFLE: /model.6/ma/Reshape_2 + /model.6/ma/Transpose_3
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONSTANT: onnx::Add_2708 + (Unnamed Layer* 117) [Shuffle]
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] COPY: /model.6/Sin_output_0 copy
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] COPY: /model.6/Cos_output_0 copy
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] COPY: /model.6/Sin_1_output_0 copy
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] COPY: /model.6/Cos_1_output_0 copy
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] SHUFFLE: /model.6/Unsqueeze_3
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] COPY: /model.6/Cast
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] ELEMENTWISE: /model.6/Add
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] SHUFFLE: /model.6/ma/Transpose + reshape_before_/model.6/ma/MatMul_1
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONVOLUTION: /model.6/ma/MatMul_1 || /model.6/ma/MatMul
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] COPY: reshape_after_/model.6/ma/MatMul_1_copy_input
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] SHUFFLE: reshape_after_/model.6/ma/MatMul_1
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] ELEMENTWISE: /model.6/ma/Add_1
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] SHUFFLE: /model.6/ma/Reshape_1 + /model.6/ma/Transpose_4
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONSTANT: onnx::Add_2706 + (Unnamed Layer* 111) [Shuffle]
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] COPY: reshape_after_/model.6/ma/MatMul_copy_input
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] SHUFFLE: reshape_after_/model.6/ma/MatMul
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] ELEMENTWISE: /model.6/ma/Add
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] SHUFFLE: /model.6/ma/Reshape + /model.6/ma/Transpose_2
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] POINTWISE: PWN(/model.6/ma/Constant_3_output_0 + (Unnamed Layer* 131) [Shuffle], /model.6/ma/Div)
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] MATRIX_MULTIPLY: /model.6/ma/MatMul_3
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] SOFTMAX: /model.6/ma/Softmax
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] MATRIX_MULTIPLY: /model.6/ma/MatMul_4
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] SHUFFLE: /model.6/ma/Transpose_5 + /model.6/ma/Reshape_3 + reshape_before_/model.6/ma/Gemm
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONVOLUTION: /model.6/ma/Gemm
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] SHUFFLE: reshape_after_/model.6/ma/Gemm + /model.6/ma/Reshape_4 + /model.6/ma/Transpose_6
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] ELEMENTWISE: /model.6/Add_1
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] REDUCE: /model.6/norm1/ReduceMean
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] ELEMENTWISE: /model.6/norm1/Sub
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] POINTWISE: PWN(/model.6/norm1/Constant_output_0 + (Unnamed Layer* 151) [Shuffle], /model.6/norm1/Pow)
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] REDUCE: /model.6/norm1/ReduceMean_1
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] POINTWISE: PWN(PWN(PWN(PWN(PWN(/model.6/norm1/Constant_1_output_0 + (Unnamed Layer* 155) [Shuffle], /model.6/norm1/Add), /model.6/norm1/Sqrt), /model.6/norm1/Div), /model.6/norm1/Mul), /model.6/norm1/Add_1)
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONSTANT: model.6.fc2.bias + (Unnamed Layer* 186) [Shuffle]
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONSTANT: model.6.fc1.bias + (Unnamed Layer* 169) [Shuffle]
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] SHUFFLE: reshape_before_/model.6/fc1/MatMul
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONVOLUTION: /model.6/fc1/MatMul
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] SHUFFLE: reshape_after_/model.6/fc1/MatMul
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] POINTWISE: PWN(/model.6/fc1/Add, PWN(PWN(PWN(PWN(PWN(/model.6/act/Constant_output_0 + (Unnamed Layer* 172) [Shuffle], /model.6/act/Div), /model.6/act/Erf), PWN(/model.6/act/Constant_1_output_0 + (Unnamed Layer* 176) [Shuffle], /model.6/act/Add)), /model.6/act/Mul), PWN(/model.6/act/Constant_2_output_0 + (Unnamed Layer* 180) [Shuffle], /model.6/act/Mul_1)))
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] SHUFFLE: reshape_before_/model.6/fc2/MatMul
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONVOLUTION: /model.6/fc2/MatMul
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] SHUFFLE: reshape_after_/model.6/fc2/MatMul
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] POINTWISE: PWN(/model.6/fc2/Add, /model.6/Add_2)
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] REDUCE: /model.6/norm2/ReduceMean
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] ELEMENTWISE: /model.6/norm2/Sub
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] POINTWISE: PWN(/model.6/norm2/Constant_output_0 + (Unnamed Layer* 192) [Shuffle], /model.6/norm2/Pow)
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] REDUCE: /model.6/norm2/ReduceMean_1
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] POINTWISE: PWN(PWN(PWN(PWN(PWN(/model.6/norm2/Constant_1_output_0 + (Unnamed Layer* 196) [Shuffle], /model.6/norm2/Add), /model.6/norm2/Sqrt), /model.6/norm2/Div), /model.6/norm2/Mul), /model.6/norm2/Add_1)
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] SHUFFLE: /model.6/Transpose_1 + /model.6/Reshape_3
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONVOLUTION: /model.7/conv/Conv + PWN(PWN(/model.7/act/Sigmoid), /model.7/act/Mul)
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] RESIZE: /model.8/Resize
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] COPY: /model.8/Resize_output_0 copy
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONVOLUTION: /model.11/cv2/conv/Conv || /model.11/cv1/conv/Conv
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] POINTWISE: PWN(PWN(/model.11/cv1/act/Sigmoid), /model.11/cv1/act/Mul)
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONVOLUTION: /model.11/m/m.0/conv1/conv/Conv
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONVOLUTION: /model.11/m/m.0/conv2/conv/Conv + /model.11/m/m.0/Add + PWN(PWN(/model.11/m/m.0/act/Sigmoid), /model.11/m/m.0/act/Mul)
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONVOLUTION: /model.11/m/m.1/conv1/conv/Conv
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONVOLUTION: /model.11/m/m.1/conv2/conv/Conv + /model.11/m/m.1/Add + PWN(PWN(/model.11/m/m.1/act/Sigmoid), /model.11/m/m.1/act/Mul)
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONVOLUTION: /model.11/m/m.2/conv1/conv/Conv
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONVOLUTION: /model.11/m/m.2/conv2/conv/Conv + /model.11/m/m.2/Add
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] POINTWISE: PWN(PWN(PWN(/model.11/m/m.2/act/Sigmoid), /model.11/m/m.2/act/Mul), PWN(PWN(PWN(/model.11/cv2/act/Sigmoid), /model.11/cv2/act/Mul), /model.11/Add))
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONVOLUTION: /model.11/cv3/conv/Conv + PWN(PWN(/model.11/cv3/act/Sigmoid), /model.11/cv3/act/Mul)
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONVOLUTION: /model.12/conv/Conv + PWN(PWN(/model.12/act/Sigmoid), /model.12/act/Mul)
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] RESIZE: /model.13/Resize
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] COPY: /model.13/Resize_output_0 copy
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONVOLUTION: /model.16/cv2/conv/Conv || /model.16/cv1/conv/Conv
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] POINTWISE: PWN(PWN(/model.16/cv1/act/Sigmoid), /model.16/cv1/act/Mul)
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONVOLUTION: /model.16/m/m.0/conv1/conv/Conv
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONVOLUTION: /model.16/m/m.0/conv2/conv/Conv + /model.16/m/m.0/Add + PWN(PWN(/model.16/m/m.0/act/Sigmoid), /model.16/m/m.0/act/Mul)
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONVOLUTION: /model.16/m/m.1/conv1/conv/Conv
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONVOLUTION: /model.16/m/m.1/conv2/conv/Conv + /model.16/m/m.1/Add + PWN(PWN(/model.16/m/m.1/act/Sigmoid), /model.16/m/m.1/act/Mul)
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONVOLUTION: /model.16/m/m.2/conv1/conv/Conv
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONVOLUTION: /model.16/m/m.2/conv2/conv/Conv + /model.16/m/m.2/Add
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] POINTWISE: PWN(PWN(PWN(/model.16/m/m.2/act/Sigmoid), /model.16/m/m.2/act/Mul), PWN(PWN(PWN(/model.16/cv2/act/Sigmoid), /model.16/cv2/act/Mul), /model.16/Add))
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONVOLUTION: /model.16/cv3/conv/Conv + PWN(PWN(/model.16/cv3/act/Sigmoid), /model.16/cv3/act/Mul)
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONVOLUTION: /model.24/input_proj.0/input_proj.0.0/Conv
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONVOLUTION: /model.17/conv/Conv + PWN(PWN(/model.17/act/Sigmoid), /model.17/act/Mul)
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] COPY: /model.12/act/Mul_output_0 copy
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONVOLUTION: /model.19/cv2/conv/Conv || /model.19/cv1/conv/Conv
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] POINTWISE: PWN(PWN(/model.19/cv1/act/Sigmoid), /model.19/cv1/act/Mul)
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONVOLUTION: /model.19/m/m.0/conv1/conv/Conv
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONVOLUTION: /model.19/m/m.0/conv2/conv/Conv + /model.19/m/m.0/Add + PWN(PWN(/model.19/m/m.0/act/Sigmoid), /model.19/m/m.0/act/Mul)
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONVOLUTION: /model.19/m/m.1/conv1/conv/Conv
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONVOLUTION: /model.19/m/m.1/conv2/conv/Conv + /model.19/m/m.1/Add + PWN(PWN(/model.19/m/m.1/act/Sigmoid), /model.19/m/m.1/act/Mul)
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONVOLUTION: /model.19/m/m.2/conv1/conv/Conv
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONVOLUTION: /model.19/m/m.2/conv2/conv/Conv + /model.19/m/m.2/Add
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] POINTWISE: PWN(PWN(PWN(/model.19/m/m.2/act/Sigmoid), /model.19/m/m.2/act/Mul), PWN(PWN(PWN(/model.19/cv2/act/Sigmoid), /model.19/cv2/act/Mul), /model.19/Add))
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONVOLUTION: /model.19/cv3/conv/Conv + PWN(PWN(/model.19/cv3/act/Sigmoid), /model.19/cv3/act/Mul)
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONVOLUTION: /model.24/input_proj.1/input_proj.1.0/Conv
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONVOLUTION: /model.20/conv/Conv + PWN(PWN(/model.20/act/Sigmoid), /model.20/act/Mul)
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] COPY: /model.7/act/Mul_output_0 copy
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONVOLUTION: /model.22/cv2/conv/Conv || /model.22/cv1/conv/Conv
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] POINTWISE: PWN(PWN(/model.22/cv1/act/Sigmoid), /model.22/cv1/act/Mul)
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONVOLUTION: /model.22/m/m.0/conv1/conv/Conv
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONVOLUTION: /model.22/m/m.0/conv2/conv/Conv + /model.22/m/m.0/Add + PWN(PWN(/model.22/m/m.0/act/Sigmoid), /model.22/m/m.0/act/Mul)
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONVOLUTION: /model.22/m/m.1/conv1/conv/Conv
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONVOLUTION: /model.22/m/m.1/conv2/conv/Conv + /model.22/m/m.1/Add + PWN(PWN(/model.22/m/m.1/act/Sigmoid), /model.22/m/m.1/act/Mul)
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONVOLUTION: /model.22/m/m.2/conv1/conv/Conv
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONVOLUTION: /model.22/m/m.2/conv2/conv/Conv + /model.22/m/m.2/Add
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] POINTWISE: PWN(PWN(PWN(/model.22/m/m.2/act/Sigmoid), /model.22/m/m.2/act/Mul), PWN(PWN(PWN(/model.22/cv2/act/Sigmoid), /model.22/cv2/act/Mul), /model.22/Add))
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONVOLUTION: /model.22/cv3/conv/Conv + PWN(PWN(/model.22/cv3/act/Sigmoid), /model.22/cv3/act/Mul)
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] CONVOLUTION: /model.24/input_proj.2/input_proj.2.0/Conv
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] MYELIN: {ForeignNode[model.24.enc_output.1.bias + (Unnamed Layer* 409) [Shuffle].../model.24/decoder/dec_bbox_head.0/layers.2/Add]}
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] POINTWISE: PWN(PWN(/model.24/decoder/Clip), PWN(PWN(PWN(PWN(PWN(PWN(PWN(/model.24/decoder/Constant_3_output_0 + (Unnamed Layer* 744) [Shuffle], /model.24/decoder/Sub), PWN(/model.24/decoder/Constant_4_output_0 + (Unnamed Layer* 748) [Shuffle], (Unnamed Layer* 750) [ElementWise])), PWN((Unnamed Layer* 747) [Constant] + (Unnamed Layer* 749) [Shuffle], (Unnamed Layer* 751) [ElementWise])), PWN(PWN(PWN(/model.24/decoder/Constant_2_output_0 + (Unnamed Layer* 739) [Shuffle], (Unnamed Layer* 741) [ElementWise]), PWN((Unnamed Layer* 738) [Constant] + (Unnamed Layer* 740) [Shuffle], (Unnamed Layer* 742) [ElementWise])), /model.24/decoder/Div)), /model.24/decoder/Log), /model.24/decoder/Add), PWN(/model.24/decoder/Sigmoid_1)))
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] POINTWISE: PWN(/model.24/decoder/Clip_3)
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] MYELIN: {ForeignNode[/model.24/decoder/layers.1/Transpose_1.../model.24/decoder/Sigmoid_2]}
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] POINTWISE: PWN(PWN(/model.24/decoder/Clip_6), PWN(PWN(PWN((Unnamed Layer* 1297) [Constant] + (Unnamed Layer* 1299) [Shuffle], PWN(PWN(/model.24/decoder/Constant_14_output_0 + (Unnamed Layer* 1298) [Shuffle], PWN(PWN(/model.24/decoder/Constant_13_output_0 + (Unnamed Layer* 1294) [Shuffle], /model.24/decoder/Sub_2), (Unnamed Layer* 1300) [ElementWise])), (Unnamed Layer* 1301) [ElementWise])), PWN(PWN((Unnamed Layer* 1288) [Constant] + (Unnamed Layer* 1290) [Shuffle], PWN(PWN(/model.24/decoder/Constant_12_output_0 + (Unnamed Layer* 1289) [Shuffle], (Unnamed Layer* 1291) [ElementWise]), (Unnamed Layer* 1292) [ElementWise])), /model.24/decoder/Div_2)), /model.24/decoder/Log_2))
+[10/26/2026-16:46:25] [TRT] [I] [GpuLayer] MYELIN: {ForeignNode[/model.24/decoder/layers.2/Transpose_1.../model.24/Concat_6]}
+[10/26/2026-16:46:27] [TRT] [I] [MemUsageChange] Init cuBLAS/cuBLASLt: CPU +534, GPU +830, now: CPU 1203, GPU 7512 (MiB)
+[10/26/2026-16:46:27] [TRT] [I] [MemUsageChange] Init cuDNN: CPU +82, GPU +130, now: CPU 1285, GPU 7642 (MiB)
+[10/26/2026-16:46:27] [TRT] [I] Global timing cache in use. Profiling results in this builder pass will be stored.
+[10/26/2026-16:48:16] [TRT] [I] Some tactics do not have sufficient workspace memory to run. Increasing workspace size will enable more tactics, please check verbose output for requested sizes.
+[10/26/2026-17:00:41] [TRT] [I] Total Activation Memory: 2281369600
+[10/26/2026-17:00:41] [TRT] [I] Detected 1 inputs and 1 output network tensors.
+[10/26/2026-17:00:44] [TRT] [I] Total Host Persistent Memory: 243216
+[10/26/2026-17:00:44] [TRT] [I] Total Device Persistent Memory: 114688
+[10/26/2026-17:00:44] [TRT] [I] Total Scratch Memory: 10560000
+[10/26/2026-17:00:44] [TRT] [I] [MemUsageStats] Peak memory usage of TRT CPU/GPU memory allocators: CPU 43 MiB, GPU 1482 MiB
+[10/26/2026-17:00:44] [TRT] [I] [BlockAssignment] Started assigning block shifts. This will take 175 steps to complete.
+[10/26/2026-17:00:44] [TRT] [I] [BlockAssignment] Algorithm ShiftNTopDown took 31.8608ms to assign 10 blocks to 175 nodes requiring 26214400 bytes.
+[10/26/2026-17:00:44] [TRT] [I] Total Activation Memory: 26214400
+[10/26/2026-17:00:45] [TRT] [I] [MemUsageChange] Init cuBLAS/cuBLASLt: CPU +0, GPU +0, now: CPU 1693, GPU 9820 (MiB)
+[10/26/2026-17:00:45] [TRT] [W] TensorRT encountered issues when converting weights between types and that could affect accuracy.
+[10/26/2026-17:00:45] [TRT] [W] If this is not the desired behavior, please modify the weights or retrain with regularization to adjust the magnitude of the weights.
+[10/26/2026-17:00:45] [TRT] [W] Check verbose logs for the list of affected weights.
+[10/26/2026-17:00:45] [TRT] [W] - 1 weights are affected by this issue: Detected FP32 infinity values and converted them to corresponding FP16 infinity.
+[10/26/2026-17:00:45] [TRT] [W] - 160 weights are affected by this issue: Detected subnormal FP16 values.
+[10/26/2026-17:00:45] [TRT] [W] - 12 weights are affected by this issue: Detected values less than smallest positive FP16 subnormal value and converted them to the FP16 minimum subnormalized value.
+[10/26/2026-17:00:45] [TRT] [W] - 2 weights are affected by this issue: Detected finite FP32 values which would overflow in FP16 and converted them to the closest finite FP16 value.
+[10/26/2026-17:00:45] [TRT] [I] [MemUsageChange] TensorRT-managed allocation in building engine: CPU +39, GPU +64, now: CPU 39, GPU 64 (MiB)
+{
+  "precision_requested": "fp16",
+  "fp16_fallback": true,
+  "calibration": null,
+  "calibration_batches_consumed": 0,
+  "tensorrt": "8.5.2.2",
+  "build_seconds": 860.8207817077637,
+  "engine_sha256": "62a80c11e926c7e7a478ee1893dfac130525eb34eca9792abe4dc7e8c11e00ed",
+  "engine_bytes": 43551494,
+  "workspace_bytes": 2147483648
+}

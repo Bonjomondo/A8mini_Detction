@@ -1,0 +1,43 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "/home/q/Documents/A8mini_Detction/benchmark_trt.py",
+    "--engine",
+    "/home/q/Documents/A8mini_Detction/benchmarks/20261006_testAC/B06_rtdetr_r18/model_fp16.engine",
+    "--output",
+    "/home/q/Documents/A8mini_Detction/benchmarks/20261006_testAC/B06_rtdetr_r18/run_03",
+    "--warmup",
+    "500",
+    "--duration",
+    "30"
+  ],
+  "input_size": [
+    640,
+    640
+  ],
+  "batch": 1,
+  "precision": "FP16 with FP32 fallback",
+  "backend": "TensorRT",
+  "dynamic": false,
+  "streams": 1,
+  "cuda_graph": false,
+  "warmup_iterations": 500,
+  "duration_s": 30,
+  "repeat": 3,
+  "data_transfer": "excluded",
+  "preprocessing": "excluded",
+  "postprocessing": "external selection/NMS excluded; model box decode retained",
+  "workspace_mib": 4096,
+  "opset": 16,
+  "tf32": false,
+  "seed": 0,
+  "tests": [
+    "A",
+    "C"
+  ],
+  "allow_unlocked": false,
+  "model": "RT-DETR-R18",
+  "weights": "/home/q/Documents/A8mini_Detction/weights/rtdetr_r18vd_dec3_6x_coco_from_paddle.pth",
+  "environment": "../env/environment_20261007_144212.json",
+  "environment_sha256": "9874191c1d59d53c4aec06ba526c181fd18a7f369e5dbeeb71519f3ee5422ec2"
+}

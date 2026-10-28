@@ -1,0 +1,346 @@
+{
+  "status": "ok",
+  "captured_at": "2026-10-07T15:12:07.096493+08:00",
+  "passed_models": 8,
+  "expected_models": 8,
+  "requested_models": [
+    "YOLO11n",
+    "YOLO11s",
+    "YOLO11m",
+    "YOLO26n",
+    "YOLO26s",
+    "YOLO26m",
+    "RT-DETR-R18",
+    "SO-DETR-NoFFT"
+  ],
+  "models": [
+    {
+      "model": "YOLO11n",
+      "status": "ok",
+      "engine_sha256": "c3a0aab336b57d80bd84e427ffc59cb6cf0442ffb2a36de4dd7d8b12e5da6d41",
+      "runs": [
+        {
+          "repeat": 1,
+          "duration_s": 30.00365914400004,
+          "iterations": 3172,
+          "telemetry_samples": 146,
+          "environment": "env/environment.json",
+          "output_finite": true,
+          "clocks_verified": true,
+          "engine_checksum_scope": "model + build; legacy run did not record its own checksum"
+        },
+        {
+          "repeat": 2,
+          "duration_s": 30.00265698399994,
+          "iterations": 3187,
+          "telemetry_samples": 146,
+          "environment": "env/environment.json",
+          "output_finite": true,
+          "clocks_verified": true,
+          "engine_checksum_scope": "model + build; legacy run did not record its own checksum"
+        },
+        {
+          "repeat": 3,
+          "duration_s": 30.007977529000073,
+          "iterations": 3180,
+          "telemetry_samples": 146,
+          "environment": "env/environment.json",
+          "output_finite": true,
+          "clocks_verified": true,
+          "engine_checksum_scope": "model + build; legacy run did not record its own checksum"
+        }
+      ],
+      "convolution_layers": 85,
+      "fp16_convolution_layers": 85,
+      "total_iterations": 9539,
+      "measured_duration_s": 90.01429365700005
+    },
+    {
+      "model": "YOLO11s",
+      "status": "ok",
+      "engine_sha256": "21325448d783a0503454eb916617eb25ee085dee19ee26e6d21e911c7319cc02",
+      "runs": [
+        {
+          "repeat": 1,
+          "duration_s": 30.007462592000138,
+          "iterations": 1922,
+          "telemetry_samples": 146,
+          "environment": "env/environment_20261006_173320.json",
+          "output_finite": true,
+          "clocks_verified": true,
+          "engine_checksum_scope": "run + model + build"
+        },
+        {
+          "repeat": 2,
+          "duration_s": 30.00839187199972,
+          "iterations": 1920,
+          "telemetry_samples": 146,
+          "environment": "env/environment_20261006_173320.json",
+          "output_finite": true,
+          "clocks_verified": true,
+          "engine_checksum_scope": "run + model + build"
+        },
+        {
+          "repeat": 3,
+          "duration_s": 30.010448779999933,
+          "iterations": 1919,
+          "telemetry_samples": 146,
+          "environment": "env/environment_20261006_173320.json",
+          "output_finite": true,
+          "clocks_verified": true,
+          "engine_checksum_scope": "run + model + build"
+        }
+      ],
+      "convolution_layers": 85,
+      "fp16_convolution_layers": 85,
+      "total_iterations": 5761,
+      "measured_duration_s": 90.02630324399979
+    },
+    {
+      "model": "YOLO11m",
+      "status": "ok",
+      "engine_sha256": "8741f9dd3263f339357dd41b58e46f7dcbe7b69ef11a9ebfa6900a7c9e147596",
+      "runs": [
+        {
+          "repeat": 1,
+          "duration_s": 30.029487884000446,
+          "iterations": 965,
+          "telemetry_samples": 146,
+          "environment": "env/environment_20261006_173320.json",
+          "output_finite": true,
+          "clocks_verified": true,
+          "engine_checksum_scope": "run + model + build"
+        },
+        {
+          "repeat": 2,
+          "duration_s": 30.020475778999753,
+          "iterations": 963,
+          "telemetry_samples": 146,
+          "environment": "env/environment_20261006_173320.json",
+          "output_finite": true,
+          "clocks_verified": true,
+          "engine_checksum_scope": "run + model + build"
+        },
+        {
+          "repeat": 3,
+          "duration_s": 30.002238475999548,
+          "iterations": 963,
+          "telemetry_samples": 146,
+          "environment": "env/environment_20261006_173320.json",
+          "output_finite": true,
+          "clocks_verified": true,
+          "engine_checksum_scope": "run + model + build"
+        }
+      ],
+      "convolution_layers": 105,
+      "fp16_convolution_layers": 105,
+      "total_iterations": 2891,
+      "measured_duration_s": 90.05220213899975
+    },
+    {
+      "model": "YOLO26n",
+      "status": "ok",
+      "engine_sha256": "98c3284878e1751bb01ac68fcbcdc44212f7b7bf114b54a8fb3c506ca48f861e",
+      "runs": [
+        {
+          "repeat": 1,
+          "duration_s": 30.004261197000233,
+          "iterations": 3100,
+          "telemetry_samples": 145,
+          "environment": "env/environment_20261006_173320.json",
+          "output_finite": true,
+          "clocks_verified": true,
+          "engine_checksum_scope": "run + model + build"
+        },
+        {
+          "repeat": 2,
+          "duration_s": 30.004701778000708,
+          "iterations": 3084,
+          "telemetry_samples": 146,
+          "environment": "env/environment_20261006_173320.json",
+          "output_finite": true,
+          "clocks_verified": true,
+          "engine_checksum_scope": "run + model + build"
+        },
+        {
+          "repeat": 3,
+          "duration_s": 30.00466566799969,
+          "iterations": 3096,
+          "telemetry_samples": 146,
+          "environment": "env/environment_20261006_173320.json",
+          "output_finite": true,
+          "clocks_verified": true,
+          "engine_checksum_scope": "run + model + build"
+        }
+      ],
+      "convolution_layers": 97,
+      "fp16_convolution_layers": 97,
+      "total_iterations": 9280,
+      "measured_duration_s": 90.01362864300063
+    },
+    {
+      "model": "YOLO26s",
+      "status": "ok",
+      "engine_sha256": "46ea0fe04cea9b2c5f3e416d32595639976bddc82f8db0ac941602c365876a2c",
+      "runs": [
+        {
+          "repeat": 1,
+          "duration_s": 30.01358296499984,
+          "iterations": 1839,
+          "telemetry_samples": 145,
+          "environment": "env/environment_20261006_173320.json",
+          "output_finite": true,
+          "clocks_verified": true,
+          "engine_checksum_scope": "run + model + build"
+        },
+        {
+          "repeat": 2,
+          "duration_s": 30.014468811999905,
+          "iterations": 1840,
+          "telemetry_samples": 146,
+          "environment": "env/environment_20261006_173320.json",
+          "output_finite": true,
+          "clocks_verified": true,
+          "engine_checksum_scope": "run + model + build"
+        },
+        {
+          "repeat": 3,
+          "duration_s": 30.000894574000085,
+          "iterations": 1833,
+          "telemetry_samples": 145,
+          "environment": "env/environment_20261006_173320.json",
+          "output_finite": true,
+          "clocks_verified": true,
+          "engine_checksum_scope": "run + model + build"
+        }
+      ],
+      "convolution_layers": 97,
+      "fp16_convolution_layers": 97,
+      "total_iterations": 5512,
+      "measured_duration_s": 90.02894635099983
+    },
+    {
+      "model": "YOLO26m",
+      "status": "ok",
+      "engine_sha256": "e28556c8ad295e0e13b121e7acba44b137fa63a29c2b0ac5c333fda87bdedd1b",
+      "runs": [
+        {
+          "repeat": 1,
+          "duration_s": 30.00879275500006,
+          "iterations": 952,
+          "telemetry_samples": 146,
+          "environment": "env/environment_20261007_144212.json",
+          "output_finite": true,
+          "clocks_verified": true,
+          "engine_checksum_scope": "run + model + build"
+        },
+        {
+          "repeat": 2,
+          "duration_s": 30.017577684999992,
+          "iterations": 954,
+          "telemetry_samples": 146,
+          "environment": "env/environment_20261007_144212.json",
+          "output_finite": true,
+          "clocks_verified": true,
+          "engine_checksum_scope": "run + model + build"
+        },
+        {
+          "repeat": 3,
+          "duration_s": 30.02421417700009,
+          "iterations": 951,
+          "telemetry_samples": 146,
+          "environment": "env/environment_20261007_144212.json",
+          "output_finite": true,
+          "clocks_verified": true,
+          "engine_checksum_scope": "run + model + build"
+        }
+      ],
+      "convolution_layers": 105,
+      "fp16_convolution_layers": 105,
+      "total_iterations": 2857,
+      "measured_duration_s": 90.05058461700014
+    },
+    {
+      "model": "RT-DETR-R18",
+      "status": "ok",
+      "engine_sha256": "f2d19df54b8036ec5346478c4fea963b4ffdeafdbf86f2cb407eca0409347814",
+      "runs": [
+        {
+          "repeat": 1,
+          "duration_s": 30.009727883999858,
+          "iterations": 903,
+          "telemetry_samples": 146,
+          "environment": "env/environment_20261007_144212.json",
+          "output_finite": true,
+          "clocks_verified": true,
+          "engine_checksum_scope": "run + model + build"
+        },
+        {
+          "repeat": 2,
+          "duration_s": 30.01490710300004,
+          "iterations": 903,
+          "telemetry_samples": 146,
+          "environment": "env/environment_20261007_144212.json",
+          "output_finite": true,
+          "clocks_verified": true,
+          "engine_checksum_scope": "run + model + build"
+        },
+        {
+          "repeat": 3,
+          "duration_s": 30.017964232000168,
+          "iterations": 903,
+          "telemetry_samples": 146,
+          "environment": "env/environment_20261007_144212.json",
+          "output_finite": true,
+          "clocks_verified": true,
+          "engine_checksum_scope": "run + model + build"
+        }
+      ],
+      "convolution_layers": 64,
+      "fp16_convolution_layers": 64,
+      "total_iterations": 2709,
+      "measured_duration_s": 90.04259921900007
+    },
+    {
+      "model": "SO-DETR-NoFFT",
+      "status": "ok",
+      "engine_sha256": "3ec1ac5abc5a5d75b38e3f300f26f29e74c8871a570c985b8067dcfe0dc4ece6",
+      "runs": [
+        {
+          "repeat": 1,
+          "duration_s": 30.038205755000035,
+          "iterations": 775,
+          "telemetry_samples": 146,
+          "environment": "env/environment_20261007_144212.json",
+          "output_finite": true,
+          "clocks_verified": true,
+          "engine_checksum_scope": "run + model + build"
+        },
+        {
+          "repeat": 2,
+          "duration_s": 30.032042821999767,
+          "iterations": 775,
+          "telemetry_samples": 146,
+          "environment": "env/environment_20261007_144212.json",
+          "output_finite": true,
+          "clocks_verified": true,
+          "engine_checksum_scope": "run + model + build"
+        },
+        {
+          "repeat": 3,
+          "duration_s": 30.012033171999974,
+          "iterations": 774,
+          "telemetry_samples": 146,
+          "environment": "env/environment_20261007_144212.json",
+          "output_finite": true,
+          "clocks_verified": true,
+          "engine_checksum_scope": "run + model + build"
+        }
+      ],
+      "convolution_layers": 63,
+      "fp16_convolution_layers": 63,
+      "total_iterations": 2324,
+      "measured_duration_s": 90.08228174899978
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "weights": "/home/q/Documents/A8mini_Detction/weights/yolo26s.pt",
+  "weights_sha256": "646f8bc3fe0a656803d95c294f7852321748cb29d13466a1af8862e2db384a1b",
+  "input_shape": [
+    1,
+    3,
+    640,
+    640
+  ],
+  "opset": 16,
+  "postprocessing": "External detection selection/NMS excluded; box decode retained",
+  "conv_bn_fusion": "torch.nn.utils.fuse_conv_bn_eval; channel-wise scaling",
+  "ultralytics": "8.4.89",
+  "ultralytics_path": "/home/q/.local/lib/python3.8/site-packages/ultralytics/__init__.py",
+  "params": 10009784,
+  "implementation": "Ultralytics; YOLO26 raw one-to-one head; no final top-k/NMS",
+  "deploy_params": 9496140,
+  "gflops": 20.6923776,
+  "gflops_method": "THOP MACs x 2, deployed FP32 PyTorch model at 640; unsupported ops not counted",
+  "onnx_initializers_finite": true,
+  "onnx_inputs": {
+    "images": [
+      1,
+      3,
+      640,
+      640
+    ]
+  },
+  "onnx_outputs": {
+    "output0": [
+      1,
+      8400,
+      84
+    ]
+  },
+  "onnx_sha256": "df750f0ba5ada4fa153531eeb6c1d737b56bca5d03f34a44f28ca1a87f4c6017",
+  "onnx_bytes": 38237768
+}
